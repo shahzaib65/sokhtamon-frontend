@@ -39,7 +39,7 @@ export default function Example() {
       {({ open }) => (
         <>
           <div className="mx-auto w-full  px-6 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-20 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -67,7 +67,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={
-                          ' px-3 pt-[18px] text-xs font-roboto font-normal text-gray'
+                          ' px-3 pt-[14px] text-sm font-roboto font-normal text-gray'
                         }
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -78,14 +78,14 @@ export default function Example() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center lg:pr-8 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <p className='px-3 pt-1 text-xs font-roboto font-normal text-gray'>Cities</p>
+              <p className='px-3 pt-1 text-sm font-roboto font-normal text-gray'>Cities</p>
                 <button
                   type="button"
                   className="relative rounded-full bg-primary p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-4 w-4" aria-hidden="true" />
+                  <BellIcon className="h-5 w-5" aria-hidden="true" />
                 </button>
 
                 {/* Profile dropdown */}
@@ -95,7 +95,7 @@ export default function Example() {
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
                       <img
-                        className="h-6 w-6 rounded-full"
+                        className="h-7 w-7 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
                       />
