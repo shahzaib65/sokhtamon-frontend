@@ -32,19 +32,19 @@ const Home = () => {
               />
             </div>
 
-            <div className=" w-2/3 lg:flex-1 xs:flex lg:justify-end xs:justify-center h-full ">
+            <div className=" w-2/3 mx-2 lg:flex-1 xs:flex lg:justify-end xs:justify-center h-full ">
               <select
                 className=" lg:pb-3.5 appearance-none h-full lg:text-end lg:items-end xs:text-center xs:items-center font-roboto font-normal lg:text-sm xs:text-xs w-full border-none outline-none"
                 id="dropdown"
                 value={selectedOption}
                 onChange={handleSelectChange}
               >
-                <option value="">Select Category</option>
-                <option value="option1">Construction material</option>
+                <option className=" font-normal text-[10px]" value="">Select Category</option>
+                <optio className=" font-normal text-[10px]" value="option1">Construction material</optio>
                 <option value="option2">
                    Doors, Windows and other products
                 </option>
-                <option value="option3">Decoration Materials</option>
+                <option className=" font-normal text-[10px]" value="option3">Decoration Materials</option>
               </select>
             </div>
 
@@ -56,8 +56,8 @@ const Home = () => {
               <img className="item-center lg:p-3 xs:p-1" src={search} alt="test" />
             </div>
           </div>
-          <div className="lg:mx-16 xs:mx-6 h-[50px] bg-primary rounded-[2px] text-white font-roboto font-semibold text-sm flex justify-center">
-          <p className=" text-center items-center px-7 pt-4 h-full">
+          <div className="lg:mx-16 xs:mx-6 h-[50px] bg-primary rounded-[2px] text-white font-roboto font-medium text-base flex justify-center">
+          <p className=" text-center items-center px-7 py-3 h-full">
             Place an AD
           </p>
           </div>
