@@ -55,7 +55,7 @@ export default function Example() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-11 w-auto"
+                    className="h-[40px] w-auto ml-8"
                     src={logo}
                     alt="Your Company"
                   />
@@ -67,7 +67,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={
-                          ' px-3 pt-4 text-xs font-roboto font-normal text-gray'
+                          ' px-3 pt-[18px] text-xs font-roboto font-normal text-gray'
                         }
                         aria-current={item.current ? 'page' : undefined}
                       >
