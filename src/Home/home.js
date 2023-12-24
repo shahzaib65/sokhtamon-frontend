@@ -65,8 +65,8 @@ const Home = () => {
         </div>
    
     <div className=" relative flex flex-col lg:w-full sm:w-full xs:w-full lg:mt-32 xs:mt-40 sm:mt-40 justify-start items-start h-auto lg:mx-10 xs:px-6">
-    <p className="text-white font-roboto text-start  font-medium lg:mt-12 lg:w-[600px] xs:w-full sm:w-full lg:text-5xl xs:text-2xl">Diversified And Unvarying Material</p>
-    <p className=" text-white font-light font-roboto text-start mt-5 lg:text-base xs:text-sm xs:w-[300px] lg:w-[500px]">Lorem ipsum dolor sit amet consetetur Lorem ipsum dolor sit amet consetetur Lorem ipsum dolor sit amet consetetur Lorem ipsum dolor sit amet consetetur Lorem ipsum dolor sit amet consetetur.</p>
+    <p className="text-white font-roboto text-start  font-medium lg:mt-8 lg:w-[600px] xs:w-full sm:w-full lg:text-2xl xs:text-2xl">Diversified And Unvarying Material</p>
+    <p className=" text-white font-light font-roboto text-start mt-3 lg:text-base xs:text-sm xs:w-[300px] lg:w-[500px]">Lorem ipsum dolor sit amet consetetur Lorem ipsum dolor sit amet consetetur Lorem ipsum dolor sit amet consetetur Lorem ipsum dolor sit amet consetetur Lorem ipsum dolor sit amet consetetur.</p>
     </div>
 
       </div>
