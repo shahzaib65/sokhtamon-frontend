@@ -77,7 +77,7 @@ export default function Example() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="absolute inset-y-0 right-0 flex items-center lg:pr-8 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <p className='px-3 pt-1 text-xs font-roboto font-normal text-gray'>Cities</p>
                 <button
                   type="button"
