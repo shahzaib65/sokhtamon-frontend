@@ -5,10 +5,11 @@ import logo from "../../src/assets/logo.png"
 import { Link } from 'react-router-dom';
 const navigation = [
   
-  { name: 'City', href: '#', current: false },
-  { name: 'Contact Us', href: '#', current: false },
+  
   { name: 'About Us', href: '#', current: false },
-  { name: 'Services', link: '', current: true }
+  { name: 'Services', link: '', current: true },
+  { name: 'Contact Us', href: '#', current: false }
+ 
 ]
 
 function classNames(...classes) {
@@ -65,10 +66,9 @@ export default function Example() {
                       <Link
                         key={item.name}
                         href={item.href}
-                        className={classNames(
-                          item.current ? ' text-gray' : ' text-gray',
-                          'rounded-md px-3 py-1 mt-1 text-base font-roboto font-normal'
-                        )}
+                        className={
+                          ' px-3 py-1 mt-1 text-base font-roboto font-normal text-gray'
+                        }
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
@@ -78,6 +78,7 @@ export default function Example() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <p className='px-3 py-1 mt-1 text-base font-roboto font-normal text-gray'>Cities</p>
                 <button
                   type="button"
                   className="relative rounded-full bg-primary p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
