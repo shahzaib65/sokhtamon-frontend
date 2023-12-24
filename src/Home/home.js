@@ -25,14 +25,14 @@ const Home = () => {
         />
         <div className=" flex lg:flex-row sm:flex-col xs:flex-col lg:justify-between absolute w-full h-10 lg:mt-10 lg:space-y-0 sm:mt-10 xs:mt-10 xs:space-y-4 xs:w-full sm:space-y-4 ">
           <div className=" lg:mx-16 xs:mx-6 bg-white rounded-[2px] flex flex-row lg:w-1/3 sm:w-auto justify-end">
-            <div className=" w-1/3 h-full">
+            <div className="w-auto h-full bg-black">
               <input
-                className=" w-full h-full px-2 font-roboto font-normal text-xs outline-none"
+                className=" w-full h-full px-2 font-roboto font-normal text-sm outline-none"
                 placeholder="Search"
               />
             </div>
 
-            <div className=" w-1/2 flex justify-center h-full">
+            <div className=" w-2/3 flex justify-center h-full ">
               <select
                 className=" mx-2 appearance-none text-center items-center font-roboto font-normal lg:text-base xs:text-xs w-full border-none outline-none"
                 id="dropdown"
@@ -49,11 +49,11 @@ const Home = () => {
             </div>
 
             <div className=" w-auto h-full flex justify-center items-center mx-2">
-              <IoIosArrowDown size={20} />
+              <IoIosArrowDown size={24} />
             </div>
 
-            <div className=" bg-primary w-10 h-full">
-              <img className=" p-2" src={search} alt="test" />
+            <div className=" bg-primary w-11 h-full flex justify-center">
+              <img className="item-center p-1" src={search} alt="test" />
             </div>
           </div>
           <p className=" lg:mx-16 xs:mx-6 px-3 h-10 py-1.5 bg-primary rounded-[2px] text-white font-roboto font-normal text-base">

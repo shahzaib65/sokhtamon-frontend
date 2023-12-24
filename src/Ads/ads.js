@@ -4,20 +4,20 @@ const Ads = () => {
   const products = [
     {
       id: 1,
-      name: "Basic Tee",
+      name: "Contruction Material",
       href: "#",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+        "https://cement.org.au/wp-content/uploads/2020/07/iStock-476199756-1024x870.jpg",
       imageAlt: "Front of men's Basic Tee in black.",
       price: "$35",
       color: "Black",
     },
     {
       id: 2,
-      name: "Basic Tee",
+      name: "Plumbing",
       href: "#",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+        "https://suburbanplumbingoc.com/wp-content/uploads/2020/06/How-Your-Home-Plumbing-System-Works.jpg",
       imageAlt: "Front of men's Basic Tee in black.",
       price: "$35",
       color: "Black",
@@ -36,40 +36,40 @@ const Ads = () => {
   
     {
       id: 4,
-      name: "Basic Tee",
+      name: "Markets",
       href: "#",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+        "https://eurasianet.org/sites/default/files/styles/article/public/2020-11/43690023282_f51e6d4c48_k.jpg?itok=JaZpkn3R,https://eurasianet.org/og-twitter.png",
       imageAlt: "Front of men's Basic Tee in black.",
       price: "$35",
       color: "Black",
     },
     {
       id: 5,
-      name: "Basic Tee",
+      name: "Electrical&Lighting",
       href: "#",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+        "https://engineering.missouri.edu/wp-content/uploads/2022/01/EECS.png",
       imageAlt: "Front of men's Basic Tee in black.",
       price: "$35",
       color: "Black",
     },
     {
       id: 6,
-      name: "Basic Tee",
+      name: "Tools and equipment",
       href: "#",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+        "https://empire-s3-production.bobvila.com/articles/wp-content/uploads/2022/02/iStock-1297982665.jpg",
       imageAlt: "Front of men's Basic Tee in black.",
       price: "$35",
       color: "Black",
     },
     {
       id: 7,
-      name: "Basic Tee",
+      name: "Appliances",
       href: "#",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+        "https://cdn.firstcry.com/education/2023/01/13101355/Names-Of-Household-Appliances-In-English.jpg",
       imageAlt: "Front of men's Basic Tee in black.",
       price: "$35",
       color: "Black",
@@ -94,13 +94,13 @@ const Ads = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="lg:h-80 border border-gray rounded-md flex flex-col"
+              className="lg:h-96 border border-gray rounded-md flex flex-col"
             >
               <div className=" rounded-tl-md rounded-tr-md overflow-hidden">
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
-                  className=" object-contain lg:h-[200px] lg:w-full"
+                  className=" object-cover lg:h-[250px] lg:w-full"
                 />
               </div>
 

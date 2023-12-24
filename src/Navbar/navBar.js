@@ -4,10 +4,11 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from "../../src/assets/logo.png"
 import { Link } from 'react-router-dom';
 const navigation = [
-  { name: 'Home', link: '/', current: true },
+  
   { name: 'City', href: '#', current: false },
   { name: 'Contact Us', href: '#', current: false },
   { name: 'About Us', href: '#', current: false },
+  { name: 'Services', link: '', current: true }
 ]
 
 function classNames(...classes) {
@@ -65,7 +66,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-primary text-white' : ' text-gray hover:bg-primary hover:text-white',
+                          item.current ? ' text-gray' : ' text-gray',
                           'rounded-md px-3 py-1 mt-1 text-base font-roboto font-normal'
                         )}
                         aria-current={item.current ? 'page' : undefined}
