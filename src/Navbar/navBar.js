@@ -55,7 +55,7 @@ export default function Example() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-10 w-auto"
+                    className="h-11 w-auto"
                     src={logo}
                     alt="Your Company"
                   />
@@ -67,7 +67,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={
-                          ' px-3 py-1 mt-1 text-base font-roboto font-normal text-gray'
+                          ' px-3 pt-4 text-xs font-roboto font-normal text-gray'
                         }
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -78,14 +78,14 @@ export default function Example() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <p className='px-3 py-1 mt-1 text-base font-roboto font-normal text-gray'>Cities</p>
+              <p className='px-3 pt-1 text-xs font-roboto font-normal text-gray'>Cities</p>
                 <button
                   type="button"
                   className="relative rounded-full bg-primary p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  <BellIcon className="h-4 w-4" aria-hidden="true" />
                 </button>
 
                 {/* Profile dropdown */}
@@ -95,7 +95,7 @@ export default function Example() {
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
                       <img
-                        className="h-8 w-8 rounded-full"
+                        className="h-6 w-6 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
                       />
