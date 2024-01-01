@@ -1,9 +1,13 @@
 import React from 'react';
 import NavBar from "../src/Navbar/navBar"
-import Footer from "../src/Footer/footer"
-import Home from "../src/Home/home"
-import './App.css';
+import Contact from './ContactUs/Contact';
+import PostJob from './Jobs/PostJob';
+import Service from "./Services"
+import ProductsPage from './ProductsPage';
+import DetailPage from './DetailPage';
+import Main from './MainPage';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import AboutUs from './AboutUs';
 function App() {
   return (
     <div className="App">
@@ -11,7 +15,13 @@ function App() {
     <NavBar/>
    
       <Routes>
-      <Route exact path="/" element={<Home/>}/>
+      <Route exact path="/" element={<Main/>}/>
+      <Route exact path="/contact" element={<Contact/>}/>
+      <Route exact path='/detail' element={<DetailPage/>}/>
+      <Route exact path='/product' element={<ProductsPage/>}/>
+      <Route exact path='/service' element={<Service/>}/>
+      <Route exact path='/post' element={<PostJob/>}/>
+      <Route exact path='/about' element={<AboutUs/>}/>
       </Routes>
     </Router>
     

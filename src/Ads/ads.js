@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer/footer";
+
 const Ads = () => {
   const products = [
     {
@@ -140,7 +140,7 @@ const Ads = () => {
           ))}
         </div>
       </div>
-      <Footer/>
+    
     </div>
   );
 };
