@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../assets/banner.png";
+import banner from "../assets/contact_bg.svg";
 import { Text } from "../components/Text";
 import { Line } from "../components/Line";
 import { Button } from "../components/Button";
@@ -33,6 +33,10 @@ const Contact = () => {
           size="txtRobotoBold32"
         >
           Get In Touch
+        </Text>
+
+        <Text className=" mt-2 w-[50%] text-center">
+        Need assistance or have questions about our construction materials? Use the contact form for a quick and tailored response. Prefer direct communication? Find our contact details below. Your satisfaction is our priority, and we look forward to hearing from you. Let's build together!
         </Text>
 
         <div className=" flex bg-white-A700 justify-start items-center lg:w-[70%] xs:w-full mt-[54px] mx-20 p-[11px] rounded-[10px] shadow-bs">

@@ -1,5 +1,5 @@
-import React from "react";
-import banner from "../assets/banner.png";
+import React, { useEffect, useState } from "react";
+import banner from "../assets/post_banner.svg";
 import { Text } from "../components/Text";
 import { SelectBox } from "../components/SelectBox";
 import { Input } from "../components/Input";
@@ -9,12 +9,58 @@ import arrow from "../assets/arrow.png";
 import add from "../assets/add.svg"
 import { TextArea } from "../components/TextArea";
 import Footer from '../Footer';
+import axios from "axios"
 const PostJob = () => {
-  const yournametwoOptionsList = [
+
+  const selectCategoryOptionsList = [
     { label: "Option1", value: "option1" },
     { label: "Option2", value: "option2" },
     { label: "Option3", value: "option3" },
   ];
+ 
+  const [category,setcategory] = useState([])
+   const [city,setCity] = useState([])
+
+  const options = category.map(data => ({
+    label: data.categoryName    ,
+    value: data.categoryName,
+  }));
+
+  const cityData = city.map(data => ({
+    label: data.city_name    ,
+    value: data.city_name,
+  }));
+
+
+  useEffect(()=>{
+categories()
+  },[])
+
+  useEffect(()=>{
+  cities()
+  },[])
+
+
+  const categories = () =>{
+     axios.get("https://sokhtamon-backend-production.up.railway.app/api/category/fetch")
+     .then((res)=>{
+      console.log(res.data.categories)
+      setcategory(res.data.categories)
+     }).catch((err)=>{
+      console.log(err)
+     })
+  }
+
+  //api/city/fetch
+  const cities = () =>{
+    axios.get("https://sokhtamon-backend-production.up.railway.app/api/city/fetch")
+    .then((res)=>{
+     console.log(res.data.Cities)
+     setCity(res.data.Cities)
+    }).catch((err)=>{
+     console.log(err)
+    })
+  }
 
   return (
     <>
@@ -56,9 +102,9 @@ const PostJob = () => {
                     />
                   }
                   isMulti={false}
-                  name="yournametwo"
-                  options={yournametwoOptionsList}
-                  isSearchable={false}
+                  name="category"
+                  options={options}
+                  isSearchable={true}
                   placeholder="Select Category"
                   shape="round"
                   color="gray_100"
@@ -104,9 +150,9 @@ const PostJob = () => {
                       />
                     }
                     isMulti={false}
-                    name="yournametwo"
-                    options={yournametwoOptionsList}
-                    isSearchable={false}
+                    name="city"
+                    options={cityData}
+                    isSearchable={true}
                     placeholder="Select City"
                     shape="round"
                     color="gray_100"

@@ -5,7 +5,7 @@ import {Text} from "../components/Text";
 import {List} from "../components/List";
 import {SelectBox} from "../components/SelectBox"
 import cement from "../assets/cement.svg"
-import banner from "../assets/banner.png"
+import banner from "../assets/home_banner.svg"
 import arrow from "../assets/arrow.png"
 import search_bg from "../assets/search_bg.svg"
 import Footer from '../Footer';
@@ -149,11 +149,11 @@ const Main = () => {
             New Advertisement
           </Text>
 
-          <div className="xs:gap-5 gap-[30px] grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center min-h-[auto] mt-[54px] mx-auto xs:px-5 w-full">
+          <div className="xs:gap-5 lg:gap-[0px] grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center min-h-[auto] mt-[54px] mx-auto xs:px-5 w-full">
           <Link to="/product">
-          <div className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-1 flex-col items-center justify-start pb-[33px] rounded-md w-full">
+          <div className="bg-white-A700 border border-blue_gray-100_01 border-solid flex xs:flex-1 flex-col items-center justify-start pb-[33px] rounded-md w-[70%]">
               <img
-                className="h-[265px] sm:h-auto object-cover rounded-bl rounded-br rounded-tl-md rounded-tr-md w-full"
+                className="lg:h-[240px] xs:h-auto object-cover rounded-bl rounded-br rounded-tl-md rounded-tr-md w-full"
                 src={cement}
                 alt="rectangleThirtyTwo"
               />
@@ -202,109 +202,11 @@ const Main = () => {
               </div>
             </div>
           </Link>
-
-            <div className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-1 flex-col items-center justify-start pb-[33px] rounded-md w-full">
-              <img
-                className="h-[265px] sm:h-auto object-cover rounded-bl rounded-br rounded-tl-md rounded-tr-md w-full"
-                src={cement}
-                alt="rectangleThirtyTwo"
-              />
-              <Text
-                className="mt-[17px] text-blue_gray-900 text-xl"
-                size="txtRobotoBold20"
-              >
-                Cement
-              </Text>
-              <Text
-                className="leading-[150.00%] lowercase mt-[13px] text-base text-blue_gray-300 text-center tracking-[0.20px] lg:w-[83%] sm:w-full"
-                size="txtRobotoRegular16"
-              >
-                lOREM IPSUM DOLOR SIT AMET CONSETETUR LOREM lOREM IPSUM DOLOR
-                SIT AMET CONSETETUR LOREM lOREM IPSUM DOLOR SIT AMET CONSETETUR
-                LOREM
-              </Text>
-              <div className="flex flex-row gap-2.5 items-center justify-start mt-1.5 w-auto">
-                <Text
-                  className="text-base text-indigo-A200 tracking-[0.20px] w-auto"
-                  size="txtRobotoRomanSemiBold16"
-                >
-                  Sommoni :
-                </Text>
-                <Text
-                  className="text-gray-800 text-lg tracking-[0.20px] w-auto"
-                  size="txtRobotoBold18"
-                >
-                  1199
-                </Text>
-              </div>
-              <div className="flex flex-row gap-[15px] items-center justify-start mt-[15px] w-auto">
-                <Text
-                  className="text-gray-800 text-lg tracking-[0.20px] w-auto"
-                  size="txtRobotoBold18"
-                >
-                  13:12:2023
-                </Text>
-                <Line className="bg-blue_gray-300_01 h-[25px] w-px" />
-                <Text
-                  className="text-gray-800 text-lg tracking-[0.20px] w-auto"
-                  size="txtRobotoBold18"
-                >
-                  12:30 PM
-                </Text>
-              </div>
-            </div>
+   
+          
 
 
-            <div className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-1 flex-col items-center justify-start pb-[33px] rounded-md w-full">
-              <img
-                className="h-[265px] sm:h-auto object-cover rounded-bl rounded-br rounded-tl-md rounded-tr-md w-full"
-                src={cement}
-                alt="rectangleThirtyTwo"
-              />
-              <Text
-                className="mt-[17px] text-blue_gray-900 text-xl"
-                size="txtRobotoBold20"
-              >
-                Cement
-              </Text>
-              <Text
-                className="leading-[150.00%] lowercase mt-[13px] text-base text-blue_gray-300 text-center tracking-[0.20px] lg:w-[83%] sm:w-full"
-                size="txtRobotoRegular16"
-              >
-                lOREM IPSUM DOLOR SIT AMET CONSETETUR LOREM lOREM IPSUM DOLOR
-                SIT AMET CONSETETUR LOREM lOREM IPSUM DOLOR SIT AMET CONSETETUR
-                LOREM
-              </Text>
-              <div className="flex flex-row gap-2.5 items-center justify-start mt-1.5 w-auto">
-                <Text
-                  className="text-base text-indigo-A200 tracking-[0.20px] w-auto"
-                  size="txtRobotoRomanSemiBold16"
-                >
-                  Sommoni :
-                </Text>
-                <Text
-                  className="text-gray-800 text-lg tracking-[0.20px] w-auto"
-                  size="txtRobotoBold18"
-                >
-                  1199
-                </Text>
-              </div>
-              <div className="flex flex-row gap-[15px] items-center justify-start mt-[15px] w-auto">
-                <Text
-                  className="text-gray-800 text-lg tracking-[0.20px] w-auto"
-                  size="txtRobotoBold18"
-                >
-                  13:12:2023
-                </Text>
-                <Line className="bg-blue_gray-300_01 h-[25px] w-px" />
-                <Text
-                  className="text-gray-800 text-lg tracking-[0.20px] w-auto"
-                  size="txtRobotoBold18"
-                >
-                  12:30 PM
-                </Text>
-              </div>
-            </div>
+        
 
 
           </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from "../assets/banner.png";
+import banner from "../assets/services.svg";
 import { Text } from "../components/Text";
 import { SelectBox } from "../components/SelectBox";
 import electrical from "../assets/electrical.svg"
