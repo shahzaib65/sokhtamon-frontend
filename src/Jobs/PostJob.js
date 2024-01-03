@@ -1,66 +1,86 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import banner from "../assets/post_banner.svg";
 import { Text } from "../components/Text";
 import { SelectBox } from "../components/SelectBox";
-import { Input } from "../components/Input";
-import {CheckBox} from "../components/CheckBox";
-import {Line} from "../components/Line"
+import { CheckBox } from "../components/CheckBox";
+import { Line } from "../components/Line";
 import arrow from "../assets/arrow.png";
-import add from "../assets/add.svg"
-import { TextArea } from "../components/TextArea";
-import Footer from '../Footer';
-import axios from "axios"
+import add from "../assets/add.svg";
+import { ClipLoader } from "react-spinners";
+import Footer from "../Footer";
+import axios from "axios";
+import { useForm } from "react-hook-form";
 const PostJob = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const [loading, setLoading] = useState(false);
+  const [selectCat, setSelectCat] = useState(null);
+  const [selectCity, setSelectCity] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [image, setImage] = useState(null);
+  const [category, setcategory] = useState([]);
+  const [city, setCity] = useState([]);
 
-  const selectCategoryOptionsList = [
-    { label: "Option1", value: "option1" },
-    { label: "Option2", value: "option2" },
-    { label: "Option3", value: "option3" },
-  ];
- 
-  const [category,setcategory] = useState([])
-   const [city,setCity] = useState([])
+  const fileInputRef = useRef(null);
 
-  const options = category.map(data => ({
-    label: data.categoryName    ,
+  const handleImageClick = () => {
+    fileInputRef.current.click();
+  };
+
+  const options = category.map((data) => ({
+    label: data.categoryName,
     value: data.categoryName,
   }));
 
-  const cityData = city.map(data => ({
-    label: data.city_name    ,
+  const cityData = city.map((data) => ({
+    label: data.city_name,
     value: data.city_name,
   }));
 
+  useEffect(() => {
+    categories();
+  }, []);
 
-  useEffect(()=>{
-categories()
-  },[])
+  useEffect(() => {
+    cities();
+  }, []);
 
-  useEffect(()=>{
-  cities()
-  },[])
-
-
-  const categories = () =>{
-     axios.get("https://sokhtamon-backend-production.up.railway.app/api/category/fetch")
-     .then((res)=>{
-      console.log(res.data.categories)
-      setcategory(res.data.categories)
-     }).catch((err)=>{
-      console.log(err)
-     })
-  }
+  const categories = () => {
+    axios
+      .get(
+        "https://sokhtamon-backend-production.up.railway.app/api/category/fetch"
+      )
+      .then((res) => {
+        console.log(res.data.categories);
+        setcategory(res.data.categories);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   //api/city/fetch
-  const cities = () =>{
-    axios.get("https://sokhtamon-backend-production.up.railway.app/api/city/fetch")
-    .then((res)=>{
-     console.log(res.data.Cities)
-     setCity(res.data.Cities)
-    }).catch((err)=>{
-     console.log(err)
-    })
-  }
+  const cities = () => {
+    axios
+      .get("https://sokhtamon-backend-production.up.railway.app/api/city/fetch")
+      .then((res) => {
+        console.log(res.data.Cities);
+        setCity(res.data.Cities);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedFile(file);
+    setImage(URL.createObjectURL(e.target.files[0]));
+  };
 
   return (
     <>
@@ -80,8 +100,60 @@ categories()
             </Text>
           </div>
 
-          <div className="flex flex-col gap-[0px] items-start justify-start mt-[70px] w-full">
+          <form
+            form
+            noValidate
+            onSubmit={handleSubmit(async (data) => {
+
+      if(selectCat === null){
+        setLoading(false)
+        alert("Select the category first")
+      } else if(selectCity === null){
+        setLoading(false)
+        alert("Select the city first")
+      }else if( selectedFile === null){
+        setLoading(false)
+        alert("Select the file first")
+      }else {
+        setLoading(true)
+              const form = new FormData();
+              form.append("category_name",selectCat)
+              form.append("city_name",selectCity)
+              form.append("state", "empty")
+              form.append("email",data.email)
+              form.append("username",data.name)
+              form.append("telephone",data.phone)
+              form.append("post_heading",data.heading)
+              form.append("post_status","free")
+              form.append("price",data.price)
+              form.append("image",selectedFile)
+              form.append("description",data.description)
+
+              const config = {     
+    headers: { 'content-type': 'multipart/form-data' }
+       }
+
+       axios.post("https://sokhtamon-backend-production.up.railway.app/api/post/upload",form, config)
+    .then(response => {
+      setLoading(false)
+        setImage(null)
+        reset();
+        alert("Post uploaded");
         
+    })
+    .catch(error => {
+        console.log(error);
+       // setError(error)
+    });
+      }
+
+
+        
+
+
+            })}
+            className="flex flex-col gap-[0px] items-start justify-start mt-[70px] w-full"
+          >
             <div className="flex flex-col lg:items-start gap-3 lg:justify-start lg:w-[35%] lg:mx-20 xs:items-start xs:justify-start xs:w-[80%] xs:mx-2 ">
               <Text
                 className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
@@ -102,15 +174,24 @@ categories()
                     />
                   }
                   isMulti={false}
-                  name="category"
+                  name="categoryName"
                   options={options}
                   isSearchable={true}
                   placeholder="Select Category"
                   shape="round"
                   color="gray_100"
                   size="sm"
+                  onChange={(value) => {
+                    setSelectCat(value);
+                  }}
+                  // {...register("categoryName", {
+                  //   required: "Category is required"
+                  // })}
                 />
               </div>
+              {/* {errors.categoryName && (
+                  <p className="text-start text-red-500">{errors.categoryName.message}</p>
+                )} */}
             </div>
 
             <div className="flex lg:flex-row xs:flex-col mt-[25px] w-full lg:mx-20 justify-start items-start xs:mx-2">
@@ -122,12 +203,19 @@ categories()
                   Heading
                 </Text>
 
-                <Input
-                  name="yournameone"
+                <input
                   placeholder="abc..."
-                  className="p-0 placeholder:text-gray-700 text-left text-sm w-full"
+                  className=" p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   wrapClassName="w-full"
-                ></Input>
+                  {...register("heading", {
+                    required: "Heading is required",
+                  })}
+                ></input>
+                {errors.heading && (
+                  <p className="text-start text-red-500">
+                    {errors.heading.message}
+                  </p>
+                )}
               </div>
 
               <div className=" flex flex-col lg:w-[35%] gap-3 lg:mx-10 xs:mx-2 xs:w-[80%]">
@@ -157,8 +245,17 @@ categories()
                     shape="round"
                     color="gray_100"
                     size="sm"
+                    onChange={(value) => {
+                      setSelectCity(value);
+                    }}
+                    //   {...register("city", {
+                    //   required: "City is required"
+                    // })}
                   />
                 </div>
+                {/* {errors.city && (
+                  <p className="text-start text-red-500">{errors.city.message}</p>
+                )} */}
               </div>
             </div>
 
@@ -171,55 +268,82 @@ categories()
               </Text>
 
               <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
-              <Input
+                <input
                   name="yournameone"
                   placeholder="$10"
-                  className="p-0 placeholder:text-gray-700 text-left text-sm w-full"
-                  wrapClassName="w-full"
-                ></Input>
+                  className="p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
+                  {...register("price", {
+                    required: "Price is required",
+                  })}
+                ></input>
               </div>
+              {errors.price && (
+                <p className="text-start text-red-500">
+                  {errors.price.message}
+                </p>
+              )}
             </div>
 
-   
             <div className="flex flex-row gap-[30px] lg:mx-20 xs:mx-2 items-center justify-start mt-3 w-[31%] xs:w-[80%]">
-                <CheckBox
-                  className="font-medium text-[13px] text-left tracking-[-0.26px] mb-0 flex justify-center items-center"
-                  inputClassName="border-2 border-black border-solid h-6 mr-[5px] w-6"
-                  name="bargain"
-                  id="bargain"
-                  label="Bargain"
-                ></CheckBox>
-                <CheckBox
-                  className="font-medium text-[13px] text-left tracking-[-0.26px] flex justify-center items-center"
-                  inputClassName="border-2 border-black border-solid h-6 mr-[5px] w-6"
-                  name="forfree"
-                  id="forfree"
-                  label="For Free"
-                ></CheckBox>
-              </div>
+              <CheckBox
+                className="font-medium text-[13px] text-left tracking-[-0.26px] mb-0 flex justify-center items-center"
+                inputClassName="border-2 border-black border-solid h-6 mr-[5px] w-6"
+                name="bargain"
+                id="bargain"
+                label="Bargain"
+              ></CheckBox>
+              <CheckBox
+                className="font-medium text-[13px] text-left tracking-[-0.26px] flex justify-center items-center"
+                inputClassName="border-2 border-black border-solid h-6 mr-[5px] w-6"
+                name="forfree"
+                id="forfree"
+                label="For Free"
+              ></CheckBox>
+            </div>
 
-              <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-2 " />
+            <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-2 " />
 
-              <div className=" flex flex-col lg:mx-20 xs:mx-2">
+            <div className=" flex flex-col lg:mx-20 xs:mx-2">
               <Text
-            className="mt-10 text-gray-900 text-sm tracking-[-0.28px]"
-            size="txtRobotoRomanMedium14Gray90003"
-          >
-            Photos:
-          </Text>
-          <div className="bg-deep_orange-100 flex flex-col h-[100px] items-center justify-start mt-3.5 p-[34px] md:px-5 rounded w-[100px]">
-            <img
-              className="h-8 w-8"
-              src={add}
-              alt="carbonaddfilled"
-            />
-          </div>
+                className="mt-10 text-gray-900 text-sm tracking-[-0.28px]"
+                size="txtRobotoRomanMedium14Gray90003"
+              >
+                Photos:
+              </Text>
+              <div className=" flex flex-row space-x-5 h-[100px] justify-start items-center mt-3.5 w-full">
+                <input
+                  type="file"
+                  style={{ display: "none" }}
+                  ref={fileInputRef}
+                  onChange={handleFileChange}
+                  // {...register("photo", {
+                  //           required: "Photo is required"
+                  //         })}
+                />
+                <div className="bg-deep_orange-100 h-[100px] items-center justify-start p-[34px] rounded w-[100px]">
+                  <img
+                    onClick={handleImageClick}
+                    className="h-8 w-8"
+                    src={add}
+                    alt="carbonaddfilled"
+                  />
+                </div>
+
+                <div className=" h-[100px] items-center justify-start p-[0px] rounded w-[100px]">
+                  <img
+                    className="h-[100px] w-[100px]"
+                    src={image}
+                    alt="carbonaddfilled"
+                  />
+                </div>
               </div>
+            </div>
+            {/* {errors.photo && (
+                  <p className=" ml-20 mt-3 text-start text-red-500">{errors.photo.message}</p>
+                )} */}
+            <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-2 " />
 
-              <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-2 " />
-
-
-              <div className="flex lg:flex-row xs:flex-col mt-[25px] w-full lg:mx-20 justify-start items-start xs:mx-2">
+            <div className="flex lg:flex-row xs:flex-col mt-[25px] w-full lg:mx-20 justify-start items-start xs:mx-2">
               <div className=" flex flex-col lg:w-[35%] gap-3 xs:w-[80%] ">
                 <Text
                   className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
@@ -229,16 +353,21 @@ categories()
                 </Text>
 
                 <div className="flex flex-col items-center justify-start w-full">
-              <TextArea
-                className="bg-gray-100 border-0 pb-[35px] pl-[25px] pr-[35px] pt-5 sm:px-5 rounded placeholder:text-gray-700 text-gray-700 text-left text-sm w-full outline-none"
-                name="yournamefour"
-                placeholder="Lorem ipsum dolor sit amet...."
-              ></TextArea>
-            </div>
-              
+                  <textarea
+                    className="bg-gray-100 border-0 pb-[35px] pl-[25px] pr-[35px] pt-5 sm:px-5 rounded placeholder:text-gray-700 text-gray-700 text-left text-sm w-full outline-none"
+                    name="yournamefour"
+                    placeholder="Lorem ipsum dolor sit amet...."
+                    {...register("description", {
+                      required: "Description is required",
+                    })}
+                  ></textarea>
+                </div>
+                {errors.description && (
+                  <p className=" text-start text-red-500">
+                    {errors.description.message}
+                  </p>
+                )}
               </div>
-
-            
             </div>
 
             <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-2 " />
@@ -252,12 +381,20 @@ categories()
                   Name
                 </Text>
 
-                <Input
+                <input
                   name="yournameone"
                   placeholder="abc..."
-                  className="p-0 placeholder:text-gray-700 text-left text-sm w-full"
+                  className="p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   wrapClassName="w-full"
-                ></Input>
+                  {...register("name", {
+                    required: "Name is required",
+                  })}
+                ></input>
+                {errors.name && (
+                  <p className=" text-start text-red-500">
+                    {errors.name.message}
+                  </p>
+                )}
               </div>
 
               <div className=" flex flex-col lg:w-[27%] gap-3 lg:mx-10 xs:mx-2 xs:w-[80%]">
@@ -269,16 +406,27 @@ categories()
                 </Text>
 
                 <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
-                <Input
-                  name="yournameone"
-                  placeholder="email@gmail.com"
-                  className="p-0 placeholder:text-gray-700 text-left text-sm w-full"
-                  wrapClassName="w-full"
-                ></Input>
+                  <input
+                    name="yournameone"
+                    placeholder="email@gmail.com"
+                    className="p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
+                    {...register("email", {
+                    required: "email is required",
+                    pattern: {
+                      value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi,
+                      message: "email is not valid",
+                    },
+                  })}
+                  ></input>
                 </div>
+                {errors.email && (
+                  <p className=" text-start text-red-500">
+                    {errors.email.message}
+                  </p>
+                )}
               </div>
 
-               <div className=" flex flex-col lg:w-[27%] gap-3 lg:mx-0 xs:mx-2 xs:w-[80%]">
+              <div className=" flex flex-col lg:w-[27%] gap-3 lg:mx-0 xs:mx-2 xs:w-[80%]">
                 <Text
                   className="text-gray-900 text-sm tracking-[-0.28px] lg:mt-0 w-auto xs:mt-[25px]"
                   size="txtRobotoRomanMedium14Gray90003"
@@ -287,31 +435,35 @@ categories()
                 </Text>
 
                 <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
-                <Input
-                  name="yournameone"
-                  placeholder="+12345678543"
-                  type="number"
-                  className="p-0 appearance-none placeholder:text-gray-700 text-left text-sm w-full"
-                  wrapClassName="w-full"
-                ></Input>
+                  <input
+                    name="yournameone"
+                    placeholder="+12345678543"
+                    type="text"
+                    className="p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
+                    {...register("phone", {
+                      required: "Telephone is required",
+                    })}
+                  ></input>
                 </div>
+                {errors.phone && (
+                  <p className=" text-start text-red-500">
+                    {errors.phone.message}
+                  </p>
+                )}
               </div>
-
             </div>
 
-           
+            <div className=" w-full flex justify-center mt-[25px] mb-7">
+              <button
+                type="submit"
+                className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center rounded-sm text-white-A700 font-roboto font-semibold tracking-[0.20px]"
+              >
+                {loading ? <ClipLoader color="#FFFFFF" size={30} /> : "Submit"}
+              </button>
+            </div>
+          </form>
 
-                <div className=" w-full flex justify-center mt-[25px] mb-7">
-                <div className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center rounded-sm text-white-A700 font-roboto font-semibold tracking-[0.20px]">Save
-               
-                </div>
-
-                </div>
-
-          </div>
-
-<Footer/>
-          
+          <Footer />
         </div>
       </div>
     </>

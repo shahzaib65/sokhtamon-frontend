@@ -15,7 +15,6 @@ const Input = React.forwardRef(
       placeholder = "",
       type = "text",
       children,
-      errors = [],
       label = "",
       prefix,
       suffix,
@@ -53,7 +52,7 @@ const Input = React.forwardRef(
           />
           {!!suffix && suffix}
         </div>
-        {!!errors && <ErrorMessage errors={errors} />}
+   
       </>
     );
   },

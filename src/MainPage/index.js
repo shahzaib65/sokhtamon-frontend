@@ -1,10 +1,10 @@
-import React from 'react'
-
+import React,{useEffect,useState} from 'react'
+import axios from 'axios';
 import {Line} from "../components/Line";
 import {Text} from "../components/Text";
 import {List} from "../components/List";
 import {SelectBox} from "../components/SelectBox"
-import cement from "../assets/cement.svg"
+import moment from "moment"
 import banner from "../assets/home_banner.svg"
 import arrow from "../assets/arrow.png"
 import search_bg from "../assets/search_bg.svg"
@@ -14,11 +14,51 @@ import view from "../assets/view.svg"
 import { Link } from 'react-router-dom';
 const Main = () => {
 
-    const selectCategoryOptionsList = [
-        { label: "Option1", value: "option1" },
-        { label: "Option2", value: "option2" },
-        { label: "Option3", value: "option3" },
-      ];
+  useEffect(()=>{
+    categories()
+  },[])
+
+  useEffect(()=>{
+   ad('test');
+  },[])
+
+  const [category, setcategory] = useState([]);
+  const categories = () => {
+    axios
+      .get(
+        "https://sokhtamon-backend-production.up.railway.app/api/category/fetch"
+      )
+      .then((res) => {
+        console.log(res.data.categories);
+        setcategory(res.data.categories);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const [posts ,setPosts] = useState([])
+  
+  const ad = (data) =>{
+  axios
+      .get(
+        "https://sokhtamon-backend-production.up.railway.app/api/post/fetch?category_name="+data
+      )
+      .then((res) => {
+        setPosts(res.data.posts)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+  const options = category.map((data) => ({
+    label: data.categoryName,
+    value: data.categoryName,
+  }));
+
+
+
+
       return (
       <>
         <div className="bg-white-A700 flex flex-col font-roboto items-center justify-start w-full">
@@ -36,7 +76,7 @@ const Main = () => {
                 <div className="h-[50px] relative lg:w-[45%] xs:w-full">
                   <div className="bg-white-A700 flex flex-col h-full items-end justify-start m-auto xs:pl-10 lg:pl-[575px] rounded w-full">
                     <img
-                      className="h-[50px] rounded-br rounded-tr w-[50px]"
+                      className="h-full rounded-br rounded-tr w-[50px]"
                       src={search_bg}
                       alt="frame198"
                     />
@@ -60,10 +100,14 @@ const Main = () => {
                           />
                         }
                         isMulti={false}
-                        name="frame1984077262"
-                        options={selectCategoryOptionsList}
-                        isSearchable={false}
+                        name="Category"
+                        options={options}
+                        isSearchable={true}
                         placeholder="Select Category"
+                        onChange={(value) => {
+                    console.log(value);
+                    ad(value)
+                  }}
                       />
                     </div>
                   </div>
@@ -72,7 +116,7 @@ const Main = () => {
        <Link to="/post" className='w-[55%] h-[42px] mt-[3px]'>
        <div className='flex justify-end w-full h-full rounded-sm'>
     
-       <Text  className=" pt-2.5 w-[17%] items-end text-center ml-auto text-sm text-white-A700 tracking-[0.20px] bg-yellow-800 h-full" size="txtRobotoRomanSemiBold14">Place an Add </Text>
+       <Text  className=" pt-2.5 w-[17%] items-end text-center ml-auto text-sm text-white-A700 tracking-[0.20px] bg-yellow-800 h-full" size="txtRobotoRomanSemiBold14">Place an Ad </Text>
        </div>
        </Link>
               </div>
@@ -149,27 +193,27 @@ const Main = () => {
             New Advertisement
           </Text>
 
-          <div className="xs:gap-5 lg:gap-[0px] grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center min-h-[auto] mt-[54px] mx-auto xs:px-5 w-full">
-          <Link to="/product">
-          <div className="bg-white-A700 border border-blue_gray-100_01 border-solid flex xs:flex-1 flex-col items-center justify-start pb-[33px] rounded-md w-[70%]">
+          <div className=" grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center min-h-[auto] mt-[54px] ml-16  lg:w-full">
+          {
+            posts.map((data)=>(
+              <Link to="/product">
+          <div key={data._id} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex xs:flex-1 flex-col items-center justify-start pb-[33px] rounded-md w-[85%]">
               <img
                 className="lg:h-[240px] xs:h-auto object-cover rounded-bl rounded-br rounded-tl-md rounded-tr-md w-full"
-                src={cement}
+                src={data.post_image_url}
                 alt="rectangleThirtyTwo"
               />
               <Text
                 className="mt-[17px] text-blue_gray-900 text-xl"
                 size="txtRobotoBold20"
               >
-                Cement
+                {data.post_heading}
               </Text>
               <Text
                 className="leading-[150.00%] lowercase mt-[13px] text-base text-blue_gray-300 text-center tracking-[0.20px] lg:w-[83%] sm:w-full"
                 size="txtRobotoRegular16"
               >
-                lOREM IPSUM DOLOR SIT AMET CONSETETUR LOREM lOREM IPSUM DOLOR
-                SIT AMET CONSETETUR LOREM lOREM IPSUM DOLOR SIT AMET CONSETETUR
-                LOREM
+               {data.description}
               </Text>
               <div className="flex flex-row gap-2.5 items-center justify-start mt-1.5 w-auto">
                 <Text
@@ -182,7 +226,7 @@ const Main = () => {
                   className="text-gray-800 text-lg tracking-[0.20px] w-auto"
                   size="txtRobotoBold18"
                 >
-                  1199
+                  {data.price}
                 </Text>
               </div>
               <div className="flex flex-row gap-[15px] items-center justify-start mt-[15px] w-auto">
@@ -190,19 +234,25 @@ const Main = () => {
                   className="text-gray-800 text-lg tracking-[0.20px] w-auto"
                   size="txtRobotoBold18"
                 >
-                  13:12:2023
+                {
+                  moment(data.createdAt).format('YYYY-MM-DD')
+                }
                 </Text>
                 <Line className="bg-blue_gray-300_01 h-[25px] w-px" />
                 <Text
                   className="text-gray-800 text-lg tracking-[0.20px] w-auto"
                   size="txtRobotoBold18"
                 >
-                  12:30 PM
+                  {
+                  moment(data.createdAt).format('HH:mm a')
+                }
                 </Text>
               </div>
             </div>
           </Link>
-   
+            ))
+          }
+        
           
 
 

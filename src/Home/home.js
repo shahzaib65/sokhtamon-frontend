@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import banner from "../assets/banner.png";
 import search from "../assets/search.png";
-
+import axios from "axios";
 import Ads from "../Ads/ads";
 import { IoIosArrowDown } from "react-icons/io";
 const Home = () => {
@@ -10,6 +10,8 @@ const Home = () => {
   const handleSelectChange = (e) => {
     setSelectedOption(e.target.value);
   };
+
+ 
 
   
 

@@ -12,7 +12,7 @@ import { Text } from '../components/Text';
 const Footer = () => {
   
     return (
-        <div className=' flex flex-row justify-start items-center w-full'>
+        <div className=' flex flex-row justify-start items-center w-full mt-20'>
         <div className=' flex flex-row items-start justify-between py-[18px] w-[83%] ml-[70px] mr-[177px]'>
       <div className=' flex flex-col items-start justify-start w-[40%]'>
       <img
