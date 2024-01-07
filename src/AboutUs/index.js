@@ -90,7 +90,7 @@ const AboutUs = () => {
             className="absolute h-max inset-[0] justify-center m-auto sm:text-[40px] xs:text-[30px] md:text-[46px] text-[50px] text-center text-white-A700 tracking-[-1.00px] w-max"
             size="txtRobotoRomanBold50"
           >
-            About Us
+          О нас
           </Text>
         </div>
 
