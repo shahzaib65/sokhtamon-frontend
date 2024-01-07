@@ -62,12 +62,12 @@ const Main = () => {
     <div className="w-full flex flex-col bg-white-A700 ">
       <div className="relative flex flex-col w-full">
         <img
-          className="absolute lg:h-[560px] xs:h-[640px] w-full object-cover "
+          className="absolute lg:h-[560px] xs:h-[860px] w-full object-cover "
           src={banner}
           alt="Banner"
         />
 
-        <div className="absolute flex flex-col items-start justify-start lg:mx-[5%] mt-[2%] lg:w-[91%] xs:w-full">
+        <div className="absolute flex flex-col items-start justify-start lg:px-[2%] mt-[2%] lg:w-[100%] xs:w-full">
           <div className="flex xs:flex-col lg:flex-row xs:gap-5 mt-4 lg:justify-between xs:justify-center xs:items-center w-full">
             <div className="h-[50px] relative lg:w-[35%] xs:w-[80%] bg-white-A700">
               <div className="absolute flex flex-row sm:gap-10 h-full inset-y-[0] items-center justify-end px-3 my-auto w-[100%] ">
@@ -106,7 +106,7 @@ const Main = () => {
           </div>
 
           <Text
-                className="leading-[133.00%] mt-[51px]  xs:text-[34px] md:text-[40px] lg:text-[44px] text-white-A700 tracking-[1.32px] lg:w-[52%] xs:w-[70%] lg:mx-0 xs:mx-10"
+                className="leading-[133.00%] mt-[51px]  xs:text-[34px] md:text-[40px] lg:text-[44px] text-white-A700 tracking-[1.32px] lg:w-[60%] xs:w-[70%] lg:mx-0 xs:mx-10"
                 size="txtRobotoRomanSemiBold44">
                Откройте для себя превосходство строительных материалов вместе с нами!
               </Text>
@@ -127,7 +127,7 @@ const Main = () => {
         </div>
       </div>
 
-   <div className=" w-full h-auto xs:mt-[660px] lg:mt-[560px]">
+   <div className=" w-full h-auto xs:mt-[860px] lg:mt-[560px]">
    <Text
             className="mt-[52px] md:text-3xl xs:text-[28px] lg:text-[32px] text-black-900 text-center"
             size="txtRobotoBold32"
@@ -136,7 +136,7 @@ const Main = () => {
           </Text>
    </div>
 
-   <div className=" grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center min-h-[auto] mt-[54px] ml-16  lg:w-full">
+   <div className=" grid xs:grid-cols-1 xs:gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-center min-h-[auto] mt-[54px] ml-16  lg:w-full">
           {
             posts.map((data)=>(
               <>
