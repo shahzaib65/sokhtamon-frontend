@@ -101,7 +101,7 @@ const Footer = () => {
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-              Test@gmail.com
+             sokhtamon@gmail.com
             </Text>
 
             <Text
