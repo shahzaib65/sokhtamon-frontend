@@ -102,7 +102,7 @@ const Contact = () => {
                   </Text>
                   <input
                     name="name"
-                    placeholder="назови свое имя"
+                   
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   
                   ></input>
@@ -119,7 +119,7 @@ const Contact = () => {
 
                   <input
                     name="email"
-                  placeholder="разместите свой адрес электронной почты"
+                  
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   
                   ></input>
@@ -137,7 +137,7 @@ const Contact = () => {
                   </Text>
                   <input
                     name="subject"
-                  placeholder="разместите свою тему"
+                
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                     
                   ></input>
@@ -154,7 +154,7 @@ const Contact = () => {
 
                   <input
                     name="phone"
-                   placeholder="+123456789"
+                 
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                     wrapClassName="w-full"
                   ></input>
@@ -171,7 +171,6 @@ const Contact = () => {
                 </Text>
                 <input
                   name="description"
-                  placeholder="разместите свое описание"
                   className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   wrapClassName="w-full"
                 ></input>
