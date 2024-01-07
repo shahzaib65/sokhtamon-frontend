@@ -35,7 +35,7 @@ const Contact = () => {
           Связаться
         </Text>
 
-        <Text className=" mt-2 w-[50%] text-center">
+        <Text className=" mt-2 lg:w-[50%] md:w-[50%] xs:w-full text-center">
         Нужна помощь или есть вопросы о наших строительных материалах? Используйте контактную форму для быстрого и индивидуального ответа. Предпочитаете прямое общение? Наши контактные данные приведены ниже. Ваше удовлетворение является нашим приоритетом, и мы с нетерпением ждем вашего ответа. Давайте строить вместе!
         </Text>
 
@@ -88,7 +88,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex flex-row items-start justify-start space-x-6 mt-[24px] w-full">
-                  <img
+                  {/* <img
                     className="h-[30px] mb-3"
                     src={linkedin}
                     alt="group1000001776"
@@ -103,7 +103,7 @@ const Contact = () => {
                     className="h-[30px] mb-3"
                     src={discord}
                     alt="group1000001776"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
