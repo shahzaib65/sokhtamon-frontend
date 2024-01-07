@@ -68,7 +68,7 @@ const Main = () => {
         />
 
         <div className="absolute flex flex-col items-start justify-start mt-[2%] lg:w-full xs:w-full">
-          <div className="flex xs:flex-col lg:flex-row xs:gap-5 mt-4 lg:justify-between xs:justify-center lg:px-5 xs:items-center w-full">
+          <div className="flex xs:flex-col lg:flex-row xs:gap-5 mt-4 lg:justify-between xs:justify-center lg:px-10 xs:items-center w-full">
             <div className="h-[50px] relative lg:w-[35%] xs:w-[80%] bg-white-A700">
               <div className="absolute flex flex-row sm:gap-10 h-full inset-y-[0] items-center justify-end px-3 my-auto w-[100%] ">
                 <SelectBox
@@ -106,19 +106,19 @@ const Main = () => {
           </div>
 
           <Text
-                className="leading-[133.00%] mt-[51px]  xs:text-[34px] md:text-[40px] lg:text-[44px] text-white-A700 tracking-[1.32px] lg:w-[60%] xs:w-[70%] lg:mx-0 xs:mx-10"
+                className="leading-[133.00%] mt-[51px] lg:px-10  xs:text-[34px] md:text-[40px] lg:text-[44px] text-white-A700 tracking-[1.32px] lg:w-[60%] xs:w-[70%] lg:mx-0 xs:mx-10"
                 size="txtRobotoRomanSemiBold44">
                Откройте для себя превосходство строительных материалов вместе с нами!
               </Text>
 
               <Text
-                className="leading-[150.00%] mt-5 text-lg text-white-A700 tracking-[0.20px] lg:w-[45%] lg:mx-0 xs:mx-10 xs:w-[90%]"
+                className="leading-[150.00%] mt-5 text-lg text-white-A700 tracking-[0.20px] lg:w-[45%] lg:px-0 xs:mx-10 xs:w-[90%]"
                 size="txtRobotoRegular18"
               >
                Мир качественных строительных материалов, созданных для улучшения ваших проектов. Изучите широкий спектр надежных и инновационных решений, обеспечивающих долговечность и стиль каждой конструкции. Постройте свою мечту вместе с нами.
               </Text>
 
-              <div className=" flex xs:mx-5 lg:mx-0 lg:flex-row lg:gap-5 xs:gap-3 xs:flex-col mt-5">
+              <div className=" flex xs:mx-5 lg:px-5 lg:flex-row lg:gap-5 xs:gap-3 xs:flex-col mt-5">
              <img className=" h-[59px]" src={google} alt="Google"/>
              <img className=" h-[59px]" src={apple} alt="Apple"/>
               </div>
