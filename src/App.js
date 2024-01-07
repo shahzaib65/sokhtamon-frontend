@@ -12,7 +12,8 @@ import AboutUs from './AboutUs';
 function App() {
   return (
     <div className="App">
-    <Router>
+    <AboutUs/>
+    {/* <Router>
     <NavBar/>
    
       <Routes>
@@ -25,7 +26,7 @@ function App() {
       <Route exact path='/about' element={<AboutUs/>}/>
       <Route exact path='/login' element={<Login/>}/>
       </Routes>
-    </Router>
+    </Router> */}
     
     </div>
   );
