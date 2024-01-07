@@ -34,14 +34,14 @@ const Footer = () => {
               className="text-gray-900 text-xl"
               size="txtRobotoRomanSemiBold20"
             >
-              Страница
+             Страницы
             </Text>
 
             <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-              Дом
+              Главная
             </Text>
 
             <Text
@@ -55,7 +55,7 @@ const Footer = () => {
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-              Связаться с нами
+              Контакты
             </Text>
           </div>
 
@@ -64,14 +64,14 @@ const Footer = () => {
               className="text-gray-900 text-xl"
               size="txtRobotoRomanSemiBold20"
             >
-              Поддерживать
+              Поддержка
             </Text>
 
             <Text
               className="lg:text-base xs:text-xs md:text-xs text-center text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-             Часто задаваемые вопросы, с
+             Часто задаваемые вопросы
             </Text>
 
             <Text
@@ -94,7 +94,7 @@ const Footer = () => {
               className="text-gray-900 text-xl"
               size="txtRobotoRomanSemiBold20"
             >
-              Контакт
+              Контакты
             </Text>
 
             <Text
@@ -115,7 +115,7 @@ const Footer = () => {
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-              Официальный адрес
+              Адрес:
             </Text>
           </div>
 
@@ -123,12 +123,12 @@ const Footer = () => {
 
       <div className=" flex flex-col lg:gap-[35px] xs:gap-[10px] md:gap-[10px] justify-center items-center md:w-[20%] lg:w-[20%] h-auto xs:w-[100%]">
       <img
-                      className="lg:h-[59px] items-center md:w-[120px] xs:h-[40px] md:h-[40px]"
+                      className="lg:h-[59px] items-center md:w-[120px] lg:w-auto xs:h-[40px] md:h-[40px]"
                       src={googlePlay}
                       alt="googleplay"
                     />
                     <img
-                      className="lg:h-[59px] items-center md:w-[120px] xs:h-[40px] md:h-[40px]"
+                      className="lg:h-[59px] items-center md:w-[120px] lg:w-auto xs:h-[40px] md:h-[40px]"
                       src={appstore}
                       alt="appstore"
                     />

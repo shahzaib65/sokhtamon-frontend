@@ -51,19 +51,19 @@ const AboutUs = () => {
     },
     {
       "id": "3",
-      "title": "Двери",
+      "title": "Двери/Окна",
       "image": door,
       "description": "Элегантный портал, соединяющий пространства и приглашающий переходы. Созданный с высокой точностью, он одновременно является хранителем и проходом, символизируя возможности и очарование неизведанного."
     }, 
     {
       "id": "4",
-      "title": "Электрика и Молния",
+      "title": "Электрика",
       "image": electric,
       "description": "Откройте для себя инновационные электрические решения и блестящие конструкции освещения. Наш опыт освещает пространство и открывает возможности для более светлого и эффективного будущего."
     },
     {
       "id": "5",
-      "title": "Инструменты и оборудование",
+      "title": "Инструменты/оборудование",
       "image": tools,
       "description": "Ознакомьтесь с широким ассортиментом высококачественных инструментов и оборудования для любых задач. От прецизионных ручных инструментов до современного оборудования — мы предоставим вам все необходимое"
     },
@@ -99,14 +99,14 @@ const AboutUs = () => {
             className="mt-[50px] md:text-3xl xs:text-[20px] lg:text-[32px] text-black-900 text-center"
             size="txtRobotoBold32"
           >
-            Давайте строить мечты вместе
+            Давайте строить мечты вместе!
           </Text>
 
           <Text
-            className="lg:leading-[150.00%] lowercase mt-[21px] text-base text-blue_gray-300 text-center tracking-[0.20px] lg:w-[81%] xs:mx-10 xs:w-[90%]"
+            className="lg:leading-[150.00%] mt-[21px] text-base text-blue_gray-300 text-center tracking-[0.20px] lg:w-[81%] xs:mx-10 xs:w-[90%]"
             size="txtRobotoRegular16"
           >
-      Добро пожаловать в Сохта Мон, где инновации сочетаются с долговечностью, а мечты обретают форму. откройте для себя суть нашего пути, поскольку мы разделяем страсть и приверженность, которые побуждают нас предоставлять первоклассные строительные материалы. откройте для себя сердце нашей компании, где опыт и качество объединяются, чтобы создать основу для успеха. присоединяйтесь к нам на пути к совершенству, поскольку мы строим мир, в котором строительство сочетается с мастерством, а стремления становятся реальностью.
+      Добро пожаловать в Cохта-Mон, где инновации сочетаются с долговечностью, а мечты обретают форму. откройте для себя суть нашего пути, поскольку мы разделяем страсть и приверженность, которые побуждают нас предоставлять первоклассные строительные материалы. откройте для себя сердце нашей компании, где опыт и качество объединяются, чтобы создать основу для успеха. присоединяйтесь к нам на пути к совершенству, поскольку мы строим мир, в котором строительство сочетается с мастерством, а стремления становятся реальностью.
           </Text>
 
      <div className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>
@@ -119,13 +119,13 @@ const AboutUs = () => {
                 className="font-bold mt-[3px] text-base text-blue_gray-900 text-left"
                 src={circle}
                 alt='circle'/>
-              <Text className='font-bold mt-[3px] text-base text-blue_gray-900 text-left'>
+              <Text className='font-bold mt-[3px] capitalize text-base text-blue_gray-900 text-left'>
                 {e.title}
               </Text>
 
              </div>
               <Text
-                className="leading-[150.00%] lowercase mb-1 text-blue_gray-300 text-xs tracking-[0.20px] w-full"
+                className="leading-[150.00%]  mb-1 text-blue_gray-300 text-xs tracking-[0.20px] w-full"
                 size="txtRobotoRegular12Bluegray300"
               >
               {e.description}
@@ -151,14 +151,14 @@ const AboutUs = () => {
 </div>
 <div className="flex flex-col gap-2.5 items-center justify-start mb-[31px] w-auto sm:w-full">
 <Text
-                  className="text-black-900 text-xl w-auto"
+                  className="text-black-900 capitalize text-xl w-auto"
                   size="txtRobotoBold20"
                 >
                   {e.title}
                 </Text>
 
                 <Text
-                  className="leading-[150.00%] lowercase max-w-[383px] md:max-w-full text-base text-blue_gray-300 text-center tracking-[0.20px]"
+                  className="leading-[150.00%] max-w-[383px] md:max-w-full text-base text-blue_gray-300 text-center tracking-[0.20px]"
                   size="txtRobotoRegular16"
                 >
                   {e.description}
