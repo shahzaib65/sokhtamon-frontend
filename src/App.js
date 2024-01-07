@@ -12,7 +12,7 @@ import AboutUs from './AboutUs';
 function App() {
   return (
     <div className="App">
-    <Contact/>
+    <Login/>
     
     {/* <Router>
     <NavBar/>
