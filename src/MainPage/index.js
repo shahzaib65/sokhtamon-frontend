@@ -62,13 +62,13 @@ const Main = () => {
     <div className="w-full flex flex-col bg-white-A700 ">
       <div className="relative flex flex-col w-full">
         <img
-          className="absolute lg:h-[560px] xs:h-[860px] w-full object-cover "
+          className="absolute lg:h-[560px] xs:h-[860px] w-full object-cover"
           src={banner}
           alt="Banner"
         />
 
-        <div className="absolute flex flex-col items-start justify-start md:px-0 lg:px-0 mt-[2%] lg:w-full xs:w-full">
-          <div className="flex xs:flex-col lg:flex-row xs:gap-5 mt-4 lg:justify-between xs:justify-center xs:items-center w-full">
+        <div className="absolute flex flex-col items-start justify-start mt-[2%] lg:w-full xs:w-full">
+          <div className="flex xs:flex-col lg:flex-row xs:gap-5 mt-4 lg:justify-between xs:justify-center lg:px-5 xs:items-center w-full">
             <div className="h-[50px] relative lg:w-[35%] xs:w-[80%] bg-white-A700">
               <div className="absolute flex flex-row sm:gap-10 h-full inset-y-[0] items-center justify-end px-3 my-auto w-[100%] ">
                 <SelectBox
