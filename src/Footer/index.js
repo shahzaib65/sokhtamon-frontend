@@ -1,155 +1,145 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react'
+import React from "react";
 import logo from "../../src/assets/logo.png";
 import linkedin from "../../src/assets/linkedin.png";
 import twitter from "../../src/assets/twitter.png";
-import googlePlay from "../../src/assets/googleplay.png"
-import appstore from "../../src/assets/appstore.png"
+import googlePlay from "../../src/assets/googleplay.png";
+import appstore from "../../src/assets/appstore.png";
 import fb from "../../src/assets/fb.png";
-import { Text } from '../components/Text';
-
+import { Text } from "../components/Text";
 
 const Footer = () => {
-  
-    return (
-        <div className=' flex flex-row justify-start items-center w-full mt-20'>
-        <div className=' flex flex-row items-start justify-between py-[18px] w-[83%] ml-[70px] mr-[177px]'>
-      <div className=' flex flex-col items-start justify-start w-[40%]'>
+  return (
+    <div className=" flex flex-row justify-start items-center w-[90%] mt-20">
+      <div className=" flex lg:flex-row xs:flex-col items-start lg:justify-between xs:justify-center py-[18px] w-[100%]">
+        <div className="flex flex-col items-start justify-start lg:w-[40%] xs:w-[100%]">
+          <img className="w-auto h-[50px]" src={logo} alt="sokhtamonOne_One" />
+          <Text
+            className=" mt-[15px] text-base text-gray-900 tracking-[0.51px] w-full"
+            size="txtRobotoMedium16"
+          >
+            Lorem ipsum dolor sit amet consetetur sit amet lorem ipsum dolor sit
+            amet consetetur sit amet{" "}
+          </Text>
+
+          <div className=" flex flex-row space-x-4 mt-4">
+            <img src={fb} className=" w-5 h-5" alt="fb" />
+            <img src={twitter} className=" w-5 h-5" alt="twitter" />
+            <img src={linkedin} className=" w-5 h-5" alt="linkedin" />
+          </div>
+        </div>
+
+        <div className=" flex flex-row xs:items-center lg:items-center gap-[35px] lg:justify-center xs:justify-start lg:w-[40%] xs:w-[100%] h-auto">
+          <div className=" flex flex-col h-auto xs:mt-5 lg:mt-0">
+            <Text
+              className="text-gray-900 text-xl"
+              size="txtRobotoRomanSemiBold20"
+            >
+              Page
+            </Text>
+
+            <Text
+              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
+              size="txtRobotoMedium16"
+            >
+              Home
+            </Text>
+
+            <Text
+              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto"
+              size="txtRobotoMedium16"
+            >
+              About Us
+            </Text>
+
+            <Text
+              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
+              size="txtRobotoMedium16"
+            >
+              Contact Us
+            </Text>
+          </div>
+
+          <div className=" flex flex-col justify-center items-center h-auto xs:mt-5 lg:mt-0">
+            <Text
+              className="text-gray-900 text-xl"
+              size="txtRobotoRomanSemiBold20"
+            >
+              Support
+            </Text>
+
+            <Text
+              className="lg:text-base xs:text-xs text-center text-gray-900 tracking-[0.51px] w-auto my-5"
+              size="txtRobotoMedium16"
+            >
+              FAQ,s
+            </Text>
+
+            <Text
+              className="lg:text-base xs:text-xs text-center text-gray-900 tracking-[0.51px] w-auto"
+              size="txtRobotoMedium16"
+            >
+              Support Center
+            </Text>
+
+            <Text
+              className="lg:text-base xs:text-xs text-center text-gray-900 tracking-[0.51px] w-auto my-5"
+              size="txtRobotoMedium16"
+            >
+              Security
+            </Text>
+          </div>
+
+          <div className=" flex flex-col h-auto xs:mt-5 lg:mt-0">
+            <Text
+              className="text-gray-900 text-xl"
+              size="txtRobotoRomanSemiBold20"
+            >
+              Contact
+            </Text>
+
+            <Text
+              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
+              size="txtRobotoMedium16"
+            >
+              Test@gmail.com
+            </Text>
+
+            <Text
+              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto"
+              size="txtRobotoMedium16"
+            >
+              +923027119963
+            </Text>
+
+            <Text
+              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
+              size="txtRobotoMedium16"
+            >
+              Official Address
+            </Text>
+          </div>
+
+        </div>
+
+      <div className=" flex flex-col lg:gap-[35px] xs:gap-[10px] justify-center items-center lg:w-[20%] h-auto xs:w-[100%]">
       <img
-                      className="w-auto h-[50px]"
-                      src={logo}
-                      alt="sokhtamonOne_One"
+                      className="lg:h-[59px] xs:h-[40px]"
+                      src={googlePlay}
+                      alt="googleplay"
                     />
-                    <Text
-                      className="leading-[148.00%] mt-[15px] text-base text-gray-900 tracking-[0.51px] w-full"
-                      size="txtRobotoMedium16"
-                    >
-                      Lorem ipsum dolor sit amet consetetur sit amet lorem ipsum
-                      dolor sit amet consetetur sit amet{" "}
-                    </Text>     
-
-                    <div className=' flex flex-row space-x-4 mt-4'>
-           <img src={fb} className=' w-5 h-5' alt='fb'/>
-           <img src={twitter} className=' w-5 h-5' alt='twitter'/>
-           <img src={linkedin} className=' w-5 h-5' alt='linkedin'/>
-                            </div>  
-
+                    <img
+                      className="lg:h-[59px] xs:h-[40px]"
+                      src={appstore}
+                      alt="appstore"
+                    />
       </div>
 
-      <div className="flex flex-col top-[30%] gap-[35px] items-end justify-start w-[58%] xs:w-full">
-                    <div className="flex xs:flex-col lg:flex-row xs:gap-5 items-start justify-start w-full">
-                      <div className="flex xs:flex-1 lg:flex-col ml-40 gap-[18px] items-start justify-start xs:mt-0 lg:mt-0.5 w-[11%] md:w-full">
-                        <Text
-                          className="text-gray-900 text-xl"
-                          size="txtRobotoRomanSemiBold20"
-                        >
-                          Page
-                        </Text>
-                        <div className="flex flex-col gap-[27px] items-start justify-start w-auto">
-                          <Text
-                            className="text-base text-gray-900 tracking-[0.51px] w-auto"
-                            size="txtRobotoMedium16"
-                          >
-                            Home
-                          </Text>
-                          <Text
-                            className="text-base text-gray-900 tracking-[0.51px] w-auto"
-                            size="txtRobotoMedium16"
-                          >
-                            About Us
-                          </Text>
-                        </div>
-                      </div>
-                      <div className="flex md:flex-1 flex-col gap-[18px] items-start justify-start md:ml-[0] ml-[185px] w-[18%] md:w-full">
-                        <Text
-                          className="text-gray-900 text-xl"
-                          size="txtRobotoRomanSemiBold20"
-                        >
-                          Support
-                        </Text>
-                        <ul className="flex flex-col gap-[27px] items-start justify-start w-auto md:w-full common-column-list">
-                          <li>
-                            <Text
-                              className="text-base text-gray-900 tracking-[0.51px]"
-                              size="txtRobotoMedium16"
-                            >
-                              FAQ,s
-                            </Text>
-                          </li>
-                          <li>
-                            <Text
-                              className="text-base text-gray-900 tracking-[0.51px]"
-                              size="txtRobotoMedium16"
-                            >
-                              Support Center
-                            </Text>
-                          </li>
-                          <li>
-                            <Text
-                              className="text-base text-gray-900 tracking-[0.51px]"
-                              size="txtRobotoMedium16"
-                            >
-                              Security
-                            </Text>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="flex md:flex-1 flex-col gap-5 items-start justify-start md:ml-[0] ml-[100px] w-[31%] md:w-full">
-                        <Text
-                          className="text-gray-900 text-xl"
-                          size="txtRobotoRomanSemiBold20"
-                        >
-                          Contact Us
-                        </Text>
-                        <ul className="flex flex-col gap-[27px] items-start justify-start w-auto md:w-full common-column-list">
-                          <li>
-                            <Text
-                              className="text-base text-gray-900 tracking-[0.51px]"
-                              size="txtRobotoMedium16"
-                            >
-                              +92- 343-6683-499
-                            </Text>
-                          </li>
-                          <li>
-                            <Text
-                              className="text-base text-gray-900 tracking-[0.51px]"
-                              size="txtRobotoMedium16"
-                            >
-                              expertssys@gmail.com
-                            </Text>
-                          </li>
-                          <li>
-                            <Text
-                              className="text-base text-gray-900 tracking-[0.51px]"
-                              size="txtRobotoMedium16"
-                            >
-                              92, Expertsysytems, Lahore
-                            </Text>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="flex xs:flex-col lg:flex-row gap-4 items-center justify-end w-[63%] md:w-full">
-                      <img
-                        className="h-[59px]"
-                        src={googlePlay}
-                        alt="googleplay"
-                      />
-                      <img
-                        className="h-[59px]"
-                        src={appstore}
-                        alt="appstore"
-                      />
-                    </div>
-                  </div>
+      </div>
+    </div>
 
+    
+  );
+};
 
-        </div>
-       
-        </div>
-      );
-
-  
-}
-
-export default Footer
+export default Footer;

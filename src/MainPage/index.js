@@ -78,7 +78,7 @@ const Main = () => {
                     <img
                       className="h-full rounded-br rounded-tr w-[50px]"
                       src={search_bg}
-                      alt="frame198"
+                      alt="search"
                     />
                   </div>
                   <div className="absolute flex flex-row sm:gap-10 h-max inset-y-[0] items-center justify-between left-[2%] my-auto w-[89%]">
