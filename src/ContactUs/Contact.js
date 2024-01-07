@@ -24,7 +24,7 @@ const Contact = () => {
             className="absolute h-max inset-[0] justify-center m-auto sm:text-[40px] xs:text-[20px] md:text-[46px] text-[50px] text-center text-white-A700 tracking-[-1.00px] w-max"
             size="txtRobotoRomanBold50"
           >
-            Contact Us
+            Контакты
           </Text>
         </div>
 
@@ -32,11 +32,11 @@ const Contact = () => {
           className="mt-[62px] md:text-3xl sm:text-[28px] text-[32px] text-black-900 text-center"
           size="txtRobotoBold32"
         >
-          Get In Touch
+          Связаться
         </Text>
 
         <Text className=" mt-2 w-[50%] text-center">
-        Need assistance or have questions about our construction materials? Use the contact form for a quick and tailored response. Prefer direct communication? Find our contact details below. Your satisfaction is our priority, and we look forward to hearing from you. Let's build together!
+        Нужна помощь или есть вопросы о наших строительных материалах? Используйте контактную форму для быстрого и индивидуального ответа. Предпочитаете прямое общение? Наши контактные данные приведены ниже. Ваше удовлетворение является нашим приоритетом, и мы с нетерпением ждем вашего ответа. Давайте строить вместе!
         </Text>
 
         <div className=" flex bg-white-A700 justify-start items-center lg:w-[70%] xs:w-full mt-[54px] mx-20 p-[11px] rounded-[10px] shadow-bs">
@@ -47,13 +47,13 @@ const Contact = () => {
                   className="2xl:text-2xl xs:text-[22px] lg:text-[26px] text-white-A700 tracking-[-0.52px]"
                   size="txtRobotoRomanBold26"
                 >
-                  Contact Information
+                  Контактная информация
                 </Text>
                 <Text
                   className="mt-4 text-base text-white-A700"
                   size="txtRobotoRomanMedium16"
                 >
-                  Feel free to contact with us.
+                  Не стесняйтесь обращаться к нам.
                 </Text>
                 <div className="flex flex-row gap-[15px] items-start justify-start mt-[62px] w-[35%] md:w-full">
                   <img className="h-6 w-6" src={call} alt="bxsphonecall" />
@@ -70,7 +70,7 @@ const Contact = () => {
                     className="mt-[3px] text-base text-white-A700"
                     size="txtRobotoRomanMedium16"
                   >
-                    demo@gmail.com
+                    sokhtamon@gmail.com
                   </Text>
                 </div>
                 <div className="flex flex-row gap-[15px] items-start justify-start mt-[30px] w-[73%] md:w-full">
@@ -83,8 +83,7 @@ const Contact = () => {
                     className="text-base text-white-A700 w-[89%] sm:w-full"
                     size="txtRobotoRomanMedium16"
                   >
-                    132 Dartmouth Street Boston, Massachusetts 02156 United
-                    States
+                    Адрес:
                   </Text>
                 </div>
 
@@ -116,7 +115,7 @@ const Contact = () => {
                     className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                     size="txtRobotoRomanMedium14Gray90003"
                   >
-                    Full Name
+                   Полное имя
                   </Text>
                   <input
                     name="yournameone"
@@ -132,12 +131,12 @@ const Contact = () => {
                     className="text-gray-900 text-sm tracking-[-0.28px] lg:mt-0 w-auto xs:mt-[25px]"
                     size="txtRobotoRomanMedium14Gray90003"
                   >
-                    Email
+                   Электронная почта
                   </Text>
 
                   <input
                     name="yournameone"
-                    placeholder="abc..."
+                    placeholder="test@gmail.com"
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                     wrapClassName="w-full"
                   ></input>
@@ -151,11 +150,11 @@ const Contact = () => {
                     className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                     size="txtRobotoRomanMedium14Gray90003"
                   >
-                    Subject
+                    Предмет
                   </Text>
                   <input
                     name="yournameone"
-                    placeholder="abc..."
+                    placeholder="абв..."
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                     wrapClassName="w-full"
                   ></input>
@@ -167,12 +166,12 @@ const Contact = () => {
                     className="text-gray-900 text-sm tracking-[-0.28px] lg:mt-0 w-auto xs:mt-[25px]"
                     size="txtRobotoRomanMedium14Gray90003"
                   >
-                    Phone Number
+                    Номер телефона
                   </Text>
 
                   <input
                     name="yournameone"
-                    placeholder="abc..."
+                    placeholder="1234567..."
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                     wrapClassName="w-full"
                   ></input>
@@ -185,11 +184,11 @@ const Contact = () => {
                   className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                   size="txtRobotoRomanMedium14Gray90003"
                 >
-                  Description
+                  Описание
                 </Text>
                 <input
                   name="yournameone"
-                  placeholder="abc..."
+                  placeholder="абв..."
                   className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   wrapClassName="w-full"
                 ></input>
@@ -202,7 +201,7 @@ const Contact = () => {
                   shape="round"
                   size="md"
                 >
-                  Send Message
+                  Отправить сообщение
                 </Button>
               </div>
             </div>
