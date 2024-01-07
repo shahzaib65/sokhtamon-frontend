@@ -13,7 +13,7 @@ const Login = () => {
             >Sign in
             </Text>
 
-            <Text className='text-[16px] py-2 text-black-900' size="txtRobotoRegular12"> Don’t have an account?Login</Text>
+            <Text className='text-[16px] py-2 text-black-900' size="txtRobotoRegular12"> Don’t have an account?Register</Text>
 
             <Text
                           className="text-base text-gray-600 tracking-[-0.15px] w-auto mt-10"

@@ -12,8 +12,8 @@ import AboutUs from './AboutUs';
 function App() {
   return (
     <div className="App">
-    <Login/>
     
+    <Main/>
     {/* <Router>
     <NavBar/>
    
