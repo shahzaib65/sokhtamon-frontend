@@ -1,15 +1,16 @@
 import { useEffect,useState } from 'react'
 import logo from "../../src/assets/logo.png"
 import { Link } from 'react-router-dom';
-const navigation = [
-  
-  
-  { name: 'About Us', link: '/about'},
-  { name: 'Services', link: '/service' },
-  {name: 'Cities'},
-  {name: 'Login',link: '/login'},
+const navigation1 = [
+  { name: 'Home', link: '/'},
+  { name: 'About Us', link: '/about' },
+  {name: 'Services', link: '/service'},
   { name: 'Contact Us', link: '/contact' }
- 
+]
+
+const navigation2 = [
+  { name: 'Cities', link: ''},
+  { name: 'Login', link: '/login' },
 ]
 
 
@@ -40,10 +41,24 @@ export default function Example() {
                     alt="Your Company"
                   />
                  </Link>
+                 <div className="flex space-x-4">
+                    {navigation1.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.link}
+                        className={
+                          ' px-3 pt-[14px] text-sm font-roboto font-normal text-[#64748B]'
+                        }
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {navigation2.map((item) => (
                       <Link
                         key={item.name}
                         to={item.link}

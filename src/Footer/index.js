@@ -18,8 +18,7 @@ const Footer = () => {
             className=" mt-[15px] text-base text-gray-900 tracking-[0.51px] w-full"
             size="txtRobotoMedium16"
           >
-            Lorem ipsum dolor sit amet consetetur sit amet lorem ipsum dolor sit
-            amet consetetur sit amet{" "}
+           Давайте строить мечты вместе — ваш надежный источник качественных строительных материалов!
           </Text>
 
           <div className=" flex flex-row space-x-4 mt-4">
@@ -29,34 +28,34 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className=" flex flex-row xs:items-center lg:items-center gap-[35px] lg:justify-center xs:justify-start lg:w-[40%] xs:w-[100%] h-auto">
+        <div className=" flex flex-row xs:items-center lg:items-center gap-[35px] lg:justify-center xs:justify-start md:w-[40%] lg:w-[40%] xs:w-[100%] h-auto">
           <div className=" flex flex-col h-auto xs:mt-5 lg:mt-0">
             <Text
               className="text-gray-900 text-xl"
               size="txtRobotoRomanSemiBold20"
             >
-              Page
+              Страница
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
+              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-              Home
+              Дом
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto"
+              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto"
               size="txtRobotoMedium16"
             >
-              About Us
+              О нас
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
+              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-              Contact Us
+              Связаться с нами
             </Text>
           </div>
 
@@ -65,28 +64,28 @@ const Footer = () => {
               className="text-gray-900 text-xl"
               size="txtRobotoRomanSemiBold20"
             >
-              Support
+              Поддерживать
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs text-center text-gray-900 tracking-[0.51px] w-auto my-5"
+              className="lg:text-base xs:text-xs md:text-xs text-center text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-              FAQ,s
+             Часто задаваемые вопросы, с
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs text-center text-gray-900 tracking-[0.51px] w-auto"
+              className="lg:text-base xs:text-xs md:text-xs text-center text-gray-900 tracking-[0.51px] w-auto"
               size="txtRobotoMedium16"
             >
-              Support Center
+              Центр поддержки
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs text-center text-gray-900 tracking-[0.51px] w-auto my-5"
+              className="lg:text-base xs:text-xs md:text-xs text-center text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-              Security
+              Безопасность
             </Text>
           </div>
 
@@ -95,41 +94,41 @@ const Footer = () => {
               className="text-gray-900 text-xl"
               size="txtRobotoRomanSemiBold20"
             >
-              Contact
+              Контакт
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
+              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
               Test@gmail.com
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto"
+              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto"
               size="txtRobotoMedium16"
             >
               +923027119963
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
+              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-              Official Address
+              Официальный адрес
             </Text>
           </div>
 
         </div>
 
-      <div className=" flex flex-col lg:gap-[35px] xs:gap-[10px] justify-center items-center lg:w-[20%] h-auto xs:w-[100%]">
+      <div className=" flex flex-col lg:gap-[35px] xs:gap-[10px] md:gap-[10px] justify-center items-center md:w-[20%] lg:w-[20%] h-auto xs:w-[100%]">
       <img
-                      className="lg:h-[59px] xs:h-[40px]"
+                      className="lg:h-[59px] items-center md:w-[120px] xs:h-[40px] md:h-[40px]"
                       src={googlePlay}
                       alt="googleplay"
                     />
                     <img
-                      className="lg:h-[59px] xs:h-[40px]"
+                      className="lg:h-[59px] items-center md:w-[120px] xs:h-[40px] md:h-[40px]"
                       src={appstore}
                       alt="appstore"
                     />

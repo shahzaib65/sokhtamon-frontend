@@ -14,23 +14,23 @@ const AboutUs = () => {
   const services = [
     {
       "id": "1",
-      "title": "Commercial Services",
-      "description": "Description of the services will be come here"
+      "title": "Коммерческие услуги",
+      "description": "Наши бытовые приборы обеспечивают удобство и эффективность в повседневной жизни. От современных холодильников до интеллектуальных кофеварок - мы делаем ваш дом умным и комфортным."
     },
     {
       "id": "2",
-      "title": "Residentials Services",
-      "description": "Description of the services will be come here"
+      "title": "Жилищные услуги",
+      "description": "Резиденциальный сервис - идеальное сочетание комфорта и роскоши. Наши роскошные жилые комплексы предлагают высший уровень обслуживания, безупречный дизайн и современные удобства. Почувствуйте себя как дома в окружении роскоши и беззаботности."
     },
     {
       "id": "3",
-      "title": "Appliances",
-      "description": "Description of the services will be come here"
+      "title": "Техника",
+      "description": "Наш коммерческий сервис - надежное решение для вашего бизнеса. Мы предоставляем широкий спектр услуг, включая консультации, маркетинг и техническую поддержку. Развивайтесь с нами и достигайте новых высот"
     },
     {
       "id": "4",
-      "title": "Maintenance",
-      "description": "Description of the services will be come here"
+      "title": "Обслуживание",
+      "description": "Наша служба технического обслуживания обеспечивает надежность и долговечность вашего оборудования. Опытные специалисты проводят регулярные проверки и ремонт, гарантируя бесперебойную работу. Ваше спокойствие - наш приоритет."
     },
 
   ]
@@ -39,39 +39,39 @@ const AboutUs = () => {
 
     {
       "id": "1",
-      "title": "Markets",
+      "title": "Рынки",
       "image": market,
-      "description": "Category desription will come here"
+      "description": "Рынки – пульс бизнеса и обмена в России. От традиционных продуктовых базаров до современных финансовых рынков, здесь процветает разнообразие предложений. В мире бизнеса России рынки – место встречи предпринимателей."
     },
     {
       "id": "2",
-      "title": "Construction Material",
+      "title": "Строительный материал",
       "image": construction,
-      "description": "Category desription will come here"
+      "description": "Строительство - ключевая отрасль, формирующая городскую среду. От создания жилья до инфраструктурных проектов, строительство определяет облик и функциональность наших городов, обеспечивая комфорт и развитие."
     },
     {
       "id": "3",
-      "title": "Doors",
+      "title": "Двери",
       "image": door,
-      "description": "Category desription will come here"
+      "description": "Элегантный портал, соединяющий пространства и приглашающий переходы. Созданный с высокой точностью, он одновременно является хранителем и проходом, символизируя возможности и очарование неизведанного."
     }, 
     {
       "id": "4",
-      "title": "Electrical And Lightning",
+      "title": "Электрика и Молния",
       "image": electric,
-      "description": "Category desription will come here"
+      "description": "Откройте для себя инновационные электрические решения и блестящие конструкции освещения. Наш опыт освещает пространство и открывает возможности для более светлого и эффективного будущего."
     },
     {
       "id": "5",
-      "title": "Tools And Equipment",
+      "title": "Инструменты и оборудование",
       "image": tools,
-      "description": "Category desription will come here"
+      "description": "Ознакомьтесь с широким ассортиментом высококачественных инструментов и оборудования для любых задач. От прецизионных ручных инструментов до современного оборудования — мы предоставим вам все необходимое"
     },
     {
       "id": "6",
-      "title": "Plumbing",
+      "title": "Сантехника",
       "image": plumbing,
-      "description": "Category desription will come here"
+      "description": "Экспертные сантехнические решения для бесперебойного потока воды и эффективного дренажа. Доверьте ремонт и установку нашим квалифицированным специалистам. Ваши потребности в сантехнике – наш приоритет."
     },
     
 
@@ -99,23 +99,20 @@ const AboutUs = () => {
             className="mt-[50px] md:text-3xl xs:text-[20px] lg:text-[32px] text-black-900 text-center"
             size="txtRobotoBold32"
           >
-             Let's Build Dreams Together
+            Давайте строить мечты вместе
           </Text>
 
           <Text
             className="lg:leading-[150.00%] lowercase mt-[21px] text-base text-blue_gray-300 text-center tracking-[0.20px] lg:w-[81%] xs:mx-10 xs:w-[90%]"
             size="txtRobotoRegular16"
           >
-           Welcome to Sokhta Mon, where innovation meets durability and dreams take shape. 
-Discover the essence of our journey as we share the passion and commitment that drives us to provide top-notch building materials. 
-Discover the heart of our company, where experience and quality come together to create the basis for success.
-Join us on our journey to excellence as we build a world where construction meets craftsmanship and aspirations become reality.
+      Добро пожаловать в Сохта Мон, где инновации сочетаются с долговечностью, а мечты обретают форму. откройте для себя суть нашего пути, поскольку мы разделяем страсть и приверженность, которые побуждают нас предоставлять первоклассные строительные материалы. откройте для себя сердце нашей компании, где опыт и качество объединяются, чтобы создать основу для успеха. присоединяйтесь к нам на пути к совершенству, поскольку мы строим мир, в котором строительство сочетается с мастерством, а стремления становятся реальностью.
           </Text>
 
      <div className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>
 {
   services.map((e)=>(
-    <div key={e.id} className="bg-white-A700 flex flex-1 flex-col gap-2.5 items-start justify-center p-[25px] sm:px-5 rounded-md shadow-bs w-full">
+    <div key={e.id} className="bg-white-A700 flex flex-col gap-2.5 items-start justify-center p-[25px]  sm:px-5 rounded-md shadow-bs w-full">
              <div className=' flex flex-row space-x-3'>
              <img
                 value="Appliances"
