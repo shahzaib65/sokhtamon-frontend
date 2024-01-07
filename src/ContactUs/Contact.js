@@ -29,13 +29,13 @@ const Contact = () => {
         </div>
 
         <Text
-          className="mt-[62px] md:text-3xl sm:text-[28px] text-[32px] text-black-900 text-center"
-          size="txtRobotoBold32"
+         className="mt-[50px] md:text-3xl xs:text-[20px] lg:text-[32px] text-black-900 text-center"
+            size="txtRobotoBold32"
         >
           Связаться
         </Text>
-
-        <Text className=" mt-2 lg:w-[50%] md:w-[50%] xs:w-full text-center">
+    
+        <Text className="lg:leading-[150.00%] mt-[21px] lg:w-[50%] md:w-[50%] xs:w-full text-center" size="txtRobotoRegular16">
         Нужна помощь или есть вопросы о наших строительных материалах? Используйте контактную форму для быстрого и индивидуального ответа. Предпочитаете прямое общение? Наши контактные данные приведены ниже. Ваше удовлетворение является нашим приоритетом, и мы с нетерпением ждем вашего ответа. Давайте строить вместе!
         </Text>
 
@@ -80,31 +80,14 @@ const Contact = () => {
                     alt="carbonlocationf"
                   />
                   <Text
-                    className="text-base text-white-A700 w-[89%] sm:w-full"
+                    className="text-base text-white-A700 w-[89%] sm:w-full mb-[24px]"
                     size="txtRobotoRomanMedium16"
                   >
                     Адрес:
                   </Text>
                 </div>
 
-                <div className="flex flex-row items-start justify-start space-x-6 mt-[24px] w-full">
-                  {/* <img
-                    className="h-[30px] mb-3"
-                    src={linkedin}
-                    alt="group1000001776"
-                  />
-                  <img
-                    className="h-[30px] mb-3"
-                    src={insta}
-                    alt="group1000001776"
-                  />
-
-                  <img
-                    className="h-[30px] mb-3"
-                    src={discord}
-                    alt="group1000001776"
-                  /> */}
-                </div>
+               
               </div>
             </div>
 
@@ -118,12 +101,12 @@ const Contact = () => {
                    Полное имя
                   </Text>
                   <input
-                    name="yournameone"
-                    placeholder="abc..."
+                    name="name"
+                    placeholder="назови свое имя"
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
-                    wrapClassName="w-full"
+                  
                   ></input>
-                  <Line className="bg-gray-900_01 h-px p-0 w-full" />
+                  <Line className="bg-gray-900_01 h-[1px] p-0 w-full" />
                 </div>
 
                 <div className=" flex flex-col lg:w-[50%] gap-3 lg:mx-10 xs:mx-2 xs:w-[80%]">
@@ -135,12 +118,12 @@ const Contact = () => {
                   </Text>
 
                   <input
-                    name="yournameone"
-                    placeholder="test@gmail.com"
+                    name="email"
+                  placeholder="разместите свой адрес электронной почты"
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
-                    wrapClassName="w-full"
+                  
                   ></input>
-                  <Line className="bg-gray-900_01 h-px p-0 w-full" />
+                  <Line className="bg-gray-900_01 h-[1px] p-0 w-full" />
                 </div>
               </div>
 
@@ -153,12 +136,12 @@ const Contact = () => {
                     Предмет
                   </Text>
                   <input
-                    name="yournameone"
-                    placeholder="абв..."
+                    name="subject"
+                  placeholder="разместите свою тему"
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
-                    wrapClassName="w-full"
+                    
                   ></input>
-                  <Line className="bg-gray-900_01 h-px p-0 w-full" />
+                  <Line className="bg-gray-900_01 h-[1px] p-0 w-full" />
                 </div>
 
                 <div className=" flex flex-col lg:w-[50%] gap-3  lg:mx-10 xs:mx-2 xs:w-[80%]">
@@ -170,16 +153,16 @@ const Contact = () => {
                   </Text>
 
                   <input
-                    name="yournameone"
-                    placeholder="1234567..."
+                    name="phone"
+                   placeholder="+123456789"
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                     wrapClassName="w-full"
                   ></input>
-                  <Line className="bg-gray-900_01 h-px p-0 w-full" />
+                  <Line className="bg-gray-900_01 h-[1px] p-0 w-full" />
                 </div>
               </div>
 
-              <div className=" flex lg:w-[95%] flex-col lg:mt-[45px] justify-start items-start xs:mt-[25px] xs:w-[85%]">
+              <div className=" flex lg:w-[95%] flex-col gap-3 lg:mt-[45px] justify-start items-start xs:mt-[25px] xs:w-[85%]">
                 <Text
                   className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                   size="txtRobotoRomanMedium14Gray90003"
@@ -187,12 +170,12 @@ const Contact = () => {
                   Описание
                 </Text>
                 <input
-                  name="yournameone"
-                  placeholder="абв..."
+                  name="description"
+                  placeholder="разместите свое описание"
                   className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   wrapClassName="w-full"
                 ></input>
-                <Line className="bg-gray-900_01 h-px p-0 w-full" />
+                <Line className="bg-gray-900_01 h-[1px] p-0 w-full" />
               </div>
 
               <div className=" flex justify-end items-end w-full">
