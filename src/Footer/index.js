@@ -45,7 +45,7 @@ const Footer = () => {
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto"
+              className="lg:text-base capitalize xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto"
               size="txtRobotoMedium16"
             >
               О нас
@@ -75,7 +75,7 @@ const Footer = () => {
             </Text>
 
             <Text
-              className="lg:text-base xs:text-xs md:text-xs text-center text-gray-900 tracking-[0.51px] w-auto"
+              className="lg:text-base capitalize xs:text-xs md:text-xs text-center text-gray-900 tracking-[0.51px] w-auto"
               size="txtRobotoMedium16"
             >
               Центр поддержки
