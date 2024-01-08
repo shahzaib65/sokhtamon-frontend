@@ -96,7 +96,7 @@ const PostJob = () => {
               className="absolute h-max inset-[0] justify-center m-auto sm:text-[40px] xs:text-[20px] md:text-[46px] text-[50px] text-center text-white-A700 tracking-[-1.00px] w-max"
               size="txtRobotoRomanBold50"
             >
-              Post an Add
+             Опубликовать объявление
             </Text>
           </div>
 
@@ -146,11 +146,6 @@ const PostJob = () => {
        // setError(error)
     });
       }
-
-
-        
-
-
             })}
             className="flex flex-col gap-[0px] items-start justify-start mt-[70px] w-full"
           >
@@ -159,7 +154,7 @@ const PostJob = () => {
                 className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                 size="txtRobotoRomanMedium14Gray90003"
               >
-                Category
+                Категория
               </Text>
 
               <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
@@ -177,7 +172,7 @@ const PostJob = () => {
                   name="categoryName"
                   options={options}
                   isSearchable={true}
-                  placeholder="Select Category"
+                  placeholder="выберите категорию"
                   shape="round"
                   color="gray_100"
                   size="sm"
@@ -200,7 +195,7 @@ const PostJob = () => {
                   className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                   size="txtRobotoRomanMedium14Gray90003"
                 >
-                  Heading
+                  Заголовок
                 </Text>
 
                 <input
@@ -223,7 +218,7 @@ const PostJob = () => {
                   className="text-gray-900 text-sm tracking-[-0.28px] lg:mt-0 w-auto xs:mt-[25px]"
                   size="txtRobotoRomanMedium14Gray90003"
                 >
-                  City
+                Город
                 </Text>
 
                 <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
@@ -241,7 +236,7 @@ const PostJob = () => {
                     name="city"
                     options={cityData}
                     isSearchable={true}
-                    placeholder="Select City"
+                    placeholder="Выберите город"
                     shape="round"
                     color="gray_100"
                     size="sm"
@@ -264,7 +259,7 @@ const PostJob = () => {
                 className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                 size="txtRobotoRomanMedium14Gray90003"
               >
-                Price
+                Цена
               </Text>
 
               <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
@@ -290,14 +285,14 @@ const PostJob = () => {
                 inputClassName="border-2 border-black border-solid h-6 mr-[5px] w-6"
                 name="bargain"
                 id="bargain"
-                label="Bargain"
+                label="Торговаться"
               ></CheckBox>
               <CheckBox
                 className="font-medium text-[13px] text-left tracking-[-0.26px] flex justify-center items-center"
                 inputClassName="border-2 border-black border-solid h-6 mr-[5px] w-6"
                 name="forfree"
                 id="forfree"
-                label="For Free"
+                label="Бесплатно"
               ></CheckBox>
             </div>
 
@@ -308,7 +303,7 @@ const PostJob = () => {
                 className="mt-10 text-gray-900 text-sm tracking-[-0.28px]"
                 size="txtRobotoRomanMedium14Gray90003"
               >
-                Photos:
+                Фото:
               </Text>
               <div className=" flex flex-row space-x-5 h-[100px] justify-start items-center mt-3.5 w-full">
                 <input
@@ -349,7 +344,7 @@ const PostJob = () => {
                   className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                   size="txtRobotoRomanMedium14Gray90003"
                 >
-                  Description
+                  Описание
                 </Text>
 
                 <div className="flex flex-col items-center justify-start w-full">
@@ -378,7 +373,7 @@ const PostJob = () => {
                   className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                   size="txtRobotoRomanMedium14Gray90003"
                 >
-                  Name
+                Имя
                 </Text>
 
                 <input
@@ -402,7 +397,7 @@ const PostJob = () => {
                   className="text-gray-900 text-sm tracking-[-0.28px] lg:mt-0 w-auto xs:mt-[25px]"
                   size="txtRobotoRomanMedium14Gray90003"
                 >
-                  Email
+                  Электронная почта
                 </Text>
 
                 <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
@@ -431,7 +426,7 @@ const PostJob = () => {
                   className="text-gray-900 text-sm tracking-[-0.28px] lg:mt-0 w-auto xs:mt-[25px]"
                   size="txtRobotoRomanMedium14Gray90003"
                 >
-                  Telephone
+                  Tелефон
                 </Text>
 
                 <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
@@ -458,12 +453,12 @@ const PostJob = () => {
                 type="submit"
                 className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center rounded-sm text-white-A700 font-roboto font-semibold tracking-[0.20px]"
               >
-                {loading ? <ClipLoader color="#FFFFFF" size={30} /> : "Submit"}
+                {loading ? <ClipLoader color="#FFFFFF" size={30} /> : "Представлять на рассмотрение"}
               </button>
             </div>
           </form>
 
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
     </>
