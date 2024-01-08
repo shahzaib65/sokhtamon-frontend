@@ -59,7 +59,7 @@ const Main = () => {
   }));
 
   return (
-    <div className="w-full flex flex-col bg-white-A700 ">
+    <div className="w-full flex flex-col overflow-hidden bg-white-A700 ">
       <div className="relative flex flex-col w-full">
         <img
           className="absolute lg:h-[560px] xs:h-[860px] w-full object-cover"
@@ -72,7 +72,7 @@ const Main = () => {
             <div className="h-[50px] relative lg:w-[35%] xs:w-[80%] bg-white-A700">
               <div className="absolute flex flex-row sm:gap-10 h-full inset-y-[0] items-center justify-end px-3 my-auto w-[100%] ">
                 <SelectBox
-                  className="text-black-900 text-right text-sm tracking-[0.20px] w-full"
+                  className="text-black-900 text-right text-sm tracking-[0.20px] w-full capitalize"
                   placeholderClassName="text-black-900"
                   indicator={
                     <img
@@ -106,7 +106,7 @@ const Main = () => {
           </div>
 
           <Text
-                className="leading-[133.00%] mt-[51px] lg:px-10  xs:text-[34px] md:text-[40px] lg:text-[44px] text-white-A700 tracking-[1.32px] lg:w-[60%] xs:w-[70%] lg:mx-0 xs:mx-10"
+                className="leading-[133.00%] mt-[51px] lg:px-10  xs:text-[34px] md:text-[40px] lg:text-[44px] text-white-A700 tracking-[1.32px] lg:w-[61%] xs:w-[70%] lg:mx-0 xs:mx-10"
                 size="txtRobotoRomanSemiBold44">
                Откройте для себя превосходство строительных материалов вместе с нами!
               </Text>
@@ -132,11 +132,11 @@ const Main = () => {
             className="mt-[52px] md:text-3xl xs:text-[28px] lg:text-[32px] text-black-900 text-center"
             size="txtRobotoBold32"
           >
-           Новая реклама
+          Новые объявления
           </Text>
    </div>
 
-   <div className=" grid xs:grid-cols-1 xs:gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-center min-h-[auto] mt-[54px] ml-16  lg:w-full">
+   <div className=" grid xs:grid-cols-1 xs:gap-6 sm:grid-cols-2 lg:grid-cols-4 justify-center min-h-[auto] mt-[54px] ml-16  lg:w-full">
           {
             posts.map((data)=>(
               <>
