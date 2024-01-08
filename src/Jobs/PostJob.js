@@ -199,7 +199,7 @@ const PostJob = () => {
                 </Text>
 
                 <input
-                  placeholder="abc..."
+                 
                   className=" p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   wrapClassName="w-full"
                   {...register("heading", {
@@ -265,7 +265,7 @@ const PostJob = () => {
               <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
                 <input
                   name="yournameone"
-                  placeholder="$10"
+                
                   className="p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   {...register("price", {
                     required: "Price is required",
@@ -351,7 +351,7 @@ const PostJob = () => {
                   <textarea
                     className="bg-gray-100 border-0 pb-[35px] pl-[25px] pr-[35px] pt-5 sm:px-5 rounded placeholder:text-gray-700 text-gray-700 text-left text-sm w-full outline-none"
                     name="yournamefour"
-                    placeholder="Lorem ipsum dolor sit amet...."
+                   
                     {...register("description", {
                       required: "Description is required",
                     })}
@@ -378,7 +378,7 @@ const PostJob = () => {
 
                 <input
                   name="yournameone"
-                  placeholder="abc..."
+                
                   className="p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   wrapClassName="w-full"
                   {...register("name", {
@@ -403,7 +403,7 @@ const PostJob = () => {
                 <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
                   <input
                     name="yournameone"
-                    placeholder="email@gmail.com"
+                    
                     className="p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                     {...register("email", {
                     required: "email is required",
@@ -432,7 +432,7 @@ const PostJob = () => {
                 <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
                   <input
                     name="yournameone"
-                    placeholder="+12345678543"
+                  
                     type="text"
                     className="p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                     {...register("phone", {
