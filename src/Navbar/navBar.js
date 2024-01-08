@@ -33,7 +33,7 @@ export default function Example() {
   <>
      <div className="mx-auto w-full  px-6 sm:px-6 lg:px-8">
             <div className="flex h-20 items-center justify-between">
-            <div className="flex flex-shrink-0 items-center">
+            <div className="flex flex-shrink-0 items-center ml-0">
                  <Link to="/">
                  <img
                     className="h-[40px] w-auto ml-8"
@@ -41,7 +41,7 @@ export default function Example() {
                     alt="Your Company"
                   />
                  </Link>
-                 <div className="flex space-x-4">
+                 <div className="flex space-x-4 ml-4">
                     {navigation1.map((item) => (
                       <Link
                         key={item.name}

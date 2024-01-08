@@ -48,83 +48,139 @@ const ServicePage = () => {
   const category =[
 
     {
-      "id": "1",
-      "title": "Плотник"
+      "label": "Плотник",
+      "value": "Плотник"
       
     },
     {
-      "id": "2",
-      "title": "Водопроводчик"
+      "label": "Водопроводчик",
+      "value": "Водопроводчик"
       
     },
     {
-      "id": "3",
-      "title": "Строительные рабочие",
+      "label": "Строительные рабочие",
+      "value": "Строительные рабочие",
     
     }, 
     {
-      "id": "4",
-      "title": "Асфальтировщик"
+      "label": "Асфальтировщик",
+      "value": "Асфальтировщик"
     },
     {
-      "id": "5",
-      "title": "Крановщик"
+      "label": "Крановщик",
+      "value": "Крановщик"
     },
     {
-      "id": "6",
-      "title": "ОВиК"
+      "label": "ОВиК",
+      "value": "ОВиК"
     },
     {
-      "id": "7",
-      "title": "Кровельщик"
+      "label": "Кровельщик",
+      "value": "Кровельщик"
     },
     {
-      "id": "8",
-      "title": "Украшение"
+      "label": "Украшение",
+      "value": "Украшение"
     },
     {
-      "id": "9",
-      "title": "Инспектор"
+      "label": "Инспектор",
+      "value": "Инспектор"
     },
     {
-      "id": "10",
-      "title": "Каменщик"
+      "label": "Каменщик",
+      "value": "Каменщик"
     },
     {
-      "id": "11",
-      "title": "Подрядчик по обрамлению"
+      "label": "Подрядчик по обрамлению",
+      "value": "Подрядчик по обрамлению"
     },
     {
-      "id": "12",
-      "title": "геодезист"
+      "label": "геодезист",
+      "value": "геодезист"
     },
     {
-      "id": "13",
-      "title": "Электрик"
+      "label": "Электрик",
+      "value": "Электрик"
     },
     {
-      "id": "14",
-      "title": "Архитектор"
+      "label": "Архитектор",
+      "value": "Архитектор"
     },
     {
-      "id": "15",
-      "title": "Отделочник гипсокартона"
+      "label": "Отделочник гипсокартона",
+      "value": "Отделочник гипсокартона"
     },
     {
-      "id": "16",
-      "title": "Маляр и декоратор"
+      "label": "Маляр и декоратор",
+      "value": "Маляр и декоратор"
     },
     {
-      "id": "17",
-      "title": "Бетоноотделочник"
+      "label": "Бетоноотделочник",
+      "value": "Бетоноотделочник"
     },
     {
-      "id": "18",
-      "title": "Стекольщик"
+      "label": "Стекольщик",
+      "value": "Стекольщик"
     },
     {
-      "id": "19",
-      "title": "Установщик плитки"
+      "label": "Установщик плитки",
+      "value": "Установщик плитки"
+    },
+    {
+      "label": "Вход",
+      "value": "Вход"
+    },
+    {
+      "label": "Отделочные работы",
+      "value": "Отделочные работы"
+    },
+    {
+      "label": "Штукатурные работы",
+      "value": "Штукатурные работы"
+    },
+    {
+      "label": "Выравнивание пола",
+      "value": "Выравнивание пола"
+    },
+    {
+      "label": "Малярные работы",
+      "value": "Малярные работы"
+    },
+    {
+      "label": "Паркетные работы",
+      "value": "Паркетные работы"
+    },
+    {
+      "label": "Укладка ПВХ покрытий",
+      "value": "Укладка ПВХ покрытий"
+    },
+    {
+      "label": "Плиточные работы",
+      "value": "Плиточные работы"
+    },
+    {
+      "label": "Звукоизоляция помещений",
+      "value": "Звукоизоляция помещений"
+    },
+    {
+      "label": "Инженерная сантехника",
+      "value": "Инженерная сантехника"
+    },
+    {
+      "label": "Электро-монтажные работы",
+      "value": "Электро-монтажные работы"
+    },
+    {
+      "label": "Монтаж теплого пола",
+      "value": "Монтаж теплого пола"
+    },
+    {
+      "label": "Натяжные потолки",
+      "value": "Натяжные потолки"
+    },
+    {
+      "label": "Установка дверей",
+      "value": "Установка дверей"
     }
 
     
@@ -161,15 +217,13 @@ const ServicePage = () => {
         Наша миссия - обеспечить клиентов всеми необходимыми строительными услугами под ключ, делая процесс легким и эффективным. С нами ваш проект будет в надежных руках, а результат будет отвечать самым высоким стандартам качества.
         </Text>
 
-
-
           <div className="flex xs:flex-col lg:flex-row gap-[50px] items-start justify-start lg:w-[70%] mt-[70px] mx-auto xs:px-5 xs:w-full">
-            <Text
+            {/* <Text
               className="text-2xl xs:text-[22px] text-black-900 sm:text-xl w-auto mt-4"
               size="txtRobotoRomanSemiBold24Black900"
             >
-              Search :
-            </Text>
+              Поиск :
+            </Text> */}
             <div className="border border-blue_gray-300_01 border-solid flex xs:flex-1 lg:flex-row items-center justify-between rounded lg:w-[85%]  xs:w-full">
               <SelectBox
                 className="font-medium text-base text-center text-gray-400 w-[16%] lg:pr-4  sm:w-full"
@@ -183,9 +237,9 @@ const ServicePage = () => {
                 }
                 isMulti={false}
                 name="Schedule"
-                options={schedule}
-                isSearchable={false}
-                placeholder="Расписание"
+                options={category}
+                isSearchable={true}
+                placeholder="Выберите услугу"
               />
               <Line className="bg-blue_gray-300_01 h-[62px] w-px" />
               <SelectBox
@@ -223,7 +277,7 @@ const ServicePage = () => {
             </div>
           </div>
 
-          <div className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>
+          <div className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>
 {
   category.map((e)=>(
 
@@ -237,7 +291,7 @@ const ServicePage = () => {
                   className="text-black-900 text-center capitalize text-xl w-auto"
                   size="txtRobotoBold20"
                 >
-                  {e.title}
+                  {e.value}
                 </Text>
 
                 <Text
