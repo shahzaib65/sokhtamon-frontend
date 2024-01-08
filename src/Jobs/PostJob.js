@@ -7,7 +7,6 @@ import { Line } from "../components/Line";
 import arrow from "../assets/arrow.png";
 import add from "../assets/add.svg";
 import { ClipLoader } from "react-spinners";
-import Footer from "../Footer";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 const PostJob = () => {

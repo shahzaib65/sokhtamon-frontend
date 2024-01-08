@@ -30,8 +30,7 @@ const Contact = () => {
 
         <Text
          className="mt-[50px] md:text-3xl xs:text-[20px] lg:text-[32px] text-black-900 text-center"
-            size="txtRobotoBold32"
-        >
+            size="txtRobotoBold32">
           Связаться
         </Text>
     
