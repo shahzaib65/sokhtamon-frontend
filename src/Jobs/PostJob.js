@@ -18,11 +18,13 @@ const PostJob = () => {
   } = useForm();
   const [loading, setLoading] = useState(false);
   const [selectCat, setSelectCat] = useState(null);
+  const [subCat, setSubbCat] = useState(null);
   const [selectCity, setSelectCity] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
   const [image, setImage] = useState(null);
   const [category, setcategory] = useState([]);
   const [city, setCity] = useState([]);
+  
 
   const fileInputRef = useRef(null);
 
@@ -39,6 +41,17 @@ const PostJob = () => {
     label: data.city_name,
     value: data.city_name,
   }));
+
+   const subCategory = [
+    
+      {"option": "Рынок Кушониён",label: "Рынок Кушониён"},
+      {"option": "Рынок Хисор",label: "Рынок Хисор"},
+      {"option": "Рынок Балх",label: "Рынок Балх"},
+      {"option": "Рынок Кавсар",label: "Рынок Кавсар"},
+      {"option": "Рынок Ховарон",label: "Рынок Ховарон"}
+    
+   ]
+
 
   useEffect(() => {
     categories();
@@ -148,7 +161,11 @@ const PostJob = () => {
             })}
             className="flex flex-col gap-[0px] items-start justify-start mt-[70px] w-full"
           >
-            <div className="flex flex-col lg:items-start gap-3 lg:justify-start lg:w-[35%] lg:mx-20 xs:items-start xs:justify-start xs:w-[80%] xs:mx-2 ">
+
+   
+   <div className="flex lg:flex-row xs:flex-col mt-[25px] w-full lg:mx-20 justify-start items-start xs:mx-2">
+
+            <div className="flex flex-col lg:items-start gap-3 lg:justify-start lg:w-[35%] lg:mx-0 xs:items-start xs:justify-start xs:w-[80%] xs:mx-2 ">
               <Text
                 className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                 size="txtRobotoRomanMedium14Gray90003"
@@ -183,10 +200,53 @@ const PostJob = () => {
                   // })}
                 />
               </div>
-              {/* {errors.categoryName && (
-                  <p className="text-start text-red-500">{errors.categoryName.message}</p>
-                )} */}
             </div>
+            <div className="flex flex-col lg:items-start gap-3 lg:justify-start lg:w-[35%] lg:mx-10 xs:items-start xs:justify-start xs:w-[80%] xs:mx-2 ">
+              <Text
+                className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
+                size="txtRobotoRomanMedium14Gray90003"
+              >
+              Подкатегория
+              </Text>
+
+              <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
+                <SelectBox
+                  className="text-left text-sm w-full px-2"
+                  placeholderClassName="text-gray-700"
+                  indicator={
+                    <img
+                      className="h-6 mr-[0] w-6"
+                      src={arrow}
+                      alt="arrow_down"
+                    />
+                  }
+                  isMulti={false}
+                  name="subcategory"
+                  options={subCategory}
+                  isSearchable={true}
+                  placeholder="Выберите подкатегорию"
+                  shape="round"
+                  color="gray_100"
+                  size="sm"
+                  onChange={(value) => {
+                    setSubbCat(value);
+                  }}
+                  // {...register("categoryName", {
+                  //   required: "Category is required"
+                  // })}
+                />
+              </div>
+            </div>
+
+   </div>
+
+            
+
+
+           
+
+
+            
 
             <div className="flex lg:flex-row xs:flex-col mt-[25px] w-full lg:mx-20 justify-start items-start xs:mx-2">
               <div className=" flex flex-col lg:w-[35%] gap-3 xs:w-[80%] ">
@@ -197,8 +257,7 @@ const PostJob = () => {
                   Заголовок
                 </Text>
 
-                <input
-                 
+                <input 
                   className=" p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full rounded-[4px]"
                   wrapClassName="w-full"
                   {...register("heading", {

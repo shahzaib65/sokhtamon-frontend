@@ -95,12 +95,12 @@ const Main = () => {
             </div>
             <div className="lg:w-[65%] xs:w-[80%] md:w-[65%] h-[42px]">
               <div className="flex justify-end w-full h-full rounded-sm">
-                <div
+                <Link to="/post"
                   className=" pt-2.5 lg:w-[20%] xs:w-[100%] lg:items-end xs:items-center text-center text-sm text-white-A700 tracking-[0.20px] bg-yellow-800 h-full"
                   size="txtRobotoRomanSemiBold14"
                 >
                   Разместить объявление
-                </div>
+                </Link>
               </div>
             </div>
           </div>
