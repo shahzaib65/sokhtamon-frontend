@@ -172,7 +172,7 @@ const PostJob = () => {
                   name="categoryName"
                   options={options}
                   isSearchable={true}
-                  placeholder="выберите категорию"
+                  placeholder="Bыберите Kатегорию"
                   shape="round"
                   color="gray_100"
                   size="sm"
@@ -200,7 +200,7 @@ const PostJob = () => {
 
                 <input
                  
-                  className=" p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
+                  className=" p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full rounded-[4px]"
                   wrapClassName="w-full"
                   {...register("heading", {
                     required: "Heading is required",
@@ -349,7 +349,7 @@ const PostJob = () => {
 
                 <div className="flex flex-col items-center justify-start w-full">
                   <textarea
-                    className="bg-gray-100 border-0 pb-[35px] pl-[25px] pr-[35px] pt-5 sm:px-5 rounded placeholder:text-gray-700 text-gray-700 text-left text-sm w-full outline-none"
+                    className="bg-gray-100 border-0 pb-[35px] pl-[25px] pr-[35px] pt-5 sm:px-5 placeholder:text-gray-700 text-gray-700 text-left text-sm w-full outline-none rounded-[4px]"
                     name="yournamefour"
                    
                     {...register("description", {
@@ -379,7 +379,7 @@ const PostJob = () => {
                 <input
                   name="yournameone"
                 
-                  className="p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full"
+                  className="p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full rounded-[4px]"
                   wrapClassName="w-full"
                   {...register("name", {
                     required: "Name is required",
@@ -448,12 +448,12 @@ const PostJob = () => {
               </div>
             </div>
 
-            <div className=" w-full flex justify-center mt-[25px] mb-7">
+            <div className=" w-full flex justify-center mt-[55px] mb-7">
               <button
                 type="submit"
-                className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center rounded-sm text-white-A700 font-roboto font-semibold tracking-[0.20px]"
+                className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center  text-white-A700 font-roboto font-semibold tracking-[0.20px] rounded-[4px]"
               >
-                {loading ? <ClipLoader color="#FFFFFF" size={30} /> : "Представлять на рассмотрение"}
+                {loading ? <ClipLoader color="#FFFFFF" size={30} /> : "Подать объявление"}
               </button>
             </div>
           </form>
