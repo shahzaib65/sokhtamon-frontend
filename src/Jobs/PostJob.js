@@ -172,7 +172,7 @@ const PostJob = () => {
                   name="categoryName"
                   options={options}
                   isSearchable={true}
-                  placeholder="Bыберите kатегорию"
+                  placeholder="Bыберите категорию"
                   shape="round"
                   color="gray_100"
                   size="sm"
@@ -306,7 +306,7 @@ const PostJob = () => {
                 Фото:
               </Text>
               <div className=" flex flex-row space-x-5 h-[100px] justify-start items-center mt-3.5 w-full">
-                <input
+                <input className=" outline-none"
                   type="file"
                   style={{ display: "none" }}
                   ref={fileInputRef}
