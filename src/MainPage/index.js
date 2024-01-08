@@ -62,7 +62,7 @@ const Main = () => {
     <div className="w-full flex flex-col overflow-hidden bg-white-A700 ">
       <div className="relative flex flex-col w-full">
         <img
-          className="absolute lg:h-[560px] xs:h-[860px] w-full object-cover"
+          className="absolute lg:h-[550px] xs:h-[860px] w-full object-cover"
           src={banner}
           alt="Banner"
         />
@@ -118,7 +118,7 @@ const Main = () => {
                Мир качественных строительных материалов, созданных для улучшения ваших проектов. Изучите широкий спектр надежных и инновационных решений, обеспечивающих долговечность и стиль каждой конструкции. Постройте свою мечту вместе с нами.
               </Text>
 
-              <div className=" flex xs:mx-5 lg:px-5 lg:flex-row lg:gap-5 xs:gap-3 xs:flex-col mt-5">
+              <div className=" flex xs:mx-5 lg:px-5 lg:flex-row lg:gap-5 lg:mt-10 xs:gap-3 xs:flex-col mt-5">
              <img className=" h-[59px]" src={google} alt="Google"/>
              <img className=" h-[59px]" src={apple} alt="Apple"/>
               </div>
