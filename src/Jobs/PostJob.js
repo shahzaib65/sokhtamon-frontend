@@ -172,7 +172,7 @@ const PostJob = () => {
                   name="categoryName"
                   options={options}
                   isSearchable={true}
-                  placeholder="Bыберите Kатегорию"
+                  placeholder="Bыберите kатегорию"
                   shape="round"
                   color="gray_100"
                   size="sm"
@@ -320,7 +320,7 @@ const PostJob = () => {
                     onClick={handleImageClick}
                     className="h-8 w-8"
                     src={add}
-                    alt="carbonaddfilled"
+                    alt=""
                   />
                 </div>
 
@@ -328,7 +328,7 @@ const PostJob = () => {
                   <img
                     className="h-[100px] w-[100px]"
                     src={image}
-                    alt="carbonaddfilled"
+                    alt=""
                   />
                 </div>
               </div>
