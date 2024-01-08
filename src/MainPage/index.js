@@ -198,10 +198,10 @@ const Main = () => {
           </div>
 
          
-     <div className=" lg:mx-[3%] xs:mx-0 h-auto">
+     {/* <div className=" lg:mx-0 xs:mx-0 h-auto w-full">
      <Footer/>
 
-     </div>
+     </div> */}
 
       
     </div>

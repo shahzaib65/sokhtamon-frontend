@@ -9,11 +9,12 @@ import Login from './Login';
 import Main from './MainPage';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import AboutUs from './AboutUs';
+import Footer from './Footer';
 function App() {
   return (
     <div className="App">
     
-    <Main/>
+   <Main/>
     {/* <Router>
     <NavBar/>
    
@@ -28,7 +29,7 @@ function App() {
       <Route exact path='/login' element={<Login/>}/>
       </Routes>
     </Router> */}
-    
+    <Footer/>
     </div>
   );
 }

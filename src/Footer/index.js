@@ -10,7 +10,7 @@ import { Text } from "../components/Text";
 
 const Footer = () => {
   return (
-    <div className=" flex flex-row justify-start items-center w-[90%] mt-20">
+    <div className=" flex flex-row justify-start items-center lg:mx-[3%] w-[90%] mt-20">
       <div className=" flex lg:flex-row xs:flex-col items-start lg:justify-between xs:justify-center py-[18px] w-[100%]">
         <div className="flex flex-col items-start justify-start lg:w-[40%] xs:w-[100%]">
           <img className="w-auto h-[50px]" src={logo} alt="sokhtamonOne_One" />
@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className=" flex flex-row xs:items-center lg:items-center gap-[35px] lg:justify-center xs:justify-start md:w-[40%] lg:w-[40%] xs:w-[100%] h-auto">
+        <div className=" flex flex-row xs:items-center lg:items-center gap-[35px] lg:justify-center xs:justify-start md:w-[55%] lg:space-x-3 lg:w-[55%] xs:w-[100%] h-auto">
           <div className=" flex flex-col h-auto xs:mt-5 lg:mt-0">
             <Text
               className="text-gray-900 text-xl"
@@ -121,14 +121,14 @@ const Footer = () => {
 
         </div>
 
-      <div className=" flex flex-col lg:gap-[35px] xs:gap-[10px] md:gap-[10px] justify-center items-center md:w-[20%] lg:w-[20%] h-auto xs:w-[100%]">
+      <div className=" flex flex-col lg:gap-[35px] xs:gap-[10px] md:gap-[10px] justify-center items-center md:w-auto lg:w-auto h-auto xs:w-[100%]">
       <img
-                      className="lg:h-[59px] items-center md:w-[120px] lg:w-auto xs:h-[40px] md:h-[40px]"
+                      className="lg:h-[59px] lg:ml-20 xs:ml-0 items-center md:w-[120px] lg:w-auto xs:h-[40px] md:h-[40px]"
                       src={googlePlay}
                       alt="googleplay"
                     />
                     <img
-                      className="lg:h-[59px] items-center md:w-[120px] lg:w-auto xs:h-[40px] md:h-[40px]"
+                      className="lg:h-[59px] lg:ml-20 xs:ml-0 items-center md:w-[120px] lg:w-auto xs:h-[40px] md:h-[40px]"
                       src={appstore}
                       alt="appstore"
                     />
