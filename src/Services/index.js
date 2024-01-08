@@ -49,40 +49,84 @@ const ServicePage = () => {
 
     {
       "id": "1",
-      "title": "Рынки",
-      "image": market,
-      "description": "Рынки – это ваш надежный партнер в создании непревзойденных строительных проектов! Мы предоставляем широкий ассортимент высококачественных строительных материалов, чтобы удовлетворить потребности клиентов."
+      "title": "Плотник"
+      
     },
     {
       "id": "2",
-      "title": "Строительный материал",
-      "image": construction,
-      "description": "Строительство - ключевая отрасль, формирующая городскую среду. От создания жилья до инфраструктурных проектов, строительство определяет облик и функциональность наших городов, обеспечивая комфорт и развитие."
+      "title": "Водопроводчик"
+      
     },
     {
       "id": "3",
-      "title": "Двери/Окна",
-      "image": door,
-      "description": "Мы предлагаем широкий ассортимент дверей и окон, от классических дизайнов до современных трендов, чтобы удовлетворить самые изысканные вкусы. Все продукты изготовлены из высококачественных материалов, обеспечивая долговечность и надежность."
+      "title": "Строительные рабочие",
+    
     }, 
     {
       "id": "4",
-      "title": "Электрика",
-      "image": electric,
-      "description": "Откройте для себя инновационные электрические решения и блестящие конструкции освещения. Наш опыт освещает пространство и открывает возможности для более светлого и эффективного будущего."
+      "title": "Асфальтировщик"
     },
     {
       "id": "5",
-      "title": "Инструменты/оборудование",
-      "image": tools,
-      "description": "Ознакомьтесь с широким ассортиментом высококачественных инструментов и оборудования для любых задач. От прецизионных ручных инструментов до современного оборудования — мы предоставим вам все необходимое"
+      "title": "Крановщик"
     },
     {
       "id": "6",
-      "title": "Сантехника",
-      "image": plumbing,
-      "description": "Экспертные сантехнические решения для бесперебойного потока воды и эффективного дренажа. Доверьте ремонт и установку нашим квалифицированным специалистам. Ваши потребности в сантехнике – наш приоритет."
+      "title": "ОВиК"
     },
+    {
+      "id": "7",
+      "title": "Кровельщик"
+    },
+    {
+      "id": "8",
+      "title": "Украшение"
+    },
+    {
+      "id": "9",
+      "title": "Инспектор"
+    },
+    {
+      "id": "10",
+      "title": "Каменщик"
+    },
+    {
+      "id": "11",
+      "title": "Подрядчик по обрамлению"
+    },
+    {
+      "id": "12",
+      "title": "геодезист"
+    },
+    {
+      "id": "13",
+      "title": "Электрик"
+    },
+    {
+      "id": "14",
+      "title": "Архитектор"
+    },
+    {
+      "id": "15",
+      "title": "Отделочник гипсокартона"
+    },
+    {
+      "id": "16",
+      "title": "Маляр и декоратор"
+    },
+    {
+      "id": "17",
+      "title": "Бетоноотделочник"
+    },
+    {
+      "id": "18",
+      "title": "Стекольщик"
+    },
+    {
+      "id": "19",
+      "title": "Установщик плитки"
+    }
+
     
 
   ]
@@ -142,10 +186,10 @@ const ServicePage = () => {
                   />
                 }
                 isMulti={false}
-                name="frame1984077302"
+                name="Schedule"
                 options={schedule}
                 isSearchable={false}
-                placeholder="Schedule"
+                placeholder="Расписание"
               />
               <Line className="bg-blue_gray-300_01 h-[62px] w-px" />
               <SelectBox
@@ -178,26 +222,23 @@ const ServicePage = () => {
                 }
                 size="md"
               >
-                <div className="font-medium text-base text-center">Search</div>
+                <div className="font-medium text-base text-center">Поиск</div>
               </Button>
             </div>
           </div>
 
-          <div className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>
+          <div className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>
 {
   category.map((e)=>(
 
     <div key={e} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-col gap-[15px] items-center justify-center p-[15px] rounded-md w-full">
 <div className=' mt-5 flex justify-center items-center'>
-<img
-                  className="h-[100px] w-[100px]"
-                  src={e.image}
-                  alt="market"
-                />
+
 </div>
+
 <div className="flex flex-col gap-2.5 items-center justify-start mb-[15px] w-auto sm:w-full">
 <Text
-                  className="text-black-900 capitalize text-xl w-auto"
+                  className="text-black-900 text-center capitalize text-xl w-auto"
                   size="txtRobotoBold20"
                 >
                   {e.title}

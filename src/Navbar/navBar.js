@@ -2,15 +2,15 @@ import { useEffect,useState } from 'react'
 import logo from "../../src/assets/logo.png"
 import { Link } from 'react-router-dom';
 const navigation1 = [
-  { name: 'Home', link: '/'},
-  { name: 'About Us', link: '/about' },
-  {name: 'Services', link: '/service'},
-  { name: 'Contact Us', link: '/contact' }
+  { name: 'Главная', link: '/'},
+  { name: ' О нас', link: '/about' },
+  {name: 'Услуги', link: '/service'},
+  { name: 'Контакты', link: '/contact' }
 ]
 
 const navigation2 = [
-  { name: 'Cities', link: ''},
-  { name: 'Login', link: '/login' },
+  { name: 'Города', link: ''},
+  { name: 'Авторизоваться', link: '/login' },
 ]
 
 
