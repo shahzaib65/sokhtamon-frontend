@@ -106,7 +106,7 @@ const Main = () => {
           </div>
 
           <Text
-                className="leading-[133.00%] mt-[51px] lg:px-10  xs:text-[34px] md:text-[40px] lg:text-[44px] text-white-A700 tracking-[1.32px] lg:w-[61%] xs:w-[70%] lg:mx-0 xs:mx-10"
+                className="leading-[133.00%] mt-[51px] lg:px-10  xs:text-[34px] md:text-[40px] lg:text-[44px] text-white-A700 tracking-[1.32px] lg:w-[65%] xs:w-[70%] lg:mx-0 xs:mx-10"
                 size="txtRobotoRomanSemiBold44">
                Откройте для себя превосходство строительных материалов вместе с нами!
               </Text>
