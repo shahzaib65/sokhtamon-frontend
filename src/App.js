@@ -10,6 +10,9 @@ import Main from './MainPage';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import AboutUs from './AboutUs';
 import Footer from './Footer';
+import Privacy from "./Policy"
+import Tos from "./TOS"
+
 function App() {
   return (
     <div className="App">
@@ -27,9 +30,12 @@ function App() {
       <Route exact path='/post' element={<PostJob/>}/>
       <Route exact path='/about' element={<AboutUs/>}/>
       <Route exact path='/login' element={<Login/>}/>
+      <Route exact path = "/privacy" element={<Privacy/>}/>
+      <Route exact path='/tos' element={<Tos/>}/>
       </Routes>
+      <Footer/>
     </Router>
-    <Footer/>
+  
     </div>
   );
 }

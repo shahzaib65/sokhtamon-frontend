@@ -7,6 +7,7 @@ import googlePlay from "../../src/assets/googleplay.png";
 import appstore from "../../src/assets/appstore.png";
 import fb from "../../src/assets/fb.png";
 import { Text } from "../components/Text";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -37,33 +38,41 @@ const Footer = () => {
              Страницы
             </Text>
 
+            <Link to="/">
             <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
               Главная
             </Text>
+            </Link>
 
+            <Link to="/about">
             <Text
               className="lg:text-base capitalize xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto"
               size="txtRobotoMedium16"
             >
               О нас
             </Text>
+            </Link>
 
+            <Link to="/contact">
             <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
               Контакты
             </Text>
+            </Link>
 
-            <Text
+           <Link to="/service">
+           <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-0"
               size="txtRobotoMedium16"
             >
               Услуги
             </Text>
+           </Link>
 
           </div>
 
@@ -105,19 +114,23 @@ const Footer = () => {
               Контакты
             </Text>
 
-            <Text
+           <Link to="/privacy">
+           <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-             sokhtamon@gmail.com
+            политика конфиденциальности
             </Text>
+           </Link>
 
+            <Link to="/tos">
             <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto"
               size="txtRobotoMedium16"
             >
-              +923027119963
+              Условия эксплуатации
             </Text>
+            </Link>
 
             <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"

@@ -167,7 +167,7 @@ const Main = () => {
                   className="text-base text-indigo-A200 tracking-[0.20px] w-auto"
                   size="txtRobotoRomanSemiBold16"
                 >
-                  Соммони :
+                  Сомони :
                 </Text>
                 <Text
                   className="text-gray-800 text-lg tracking-[0.20px] w-auto"
