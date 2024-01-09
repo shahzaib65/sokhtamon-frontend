@@ -20,7 +20,7 @@ const Main = () => {
   }, []);
 
   useEffect(() => {
-    ad("test");
+   // ad("test");
   }, []);
 
   const [category, setcategory] = useState([]);
@@ -72,7 +72,7 @@ const Main = () => {
             <div className="h-[50px] relative lg:w-[35%] xs:w-[80%] bg-white-A700">
               <div className="absolute flex flex-row sm:gap-10 h-full inset-y-[0] items-center justify-end px-3 my-auto w-[100%] ">
                 <SelectBox
-                  className="text-black-900 text-right text-sm tracking-[0.20px] w-full capitalize"
+                  className="text-black-900 text-right text-sm tracking-[0.20px] w-full "
                   placeholderClassName="text-black-900"
                   indicator={
                     <img
@@ -85,7 +85,7 @@ const Main = () => {
                   name="Category"
                   options={options}
                   isSearchable={true}
-                  placeholder="выберите категорию"
+                  placeholder="Bыберите категорию"
                   onChange={(value) => {
                     console.log(value);
                     ad(value);
@@ -137,7 +137,7 @@ const Main = () => {
    </div>
 
    <div className=" w-[95%] h-auto ">
-   <div className=" grid xs:grid-cols-1 xs:gap-6 lg:gap-2 sm:grid-cols-2 lg:grid-cols-4 justify-center ml-5 min-h-[auto] mt-[54px]  lg:w-full">
+   <div className=" grid xs:grid-cols-1 xs:gap-6 lg:gap-4 sm:grid-cols-2 lg:grid-cols-4 justify-center ml-5 min-h-[auto] mt-[54px]  lg:w-full">
           {
             posts.map((data)=>(
               <>

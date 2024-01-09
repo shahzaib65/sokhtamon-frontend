@@ -47,7 +47,7 @@ export default function Example() {
                         key={item.name}
                         to={item.link}
                         className={
-                          ' px-3 pt-[14px] text-sm font-roboto font-normal text-[#64748B]'
+                          ' px-3 pt-[4px] text-sm font-roboto font-normal text-[#64748B]'
                         }
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -63,7 +63,7 @@ export default function Example() {
                         key={item.name}
                         to={item.link}
                         className={
-                          ' px-3 pt-[14px] text-sm font-roboto font-normal text-[#64748B]'
+                          ' px-3 pt-[4px] text-sm font-roboto font-normal text-[#64748B]'
                         }
                         aria-current={item.current ? 'page' : undefined}
                       >
