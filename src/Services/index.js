@@ -17,9 +17,7 @@ import tools from "../assets/tools.svg";
 import axios from 'axios';
 const ServicePage = () => {
 
-  const schedule = [
-    {"option": "1",label: "opton"}
-  ]
+ 
 
   const [selectCity, setSelectCity] = useState(null);
   const [city, setCity] = useState([]);
@@ -70,10 +68,7 @@ const ServicePage = () => {
       "label": "Крановщик",
       "value": "Крановщик"
     },
-    {
-      "label": "ОВиК",
-      "value": "ОВиК"
-    },
+    
     {
       "label": "Кровельщик",
       "value": "Кровельщик"
@@ -95,8 +90,8 @@ const ServicePage = () => {
       "value": "Подрядчик по обрамлению"
     },
     {
-      "label": "геодезист",
-      "value": "геодезист"
+      "label": "Геодезист",
+      "value": "Геодезист"
     },
     {
       "label": "Электрик",
@@ -222,7 +217,7 @@ const ServicePage = () => {
             </Text> */}
             <div className="border border-blue_gray-300_01 border-solid flex xs:flex-1 lg:flex-row items-center justify-between rounded lg:w-[85%]  xs:w-full">
               <SelectBox
-                className="font-medium text-base text-center text-gray-400 w-[16%] lg:pr-4  sm:w-full"
+                className="font-medium text-base text-center text-gray-400 w-[16%] lg:px-4  sm:w-full"
                 placeholderClassName="text-gray-400"
                 indicator={
                   <img
@@ -316,125 +311,6 @@ const ServicePage = () => {
 }
    </div>
 
-
-
-          {/* <div className="lg:gap-5 gap-[30px] grid xs:grid-cols-1 lg:grid-cols-5  justify-center lg:max-w-screen min-h-[auto] mt-10 mx-auto lg:px-5 xs:w-full">
-          <div className="bg-white-A700 border border-blue_gray-100_7f border-solid flex flex-1 flex-col items-center justify-center p-[13px] rounded w-full">
-              <div className="flex flex-col gap-[11px] items-center justify-start mt-3 w-[39%] md:w-full">
-                <div
-                  className="bg-cover bg-no-repeat flex flex-col h-20 items-center justify-start p-[23px] sm:px-5 w-20"
-                  style={{ backgroundImage: `url(${bg})` }}
-                >
-                  <img
-                    className="h-[34px] w-[34px]"
-                    src={electrical}
-                    alt="checkmark"
-                  />
-                </div>
-                <Text
-                  className="text-base text-black-900"
-                  size="txtRobotoBold16"
-                >
-                  Electrical
-                </Text>
-              </div>
-              <Text
-                className="leading-[150.00%] mt-2 text-blue_gray-300_01 text-center text-xs w-full"
-                size="txtRobotoRomanRegular12"
-              >
-                <span className="text-blue_gray-300_01 font-roboto font-normal">
-                  Lorem ipsum dolor sit amet{" "}
-                </span>
-                <span className="text-blue_gray-300_01 font-roboto font-normal">
-                  Lorem ipsum dolor sit amet consetetur
-                </span>
-              </Text>
-              <Button
-                className="cursor-pointer font-semibold mb-3 min-w-[70px] mt-[15px] text-base text-center"
-                shape="round"
-              >
-                126
-              </Button>
-            </div>
-
-            <div className="bg-white-A700 border border-blue_gray-100_7f border-solid flex flex-1 flex-col items-center justify-center p-[13px] rounded w-full">
-              <div className="flex flex-col gap-[11px] items-center justify-start mt-3 w-[39%] md:w-full">
-                <div
-                  className="bg-cover bg-no-repeat flex flex-col h-20 items-center justify-start p-[23px] sm:px-5 w-20"
-                  style={{ backgroundImage: `url(${bg})` }}
-                >
-                  <img
-                    className="h-[34px] w-[34px]"
-                    src={electrical}
-                    alt="checkmark"
-                  />
-                </div>
-                <Text
-                  className="text-base text-black-900"
-                  size="txtRobotoBold16"
-                >
-                  Electrical
-                </Text>
-              </div>
-              <Text
-                className="leading-[150.00%] mt-2 text-blue_gray-300_01 text-center text-xs w-full"
-                size="txtRobotoRomanRegular12"
-              >
-                <span className="text-blue_gray-300_01 font-roboto font-normal">
-                  Lorem ipsum dolor sit amet{" "}
-                </span>
-                <span className="text-blue_gray-300_01 font-roboto font-normal">
-                  Lorem ipsum dolor sit amet consetetur
-                </span>
-              </Text>
-              <Button
-                className="cursor-pointer font-semibold mb-3 min-w-[70px] mt-[15px] text-base text-center"
-                shape="round"
-              >
-                126
-              </Button>
-            </div>
-
-            <div className="bg-white-A700 border border-blue_gray-100_7f border-solid flex flex-1 flex-col items-center justify-center p-[13px] rounded w-full">
-              <div className="flex flex-col gap-[11px] items-center justify-start mt-3 w-[39%] md:w-full">
-                <div
-                  className="bg-cover bg-no-repeat flex flex-col h-20 items-center justify-start p-[23px] sm:px-5 w-20"
-                  style={{ backgroundImage: `url(${bg})` }}
-                >
-                  <img
-                    className="h-[34px] w-[34px]"
-                    src={electrical}
-                    alt="checkmark"
-                  />
-                </div>
-                <Text
-                  className="text-base text-black-900"
-                  size="txtRobotoBold16"
-                >
-                  Electrical
-                </Text>
-              </div>
-              <Text
-                className="leading-[150.00%] mt-2 text-blue_gray-300_01 text-center text-xs w-full"
-                size="txtRobotoRomanRegular12"
-              >
-                <span className="text-blue_gray-300_01 font-roboto font-normal">
-                  Lorem ipsum dolor sit amet{" "}
-                </span>
-                <span className="text-blue_gray-300_01 font-roboto font-normal">
-                  Lorem ipsum dolor sit amet consetetur
-                </span>
-              </Text>
-              <Button
-                className="cursor-pointer font-semibold mb-3 min-w-[70px] mt-[15px] text-base text-center"
-                shape="round"
-              >
-                126
-              </Button>
-            </div>
-
-          </div>
-<Footer/> */}
       </div>
     </div>
   )
