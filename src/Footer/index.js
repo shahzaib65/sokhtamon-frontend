@@ -111,7 +111,7 @@ const Footer = () => {
               className="text-gray-900 text-xl"
               size="txtRobotoRomanSemiBold20"
             >
-              Контакты
+              Правила сайта
             </Text>
 
            <Link to="/privacy">
@@ -119,13 +119,13 @@ const Footer = () => {
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-            политика конфиденциальности
+            Политика конфиденциальности
             </Text>
            </Link>
 
             <Link to="/tos">
             <Text
-              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto"
+              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-0"
               size="txtRobotoMedium16"
             >
               Условия эксплуатации
@@ -133,11 +133,19 @@ const Footer = () => {
             </Link>
 
             <Text
+              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-0"
+              size="txtRobotoMedium16"
+            >
+           
+            </Text>
+
+            <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-              Адрес:
+           
             </Text>
+
           </div>
 
         </div>

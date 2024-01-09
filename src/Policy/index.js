@@ -19,8 +19,8 @@ import { Text } from "../components/Text";
           </Text>
         </div>
 
- <div className=' flex flex-col my-4 justify-start items-start w-full'>
- <Text className=' mx-10 text-yellow-800 text-[24px]'
+ <div className=' flex flex-col mt-10 justify-start items-start w-full'>
+ <Text className=' mx-10 mb-5 text-yellow-800 text-[24px]'
  size="txtRobotoBold32"
  >Добро пожаловать в Политику конфиденциальности Сохта-Мон.</Text>
 <Text className=' my-4 mx-10 text-black-900 text-[14px]'
