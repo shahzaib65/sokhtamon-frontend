@@ -44,11 +44,11 @@ const PostJob = () => {
 
    const subCategory = [
     
-      {"option": "Рынок Кушониён",label: "Рынок Кушониён"},
-      {"option": "Рынок Хисор",label: "Рынок Хисор"},
-      {"option": "Рынок Балх",label: "Рынок Балх"},
-      {"option": "Рынок Кавсар",label: "Рынок Кавсар"},
-      {"option": "Рынок Ховарон",label: "Рынок Ховарон"}
+      {"label": "Рынок Кушониён", "value": "Рынок Кушониён"},
+      {"label": "Рынок Хисор", "value": "Рынок Хисор"},
+      {"label": "Рынок Балх", "value": "Рынок Балх"},
+      {"label": "Рынок Кавсар","value": "Рынок Кавсар"},
+      {"label": "Рынок Ховарон", "value": "Рынок Ховарон"}
     
    ]
 
@@ -123,13 +123,19 @@ const PostJob = () => {
       } else if(selectCity === null){
         setLoading(false)
         alert("Select the city first")
+      } else if(subCat === null){
+        setLoading(false)
+        alert("Select the subcategory first")
       }else if( selectedFile === null){
         setLoading(false)
         alert("Select the file first")
-      }else {
+      }
+       else {
         setLoading(true)
+        console.log(subCat)
               const form = new FormData();
               form.append("category_name",selectCat)
+              form.append("sub_category_name",subCat)
               form.append("city_name",selectCity)
               form.append("state", "empty")
               form.append("email",data.email)
@@ -231,9 +237,7 @@ const PostJob = () => {
                   onChange={(value) => {
                     setSubbCat(value);
                   }}
-                  // {...register("categoryName", {
-                  //   required: "Category is required"
-                  // })}
+                  
                 />
               </div>
             </div>
