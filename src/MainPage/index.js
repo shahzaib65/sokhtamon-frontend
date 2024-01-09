@@ -139,7 +139,7 @@ const Main = () => {
    <div className=" grid xs:grid-cols-1 xs:gap-6 sm:grid-cols-2 lg:grid-cols-4 justify-center min-h-[auto] mt-[54px] ml-16  lg:w-full">
           {
             posts.map((data)=>(
-              <>
+              <Link to="/detail">
           <div key={data._id} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex xs:flex-1 flex-col items-center justify-start pb-[33px] rounded-md w-[85%]">
               <img
                 className="lg:h-[240px] xs:h-auto object-cover rounded-bl rounded-br rounded-tl-md rounded-tr-md w-full"
@@ -192,7 +192,7 @@ const Main = () => {
                 </Text>
               </div>
             </div>
-          </>
+          </Link>
             ))
           }
           </div>

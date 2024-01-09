@@ -209,13 +209,8 @@ const ServicePage = () => {
         </Text>
 
           <div className="flex xs:flex-col lg:flex-row gap-[50px] items-start justify-start lg:w-[70%] mt-[70px] mx-auto xs:px-5 xs:w-full">
-            {/* <Text
-              className="text-2xl xs:text-[22px] text-black-900 sm:text-xl w-auto mt-4"
-              size="txtRobotoRomanSemiBold24Black900"
-            >
-              Поиск :
-            </Text> */}
-            <div className="border border-blue_gray-300_01 border-solid flex xs:flex-1 lg:flex-row items-center justify-between rounded lg:w-[85%]  xs:w-full">
+          
+            <div className="border border-blue_gray-300_01 border-solid flex lg:flex-row items-center justify-between rounded lg:w-[85%]  xs:w-full">
               <SelectBox
                 className="font-medium text-base text-center text-gray-400 w-[16%] lg:px-4  sm:w-full"
                 placeholderClassName="text-gray-400"
@@ -234,7 +229,7 @@ const ServicePage = () => {
               />
               <Line className="bg-blue_gray-300_01 h-[62px] w-px" />
               <SelectBox
-                className="font-medium text-base text-center text-gray-400 w-[11%] lg:pr-4 xs:w-full"
+                className="font-medium text-base text-center text-gray-400 w-[11%] lg:px-4 xs:w-full"
                 placeholderClassName="text-gray-400"
                 indicator={
                   <img
@@ -266,6 +261,8 @@ const ServicePage = () => {
                 <div className="font-medium text-base text-center">Поиск</div>
               </Button>
             </div>
+
+
           </div>
 
           <div className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>

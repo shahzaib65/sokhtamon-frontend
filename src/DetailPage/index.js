@@ -2,7 +2,7 @@ import React from 'react'
 import banner from "../assets/banner.png";
 import { Text } from "../components/Text";
 import cement from "../assets/cement.svg"
-import Footer from "../Footer"
+
 const DetailPage = () => {
   return (
     <div className='bg-white-A700 flex flex-col font-roboto items-center justify-start w-full'>
@@ -17,7 +17,7 @@ const DetailPage = () => {
               className="absolute h-max inset-[0] justify-center m-auto sm:text-[40px] xs:text-[20px] md:text-[46px] text-[50px] text-center text-white-A700 tracking-[-1.00px] w-max"
               size="txtRobotoRomanBold50"
             >
-              Detail Page
+            Подробная страница
             </Text>
           </div>
 
@@ -84,8 +84,7 @@ const DetailPage = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white-A700 flex items-center justify-center mt-[70px] md:px-5 w-full">Footer</div>
-       <Footer/>
+         
       </div>
     </div>
   )
