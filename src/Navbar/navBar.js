@@ -10,7 +10,7 @@ const navigation1 = [
 
 const navigation2 = [
   { name: 'Города', link: ''},
-  { name: 'Авторизоваться', link: '/login' },
+  { name: 'Вход', link: '/login' },
 ]
 
 
@@ -71,7 +71,6 @@ export default function Example() {
                       </Link>
                     ))}
                   </div>
-
             </div>
           </div>
   </>
