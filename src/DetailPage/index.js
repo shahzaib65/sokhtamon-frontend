@@ -77,7 +77,7 @@ const DetailPage = () => {
                   </Text>
                   <Text
                     className="xs:text-[34px] md:text-[40px] lg:text-[24px] text-yellow-800 w-auto"
-                    size="txtRobotoRomanBold44"
+                    size="txtRobotoRomanRegular18"
                   >
                     {detail.sub_category_name}
                   </Text>
