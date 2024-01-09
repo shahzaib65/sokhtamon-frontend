@@ -132,18 +132,20 @@ const Footer = () => {
             </Text>
             </Link>
 
+           <Link to="/login">
+           <Text
+              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
+              size="txtRobotoMedium16"
+            >
+           Вход
+            </Text>
+           </Link>
+
             <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-0"
               size="txtRobotoMedium16"
             >
-           
-            </Text>
-
-            <Text
-              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
-              size="txtRobotoMedium16"
-            >
-           
+           регистр
             </Text>
 
           </div>

@@ -9,7 +9,7 @@ const navigation1 = [
 ]
 
 const navigation2 = [
-  { name: 'Города', link: ''},
+ 
   { name: 'Вход', link: '/login' },
 ]
 
