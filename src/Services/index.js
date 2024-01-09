@@ -283,10 +283,14 @@ const ServicePage = () => {
 
     <div key={e} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-col gap-[15px] items-center justify-center p-[15px] rounded-md w-full">
 <div className=' mt-5 flex justify-center items-center'>
-
+<img
+                  className="h-[70px] w-[70px]"
+                  src={tools}
+                  alt="Tools"
+                />
 </div>
 
-<div className="flex flex-col gap-2.5 items-center justify-start mb-[15px] w-auto sm:w-full">
+<div className="flex flex-col gap-2.5 items-center justify-start mb-[5px] w-auto sm:w-full">
 <Text
                   className="text-black-900 text-center capitalize text-xl w-auto"
                   size="txtRobotoBold20"
@@ -294,17 +298,17 @@ const ServicePage = () => {
                   {e.value}
                 </Text>
 
-                <Text
+                {/* <Text
                   className="leading-[150.00%] max-w-[383px] md:max-w-full text-base text-blue_gray-300 text-center tracking-[0.20px]"
                   size="txtRobotoRegular16"
                 >
                   {e.description}
-                </Text>
+                </Text> */}
                 
 </div>
 
 <Button
-                className="cursor-pointer font-semibold mb-3 min-w-[70px] mt-[5px] text-base text-center"
+                className="cursor-pointer font-semibold mb-3 min-w-[70px] mt-[0px] text-base text-center"
                 shape="round"
               >
                 1
