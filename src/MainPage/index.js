@@ -59,7 +59,7 @@ const Main = () => {
   }));
 
   return (
-    <div className="w-full flex flex-col overflow-hidden bg-white-A700 ">
+    <div className="w-full flex flex-col justify-center items-center overflow-hidden  bg-white-A700 ">
       <div className="relative flex flex-col w-full">
         <img
           className="absolute lg:h-[550px] xs:h-[860px] w-full object-cover"
@@ -136,16 +136,20 @@ const Main = () => {
           </Text>
    </div>
 
-   <div className=" grid xs:grid-cols-1 xs:gap-6 sm:grid-cols-2 lg:grid-cols-4 justify-center min-h-[auto] mt-[54px] ml-16  lg:w-full">
+   <div className=" w-[95%] h-auto ">
+   <div className=" grid xs:grid-cols-1 xs:gap-6 lg:gap-2 sm:grid-cols-2 lg:grid-cols-4 justify-center ml-5 min-h-[auto] mt-[54px]  lg:w-full">
           {
             posts.map((data)=>(
-              <Link to="/detail">
-          <div key={data._id} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex xs:flex-1 flex-col items-center justify-start pb-[33px] rounded-md w-[85%]">
-              <img
-                className="lg:h-[240px] xs:h-auto object-cover rounded-bl rounded-br rounded-tl-md rounded-tr-md w-full"
+              <>
+          <div key={data._id} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex xs:flex-1 flex-col items-center justify-start pb-[33px] rounded-md w-[90%]">
+          <Link to={`/detail/${data._id}`}>
+          <img
+                className="lg:h-[240px] xs:h-auto object-fill  rounded-tl-md rounded-tr-md w-full"
                 src={data.post_image_url}
                 alt="rectangleThirtyTwo"
               />
+          </Link>
+              
               <Text
                 className="mt-[17px] text-blue_gray-900 text-xl"
                 size="txtRobotoBold20"
@@ -163,7 +167,7 @@ const Main = () => {
                   className="text-base text-indigo-A200 tracking-[0.20px] w-auto"
                   size="txtRobotoRomanSemiBold16"
                 >
-                  Sommoni :
+                  Соммони :
                 </Text>
                 <Text
                   className="text-gray-800 text-lg tracking-[0.20px] w-auto"
@@ -187,16 +191,17 @@ const Main = () => {
                   size="txtRobotoBold18"
                 >
                   {
-                  moment(data.createdAt).format('HH:mm a')
+                  moment(data.createdAt).format('HH:mm')
                 }
                 </Text>
               </div>
             </div>
-          </Link>
+          </>
             ))
           }
           </div>
 
+   </div>
          
      {/* <div className=" lg:mx-0 xs:mx-0 h-auto w-full">
      <Footer/>
