@@ -201,9 +201,7 @@ const PostJob = () => {
                   onChange={(value) => {
                     setSelectCat(value);
                   }}
-                  // {...register("categoryName", {
-                  //   required: "Category is required"
-                  // })}
+                  
                 />
               </div>
             </div>

@@ -48,22 +48,25 @@ const DetailPage = () => {
               />
             
             </div>
+
             <div className="flex md:flex-1 flex-col gap-6 items-start justify-start w-3/5 md:w-full">
               <div className="flex flex-col gap-2.5 items-center justify-start w-full">
+
                 <div className="flex flex-row lg:gap-4 gap-[349px] items-center justify-start w-auto md:w-full">
                   <Text
                     className="lg:text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
                     size="txtRobotoRomanSemiBold24Black900"
                   >
-                    Соммони:
+                    Сомони:
                   </Text>
                   <Text
-                    className="xs:text-[34px] md:text-[40px] lg:text-[34px] text-yellow-800 w-auto"
+                    className="xs:text-[34px] md:text-[40px] lg:text-[24px] text-yellow-800 w-auto"
                     size="txtRobotoRomanBold44"
                   >
                     {detail.price}
                   </Text>
                 </div>
+
                 <div className="flex flex-col gap-[15px] items-start justify-start w-auto md:w-full">
                   <div className="flex flex-row gap-2 h-6 md:h-auto items-center justify-start w-auto">
                   <Text
@@ -73,7 +76,7 @@ const DetailPage = () => {
                       Подкатегория:
                   </Text>
                   <Text
-                    className="xs:text-[34px] md:text-[40px] lg:text-[34px] text-yellow-800 w-auto"
+                    className="xs:text-[34px] md:text-[40px] lg:text-[24px] text-yellow-800 w-auto"
                     size="txtRobotoRomanBold44"
                   >
                     {detail.sub_category_name}
@@ -90,7 +93,27 @@ const DetailPage = () => {
                   </Text>
                 </div>
               </div>
+
               <div className="flex flex-col gap-[5px] items-start justify-start w-auto md:w-full">
+
+
+              <div className="flex flex-row gap-2 h-6 md:h-auto items-center justify-start w-auto">
+                  <Text
+                    className="lg:text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
+                    size="txtRobotoRomanSemiBold24Black900"
+                  >
+                      Имя:
+                  </Text>
+                  <Text
+                    className="xs:text-[34px] md:text-[40px] lg:text-[24px] text-yellow-800 w-auto"
+                    size="txtRobotoRomanRegular18"
+                  >
+                    {detail.username}
+                  </Text>
+                  </div>
+
+
+
               <div className="flex flex-row gap-2 h-6 md:h-auto items-center justify-start w-auto">
                   <Text
                     className="lg:text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
