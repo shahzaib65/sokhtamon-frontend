@@ -12,6 +12,9 @@ import AboutUs from './AboutUs';
 import Footer from './Footer';
 import Privacy from "./Policy"
 import Tos from "./TOS"
+import Mobile from "./PhoneLogin"
+import Otp from "./otpVerification"
+import Apply from "./ServiceJob"
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
       <Route exact path='/login' element={<Login/>}/>
       <Route exact path = "/privacy" element={<Privacy/>}/>
       <Route exact path='/tos' element={<Tos/>}/>
+      <Route exact path = "/mobile" element={<Mobile/>}/>
+      <Route exact path='/otp' element={<Otp/>}/>
+      <Route exact path='/job' element={<Apply/>}/>
       </Routes>
       <Footer/>
     </Router>

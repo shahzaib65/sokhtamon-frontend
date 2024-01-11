@@ -7,10 +7,6 @@ import { SelectBox } from "../components/SelectBox";
 import moment from "moment";
 import banner from "../assets/home_banner.svg";
 import arrow from "../assets/arrow.png";
-import search_bg from "../assets/search_bg.svg";
-import Footer from "../Footer";
-import user from "../assets/user.svg";
-import view from "../assets/view.svg";
 import { Link } from "react-router-dom";
 import google from "../assets/googleplay.png"
 import apple from "../assets/appstore.png"

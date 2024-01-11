@@ -2,17 +2,13 @@ import React,{useState,useEffect} from 'react'
 import banner from "../assets/services.svg";
 import { Text } from "../components/Text";
 import { SelectBox } from "../components/SelectBox";
-
+import { Link } from 'react-router-dom';
 import {Line} from "../components/Line"
 import arrow from "../assets/arrow.png";
 
 import search from "../assets/search.png"
 import { Button } from '../components/Button';
-import market from "../assets/market.svg"
-import door from "../assets/door.svg"
-import construction from "../assets/construction.svg";
-import electric from "../assets/electric.svg";
-import plumbing from "../assets/plumbing.svg"
+
 import tools from "../assets/tools.svg";
 import axios from 'axios';
 const ServicePage = () => {
@@ -189,12 +185,33 @@ const ServicePage = () => {
               src={banner}
               alt="banner"
             />
+
+<div className=' flex justify-end items-end h-[42px] mr-5 mt-4'>
+    <Link to="/job"
+                  className=" py-2 lg:w-[15%] xs:w-[100%] lg:items-end xs:items-center text-center text-sm text-white-A700 tracking-[0.20px] bg-yellow-800 h-auto"
+                  size="txtRobotoRomanSemiBold14"
+                >
+                  Подать заявку на работу
+                </Link>
+    </div>
+
+
             <Text
               className="absolute h-max inset-[0] justify-center m-auto sm:text-[40px] xs:text-[20px] md:text-[46px] text-[50px] text-center text-white-A700 tracking-[-1.00px] w-max"
               size="txtRobotoRomanBold50"
             >
            Услуги
             </Text>
+
+
+            {/* <Text
+              className="absolute h-max mt-4 justify-end m-auto sm:text-[40px] xs:text-[20px] md:text-[46px] text-[50px]  text-black-900 tracking-[-1.00px] w-max"
+              size="txtRobotoRomanBold50"
+            >
+           Услуги
+            </Text> */}
+
+    
           </div>
 
           <Text
