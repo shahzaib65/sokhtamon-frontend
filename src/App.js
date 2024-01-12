@@ -16,6 +16,7 @@ import Mobile from "./PhoneLogin"
 import Otp from "./otpVerification"
 import Apply from "./ServiceJob"
 import Subscription from './Subscription';
+import Profile from "./Profile"
 
 function App() {
   return (
@@ -27,13 +28,14 @@ function App() {
    
       <Routes>
       <Route exact path="/" element={<Main/>}/>
+      <Route exact path='/login' element={<Login/>}/>
       <Route exact path="/contact" element={<Contact/>}/>
       <Route exact path='/detail/:id' element={<DetailPage/>}/>
       <Route exact path='/product' element={<ProductsPage/>}/>
       <Route exact path='/service' element={<Service/>}/>
       <Route exact path='/post' element={<PostJob/>}/>
       <Route exact path='/about' element={<AboutUs/>}/>
-      <Route exact path='/login' element={<Login/>}/>
+      <Route exact path='/profile' element={<Profile/>}/>
       <Route exact path = "/privacy" element={<Privacy/>}/>
       <Route exact path='/tos' element={<Tos/>}/>
       <Route exact path = "/mobile" element={<Mobile/>}/>

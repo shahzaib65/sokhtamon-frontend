@@ -1,45 +1,53 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { startLoading, stopLoading } from '../loading/loadingSlice';
 import {
     loginUser
   } from './authApi';
 
   const initialState = {
-    loggedInUserToken: null, // this should only contain user identity => 'id'/'role'
+    checkemail: null, // this should only contain user identity => 'id'/'role'
     status: 'idle',
     error: null,
   };
 
   export const loginUserAsync = createAsyncThunk(
     'user/loginUser',
-    async (loginInfo, { rejectWithValue }) => {
+    async (loginInfo, { dispatch }) => {
       try {
+        dispatch(startLoading());
         const response = await loginUser(loginInfo);
+        dispatch(stopLoading)
         return response.data;
       } catch (error) {
-        console.log(error);
-        return rejectWithValue(error);
+        dispatch(stopLoading)
+        throw error;
+      } finally{
+      dispatch(stopLoading)
       }
     }
   );
 
   export const authSlice = createSlice({
     name: 'user',
-  initialState,
+  initialState: {
+    isLoading: false,
+    data: null
+  },
   reducers: {},
   extraReducers: (builder) =>{
     builder
-    
       .addCase(loginUserAsync.pending, (state) => {
         state.status = 'loading';
       })
       .addCase(loginUserAsync.fulfilled, (state, action) => {
         state.status = 'idle';
+        state.isLoading = false;
         state.loggedInUserToken = action.payload;
       })
   },
   });
 
-  export const selectLoggedInUser = (state) =>  state.auth.selectLoggedInUser
+  export const selectEmail = (state) =>  state.auth.selectemail
 
   export default authSlice.reducer;
   

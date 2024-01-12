@@ -10,8 +10,17 @@ import arrow from "../assets/arrow.png";
 import { Link } from "react-router-dom";
 import google from "../assets/googleplay.png"
 import apple from "../assets/appstore.png"
+
+
 const Main = () => {
+
+ 
+
+
   useEffect(() => {
+    
+     
+    
     categories();
   }, []);
 

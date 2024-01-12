@@ -2,16 +2,14 @@ import React, { useState } from 'react'
 import {Text} from "../components/Text"
 import { useForm } from "react-hook-form";
 import { ClipLoader } from "react-spinners";
-import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
-import { auth } from '../firebase/setup';
+import { useDispatch, useSelector } from "react-redux";
+import { otpWithEmail } from './otpSlice';
 import { useNavigate } from "react-router-dom";
-import axios from 'axios';
+
 const Otp = () => {
-    // const { id } = useParams();
-    // console.log(id)
-    const [loading, setLoading] = useState(false);
-    const [data,setdata] = useState('')
-    let navigate = useNavigate();
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+  let navigate = useNavigate();
 
     const {
         register,
@@ -19,27 +17,16 @@ const Otp = () => {
         reset,
         formState: { errors },
       } = useForm();
+
+      if(state.otp.data){
+        navigate("/")
+        reset();
+        localStorage.setItem("token",state.otp.data)
+      }
     
       const onSubmit = (data) => {
-     try {
-      setLoading(true)
-      const config = {     
-        headers: { 'content-type': 'application/json' }
-           }
-           axios.post("https://sokhtamon-backend-production.up.railway.app/api/user/verifyOtp",data,config)
-           .then((res)=>{
-             reset();
-             setLoading(false)
-             navigate("/")
-            
-           }).catch((err)=>{
-            setdata(err.response.data)  
-             setLoading(false)
-           })
-     } catch (error) {
-        console.log(error);
-        setdata("Ошибка сервера")
-     }
+        dispatch(otpWithEmail({ otp: data.otp,}));
+        
       };
 
     return (
@@ -74,10 +61,10 @@ const Otp = () => {
           </div>
                      <div className=" w-full flex justify-center mt-[15px] mb-7">
                     <button type='submit'  className=" bg-yellow-800 w-[60%] h-[50px] flex justify-center items-center rounded-sm text-white-A700 font-roboto font-semibold tracking-[0.20px]">
-                    {loading ? <ClipLoader color="#FFFFFF" size={30} /> : "Представлять на рассмотрение"}
+                    {state.otp.isLoading ? <ClipLoader color="#FFFFFF" size={30} /> : "Представлять на рассмотрение"}
                     </button>
                     </div>
-                    <p className=' font-roboto font-semibold text-base text-black-900'>{data}</p>
+                    <p className=' font-roboto font-semibold text-base text-black-900'>{state.otp.data}</p>
     
           </form>
          

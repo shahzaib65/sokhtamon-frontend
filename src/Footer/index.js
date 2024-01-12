@@ -152,12 +152,7 @@ const Footer = () => {
             </Text>
            </Link>
 
-            <Text
-              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-0"
-              size="txtRobotoMedium16"
-            >
-           регистр
-            </Text>
+           
 
           </div>
 
