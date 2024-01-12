@@ -1,13 +1,17 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useRef} from 'react'
 import banner from "../assets/services.svg";
 import { Text } from "../components/Text";
 import { SelectBox } from '../components/SelectBox';
 import arrow from "../assets/arrow.png";
 import axios from 'axios';
+import add from "../assets/add.svg";
 import { useForm } from "react-hook-form";
 import { ClipLoader } from "react-spinners";
+import { Line } from '../components/Line';
 const Job = () => {
     const [loading, setLoading] = useState(false);
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [image, setImage] = useState(null);
     const {
         register,
         handleSubmit,
@@ -145,24 +149,28 @@ const Job = () => {
         {
           "label": "Установка дверей",
           "value": "Установка дверей"
+        },
+        {
+          "label": "Транспортные услуги",
+          "value": "Транспортные услуги"
         }
     
         
     
       ]
       const [selectCity, setSelectCity] = useState(null);
-
       const [city, setCity] = useState([]);
+      const fileInputRef = useRef(null);
 
-      const cityData = city.map((data) => ({
-        label: data.city_name,
-        value: data.city_name,
-      }));
+      const handleImageClick = () => {
+        fileInputRef.current.click();
+      };
     
+
       useEffect(() => {
         cities();
       }, []);
-    
+
       const cities = () => {
         axios
           .get("https://sokhtamon-backend-production.up.railway.app/api/city/fetch")
@@ -173,6 +181,17 @@ const Job = () => {
           .catch((err) => {
             console.log(err);
           });
+      };
+
+      const cityData = city.map((data) => ({
+        label: data.city_name,
+        value: data.city_name,
+      }));
+    
+      const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        setSelectedFile(file);
+        setImage(URL.createObjectURL(e.target.files[0]));
       };
 
   return (
@@ -235,13 +254,12 @@ const Job = () => {
               </div>
 
 </div>
-
 <div className="flex flex-col lg:items-start gap-3 lg:justify-start lg:w-[35%] lg:mx-10 xs:items-start xs:justify-start xs:w-[80%] xs:mx-2 ">
               <Text
                 className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                 size="txtRobotoRomanMedium14Gray90003"
               >
-              Подкатегория
+              Город
               </Text>
 
               <div className=" flex justify-start items-center w-full bg-[#F8F8F8] rounded-[4px]">
@@ -270,10 +288,101 @@ const Job = () => {
                 />
               </div>
             </div>
-         
-
-
 </div>
+
+
+<div className="flex lg:flex-row xs:flex-col mt-[25px] w-full lg:mx-20 justify-start items-start xs:mx-2">
+<div className=" flex flex-col lg:w-[35%] gap-3 xs:w-[80%] ">
+                <Text
+                  className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
+                  size="txtRobotoRomanMedium14Gray90003"
+                >
+                  Заголовок
+                </Text>
+
+                <input 
+                  className=" p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full rounded-[4px]"
+                  wrapClassName="w-full"
+                  {...register("heading", {
+                    required: "Heading is required",
+                  })}
+                ></input>
+                {errors.heading && (
+                  <p className="text-start text-red-500">
+                    {errors.heading.message}
+                  </p>
+                )}
+              </div>         
+</div>
+
+<Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-2 " />
+
+<div className=" flex flex-col lg:mx-20 xs:mx-2">
+              <Text
+                className="mt-10 text-gray-900 text-sm tracking-[-0.28px]"
+                size="txtRobotoRomanMedium14Gray90003"
+              >
+                Фото:
+              </Text>
+              <div className=" flex flex-row space-x-5 h-[100px] justify-start items-center mt-3.5 w-full">
+                <input className=" outline-none"
+                  type="file"
+                  style={{ display: "none" }}
+                  ref={fileInputRef}
+                  onChange={handleFileChange}
+                  // {...register("photo", {
+                  //           required: "Photo is required"
+                  //         })}
+                />
+                <div className="bg-deep_orange-100 h-[100px] items-center justify-start p-[34px] rounded w-[100px]">
+                  <img
+                    onClick={handleImageClick}
+                    className="h-8 w-8"
+                    src={add}
+                    alt=""
+                  />
+                </div>
+
+                <div className=" h-[100px] items-center justify-start p-[0px] rounded w-[100px]">
+                  <img
+                    className="h-[100px] w-[100px]"
+                    src={image}
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-2 " />
+
+<div className="flex lg:flex-row xs:flex-col mt-[25px] w-full lg:mx-20 justify-start items-start xs:mx-2">
+              <div className=" flex flex-col lg:w-[35%] gap-3 xs:w-[80%] ">
+                <Text
+                  className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
+                  size="txtRobotoRomanMedium14Gray90003"
+                >
+                  Описание
+                </Text>
+
+                <div className="flex flex-col items-center justify-start w-full">
+                  <textarea
+                    className="bg-gray-100 border-0 pb-[35px] pl-[25px] pr-[35px] pt-5 sm:px-5 placeholder:text-gray-700 text-gray-700 text-left text-sm w-full outline-none rounded-[4px]"
+                    name="yournamefour"
+                   
+                    {...register("description", {
+                      required: "Description is required",
+                    })}
+                  ></textarea>
+                </div>
+                {errors.description && (
+                  <p className=" text-start text-red-500">
+                    {errors.description.message}
+                  </p>
+                )}
+              </div>
+            </div>
+ 
+
 
 <div className="flex lg:flex-row xs:flex-col mt-[25px] w-full lg:mx-20 justify-start items-start xs:mx-2">
               <div className=" flex flex-col lg:w-[27%] gap-3 xs:w-[80%] ">

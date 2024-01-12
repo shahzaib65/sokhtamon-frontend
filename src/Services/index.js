@@ -14,7 +14,7 @@ import axios from 'axios';
 const ServicePage = () => {
 
  
-
+  const[show,setShow] = useState(false)
   const [selectCity, setSelectCity] = useState(null);
   const [city, setCity] = useState([]);
 
@@ -221,13 +221,13 @@ const ServicePage = () => {
         </Text>
 
 
-        <Text className="lg:leading-[150.00%] mt-[21px] lg:w-[50%] md:w-[50%] xs:w-full text-center" size="txtRobotoRegular16">
+        <Text className="lg:leading-[150.00%] text-blue_gray-300 mt-[21px] lg:w-[50%] md:w-[50%] xs:w-full text-center" size="txtRobotoRegular16">
         Наша миссия - обеспечить клиентов всеми необходимыми строительными услугами под ключ, делая процесс легким и эффективным. С нами ваш проект будет в надежных руках, а результат будет отвечать самым высоким стандартам качества.
         </Text>
 
-          <div className="flex xs:flex-col lg:flex-row gap-[50px] items-start justify-start lg:w-[70%] mt-[70px] mx-auto xs:px-5 xs:w-full">
-          
-            <div className="border border-blue_gray-300_01 border-solid flex lg:flex-row items-center justify-between rounded lg:w-[85%]  xs:w-full">
+          <div className="flex xs:flex-col lg:flex-row gap-[50px] items-center justify-center lg:w-[70%] mt-[70px] mx-auto xs:px-5 xs:w-full">
+           <div className=' w-full flex justify-center items-center'>
+           <div className="border border-blue_gray-300_01 border-solid flex lg:flex-row items-center justify-between rounded lg:w-[85%]  xs:w-full">
               <SelectBox
                 className="font-medium text-base text-center text-gray-400 w-[16%] lg:px-4  sm:w-full"
                 placeholderClassName="text-gray-400"
@@ -278,15 +278,18 @@ const ServicePage = () => {
                 <div className="font-medium text-base text-center">Поиск</div>
               </Button>
             </div>
+           </div>
+           
 
 
           </div>
 
-          <div className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>
+       {
+        show ?    <div  className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>
 {
   category.map((e)=>(
 
-    <div key={e} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-col gap-[15px] items-center justify-center p-[15px] rounded-md w-full">
+    <div vis key={e} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-col gap-[15px] items-center justify-center p-[15px] rounded-md w-full">
 <div className=' mt-5 flex justify-center items-center'>
 <img
                   className="h-[70px] w-[70px]"
@@ -323,7 +326,8 @@ const ServicePage = () => {
 </div>
   ))
 }
-   </div>
+   </div> :null
+       }
 
       </div>
     </div>

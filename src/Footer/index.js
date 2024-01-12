@@ -104,6 +104,17 @@ const Footer = () => {
             >
               Безопасность
             </Text>
+
+            <Link to="/subscription">
+            <Text
+              className="lg:text-base xs:text-xs md:text-xs text-center text-gray-900 tracking-[0.51px] w-auto my-0"
+              size="txtRobotoMedium16"
+            >
+             Подписка
+            </Text>
+            </Link>
+
+            
           </div>
 
           <div className=" flex flex-col h-auto xs:mt-5 lg:mt-0">

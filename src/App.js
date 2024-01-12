@@ -15,6 +15,7 @@ import Tos from "./TOS"
 import Mobile from "./PhoneLogin"
 import Otp from "./otpVerification"
 import Apply from "./ServiceJob"
+import Subscription from './Subscription';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
       <Route exact path = "/mobile" element={<Mobile/>}/>
       <Route exact path='/otp' element={<Otp/>}/>
       <Route exact path='/job' element={<Apply/>}/>
+      <Route exact path='/subscription' element={<Subscription/>}/>
       </Routes>
       <Footer/>
     </Router>
