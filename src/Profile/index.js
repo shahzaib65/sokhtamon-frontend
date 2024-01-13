@@ -3,7 +3,9 @@ import banner from "../assets/services.svg";
 import { Text } from "../components/Text";
 import { useForm } from "react-hook-form";
 import { ClipLoader } from "react-spinners";
+import { useNavigate } from 'react-router-dom';
 const Profile = () => {
+  let navigate = useNavigate()
     const [loading, setLoading] = useState(false);
     const {
         register,
@@ -112,9 +114,13 @@ const Profile = () => {
             <div className=" w-full flex justify-center mt-[55px] mb-7">
               <button
                 type="submit"
+                onClick={()=>{
+                //   localStorage.removeItem("token")
+         //  navigate("/login")
+                }}
                 className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center  text-white-A700 font-roboto font-semibold tracking-[0.20px] rounded-[4px]"
               >
-                {loading ? <ClipLoader color="#FFFFFF" size={30} /> : "Выйти"}
+                {/* {loading ? <ClipLoader color="#FFFFFF" size={30} /> : "Выйти"} */}
               </button>
             </div>
 

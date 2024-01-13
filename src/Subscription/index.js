@@ -6,7 +6,7 @@ const Subscription = () => {
 
   const makePament = async()=>{
     console.log("make is calling")
-        const res = await fetch("http://192.168.1.3:5000/api/subscription/checkout",{
+        const res = await fetch("https://sokhtamon-backend-production.up.railway.app/api/subscription/checkout",{
             method: "POST",
             headers: { 'content-type': 'application/json' },
             mode: "cors", 

@@ -19,34 +19,22 @@ const navigation2 = [
 
 
 export default function Example() {
-  // const [isSticky, setSticky] = useState(false);
-  // const handleScroll = () => {
-  //   setSticky(window.scrollY > 0);
-  // };
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-  const dispatch = useDispatch();
+ 
   
-  useEffect(()=>{
-    dispatch(checkuser(localStorage.getItem("token")));
-  },[])
+  
 
   const state = useSelector((state) => state);
-
-  if(state.check.data){
-    console.log(state.check.data.role)
-  }
+  
+  
+  
+ 
 
 
   return (
   <>
   
-     <div className="mx-auto w-full  px-6 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full  px-6 sm:px-6 lg:px-8">
             <div className="flex h-20 items-center justify-between">
             <div className="flex flex-shrink-0 items-center ml-0">
                  <Link to="/">
@@ -75,18 +63,7 @@ export default function Example() {
                 <div className="flex space-x-4">
 
                 {
-                  state.check.isLoading ? (
-                    <Link
-                        
-                        to="/login"
-                        className={
-                          ' px-3 pt-[4px] text-sm font-roboto font-normal text-[#64748B]'
-                        }
-                       
-                      >
-                        Входs
-                      </Link>
-                  ):  (
+                  state.check.data ? (
                     <Link to="profile">
                     <img
                         src={avatar}
@@ -97,7 +74,16 @@ export default function Example() {
                         {/* Профиль */}
                       </img>
                     </Link>
-                 
+                    
+                  ):  ( 
+                    <Link           
+                        to="/login"
+                        className={
+                          ' px-3 pt-[4px] text-sm font-roboto font-normal text-[#64748B]'
+                        }
+                      >
+                        Входs
+                      </Link>
                    
                   )
                 }
