@@ -9,35 +9,23 @@ const Subscription = () => {
         const res = await fetch("https://sokhtamon-backend-production.up.railway.app/api/subscription/checkout",{
             method: "POST",
             headers: { 'content-type': 'application/json' },
-            mode: "cors", 
+           // mode: "cors", 
             body: JSON.stringify({
-               
+              items: [
+                {
+                    id: 1,
+                quantity: 1,
+                price: 20000,
+                name: 'shahzaib'
+
+                }
+            ]
            }),
         });
         const data = await res.json()
         window.location = data.url
 
-    //     const body = {
-    //         items: [
-    //             {
-    //                 id: 1,
-    //             quantity: 1,
-    //             price: 500,
-    //             name: 'shahzaib'
-
-    //             }
-    //         ]
-    //     }
-
-    //     const config = {
-    //         headers: { 'content-type': 'application/json' }
-    //     }
-    //     axios.post("http://192.168.1.3:5000/api/subscription/checkout",config,body)
-    //     .then((res)=>{
-    //   console.log(res.url)
-    //     }).catch((err)=>{
-    //         console.log(err)
-    //     })
+   
 
   
   }
