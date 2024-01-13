@@ -18,7 +18,6 @@ const Subscription = () => {
                 quantity: 1,
                 price: price,
                 name: 'shahzaib'
-
                 }
             ]
            }),
@@ -73,14 +72,14 @@ const Subscription = () => {
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
                             </p>
 
-                            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl dark:text-gray-300">$3.00 <span className="text-base font-medium">/Month</span></h2>
+                            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl dark:text-gray-300">$1.00 <span className="text-base font-medium">/Month</span></h2>
 
                             {/* <p className="mt-1 text-white">
                                 Yearly payment
                             </p> */}
 
                             <button  className="w-full px-4 py-2 mt-6 tracking-wide text-white-A700 capitalize transition-colors duration-300 transform bg-yellow-800 rounded-md hover:bg-yellow-800 focus:outline-none focus:bg-yellow-800 focus:ring focus:ring-yellow-800 focus:ring-opacity-80" onClick={()=>{
-                              makePament(30)
+                              makePament(1)
                             }}>
                                 Start Now
                             </button>
