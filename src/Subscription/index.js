@@ -45,8 +45,8 @@ const Subscription = () => {
     // </div>
     <div className=" bg-white-A700">
     <div className="container px-6 py-8 mx-auto">
-        <div className="xl:items-center xl:-mx-8 xl:flex">
-            <div className="flex flex-col items-center xl:items-start xl:mx-8">
+        <div className="xl:items-center xl:-mx-8 xl:flex flex-col">
+            <div className="flex flex-col items-center lg:items-center lg:mx-20 mb-10">
                 <h1 className="text-2xl font-medium  capitalize lg:text-3xl text-white">Our Pricing Plan</h1>
 
                 <div className="mt-4">
@@ -55,9 +55,12 @@ const Subscription = () => {
                     <span className="inline-block w-1 h-1 bg-yellow-800 rounded-full"></span>
                 </div>
 
-                <p className="mt-4 font-medium text-white">
-                    You can get All Access by selecting your plan!
+       
+        <p className=" w-full h-full  mt-4 font-medium text-center">
+                Выберите план, который подходит вам лучше всего. Ваш рост является нашим приоритетом, и наши тарифные планы созданы для того, чтобы стать вашими надежными спутниками на этом пути.
                 </p>
+        
+               
 
                
             </div>
@@ -69,7 +72,7 @@ const Subscription = () => {
                             <h1 className="text-xl font-medium  capitalize lg:text-2xl text-white">Standard</h1>
 
                             <p className="mt-4  text-white">
-                            The Free Plan is designed for individuals or small-scale users who are looking to explore our platform and its basic functionalities. It's an excellent starting point for those who want to get a feel for what we offer before considering more advanced features.
+                            Стандартный план предназначен для отдельных лиц или мелких пользователей, которые стремятся изучить нашу платформу и ее основные функции.
                             </p>
 
                             <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl dark:text-gray-300">Free<span className="text-base font-medium">/Month</span></h2>
@@ -147,7 +150,7 @@ const Subscription = () => {
                             <h1 className="text-xl font-medium  capitalize lg:text-2xl text-white">Golden</h1>
 
                             <p className="mt-4 text-white ">
-                            The Golden Plan is ideal for individuals, businesses, and professionals who demand the highest level of service, performance, and support. Whether you're a power user or a growing enterprise, this plan is tailored to meet your evolving needs.
+                            Золотой план идеально подходит для людей, предприятий и профессионалов, которые требуют высочайшего уровня обслуживания, производительности и поддержки.
                             </p>
 
                             <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl ">$4.99<span className="text-base font-medium">/Monthly</span></h2>
@@ -231,7 +234,7 @@ const Subscription = () => {
                             <h1 className="text-xl font-medium  capitalize lg:text-2xl text-white">Premium</h1>
 
                             <p className="mt-4 text-white ">
-                            The Premium Plan is designed for professionals, businesses, and enterprises that demand the utmost in performance, support, and customization. Whether you're a seasoned user or a growing organization, this plan is tailored to meet the demands of the most discerning users.
+                            Премиум план предназначен для профессионалов, бизнеса и предприятий, которые требуют максимальной производительности, поддержки и настройки.
                             </p>
 
                             <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl ">$9.99 <span className="text-base font-medium">/Monthly</span></h2>
