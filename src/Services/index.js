@@ -177,7 +177,7 @@ const ServicePage = () => {
     
 
   ]
-  const [job,setJob] = useState(state.job.data)
+  const [job,setJob] = useState([state.job.data])
   //  if(state.job.data){
   //    setJob(state.job.data)
   //  }
@@ -302,61 +302,68 @@ const ServicePage = () => {
        {
         show ?    <div  className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>
 {
-  job.map((e)=>(
 
-    <div vis key={e} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-col gap-[15px] items-center justify-center p-[15px] rounded-md w-full">
+  state.job.data.length === 0 ? (
+    <p className=' invisible text-center w-full'>No data available</p>
+  ): (
+    state.job.data.map((e)=>(
+
+<div vis key={e} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-col gap-[15px] items-center justify-center p-[15px] rounded-md w-full">
 <div className=' mt-5 flex justify-center items-center'>
 <img
-                  className="h-[70px] w-[70px] rounded-full"
-                  src={e.job_url}
-                  alt="Tools"
-                />
+              className="h-[70px] w-[70px] rounded-full"
+              src={e.job_url}
+              alt="Tools"
+            />
 </div>
 
 <div className="flex flex-col gap-2.5 items-center justify-start mb-[5px] w-auto sm:w-full">
 <Text
-                  className="text-black-900 text-center capitalize text-xl w-auto"
-                  size="txtRobotoBold20"
-                >
-                  {e.full_name}
-                </Text>
+              className="text-black-900 text-center capitalize text-xl w-auto"
+              size="txtRobotoBold20"
+            >
+              {e.full_name}
+            </Text>
 
-                <Text
-                  className="leading-[150.00%] max-w-[383px] md:max-w-full text-base text-blue_gray-300 text-center tracking-[0.20px]"
-                  size="txtRobotoRegular16"
-                >
-                  {e.heading}
-                </Text>
+            <Text
+              className="leading-[150.00%] max-w-[383px] md:max-w-full text-base text-blue_gray-300 text-center tracking-[0.20px]"
+              size="txtRobotoRegular16"
+            >
+              {e.heading}
+            </Text>
 
-                <div className="flex flex-row gap-2.5 items-center justify-start mt-1.5 w-auto">
-                <Text
-                  className="text-base text-indigo-A200 tracking-[0.20px] w-auto"
-                  size="txtRobotoRomanSemiBold16"
-                >
-                  Сомони :
-                </Text>
-                <Text
-                  className="text-gray-800 text-lg tracking-[0.20px] w-auto"
-                  size="txtRobotoBold18"
-                >
-                  {e.price}
-                </Text>
-              </div>
+            <div className="flex flex-row gap-2.5 items-center justify-start mt-1.5 w-auto">
+            <Text
+              className="text-base text-indigo-A200 tracking-[0.20px] w-auto"
+              size="txtRobotoRomanSemiBold16"
+            >
+              Сомони :
+            </Text>
+            <Text
+              className="text-gray-800 text-lg tracking-[0.20px] w-auto"
+              size="txtRobotoBold18"
+            >
+              {e.price}
+            </Text>
+          </div>
 
-                
+            
 </div>
 
 
 {/* <Button
-                className="cursor-pointer font-semibold mb-3 min-w-[70px] mt-[0px] text-base text-center"
-                shape="round"
-              >
-                1
-              </Button> */}
+            className="cursor-pointer font-semibold mb-3 min-w-[70px] mt-[0px] text-base text-center"
+            shape="round"
+          >
+            1
+          </Button> */}
 
 
 </div>
-  ))
+))
+  )
+
+ 
 }
    </div> :null
        }

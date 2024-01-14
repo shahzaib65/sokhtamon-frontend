@@ -24,7 +24,7 @@ const jobSlice = createSlice({
   name: "job",
   initialState: {
     isLoading: false,
-    data: null,
+    data: [],
     isError: false,
   },
   extraReducers: (builder) => {
