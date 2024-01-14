@@ -5,17 +5,22 @@ import { SelectBox } from "../components/SelectBox";
 import { Link } from 'react-router-dom';
 import {Line} from "../components/Line"
 import arrow from "../assets/arrow.png";
-
+import axios from 'axios';
 import search from "../assets/search.png"
 import { Button } from '../components/Button';
-
+import { useDispatch, useSelector } from "react-redux";
+import {applyJob} from "./serviceSlice"
 import tools from "../assets/tools.svg";
-import axios from 'axios';
-const ServicePage = () => {
 
+const ServicePage = () => {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
  
-  const[show,setShow] = useState(false)
+  const[show,setShow] = useState(true)
   const [selectCity, setSelectCity] = useState(null);
+  const[selectService,setSelectService] = useState(null);
+
+
   const [city, setCity] = useState([]);
 
   const cityData = city.map((data) => ({
@@ -31,7 +36,6 @@ const ServicePage = () => {
     axios
       .get("https://sokhtamon-backend-production.up.railway.app/api/city/fetch")
       .then((res) => {
-        console.log(res.data.Cities);
         setCity(res.data.Cities);
       })
       .catch((err) => {
@@ -39,7 +43,7 @@ const ServicePage = () => {
       });
   };
 
-  const category =[
+  const service =[
 
     {
       "label": "Плотник",
@@ -173,8 +177,20 @@ const ServicePage = () => {
     
 
   ]
+  const [job,setJob] = useState(state.job.data)
+  //  if(state.job.data){
+  //    setJob(state.job.data)
+  //  }
+   //else{
+  //    setJob([])
+  // }
 
 
+
+  
+  
+
+  
 
   return (
     <div className='bg-white-A700 flex flex-col font-roboto items-center justify-start w-full'>
@@ -204,12 +220,6 @@ const ServicePage = () => {
             </Text>
 
 
-            {/* <Text
-              className="absolute h-max mt-4 justify-end m-auto sm:text-[40px] xs:text-[20px] md:text-[46px] text-[50px]  text-black-900 tracking-[-1.00px] w-max"
-              size="txtRobotoRomanBold50"
-            >
-           Услуги
-            </Text> */}
 
     
           </div>
@@ -240,9 +250,12 @@ const ServicePage = () => {
                 }
                 isMulti={false}
                 name="Schedule"
-                options={category}
+                options={service}
                 isSearchable={true}
                 placeholder="Выберите услугу"
+                onChange={(value) => {
+                      setSelectService(value);
+                    }}
               />
               <Line className="bg-blue_gray-300_01 h-[62px] w-px" />
               <SelectBox
@@ -264,7 +277,7 @@ const ServicePage = () => {
                       setSelectCity(value);
                     }}
               />
-              <Button
+              <Button o
                 className="cursor-pointer flex items-center justify-center min-w-[155px] rounded-br rounded-tr"
                 leftIcon={
                   <img
@@ -274,6 +287,10 @@ const ServicePage = () => {
                   />
                 }
                 size="md"
+                onClick={()=>{
+                  dispatch(applyJob({city: selectCity,service: selectService}))
+                  
+                }}
               >
                 <div className="font-medium text-base text-center">Поиск</div>
               </Button>
@@ -285,13 +302,13 @@ const ServicePage = () => {
        {
         show ?    <div  className='md:gap-5 xs:gap-5 lg:gap-[30px] grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center lg:w-[90%] min-h-[auto] mt-[50px] lg:mx-auto xs:mx-5 md:px-5 xs:w-[90%]'>
 {
-  category.map((e)=>(
+  job.map((e)=>(
 
     <div vis key={e} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-col gap-[15px] items-center justify-center p-[15px] rounded-md w-full">
 <div className=' mt-5 flex justify-center items-center'>
 <img
-                  className="h-[70px] w-[70px]"
-                  src={tools}
+                  className="h-[70px] w-[70px] rounded-full"
+                  src={e.job_url}
                   alt="Tools"
                 />
 </div>
@@ -301,24 +318,25 @@ const ServicePage = () => {
                   className="text-black-900 text-center capitalize text-xl w-auto"
                   size="txtRobotoBold20"
                 >
-                  {e.value}
+                  {e.full_name}
                 </Text>
 
-                {/* <Text
+                <Text
                   className="leading-[150.00%] max-w-[383px] md:max-w-full text-base text-blue_gray-300 text-center tracking-[0.20px]"
                   size="txtRobotoRegular16"
                 >
-                  {e.description}
-                </Text> */}
+                  {e.heading}
+                </Text>
                 
 </div>
 
-<Button
+
+{/* <Button
                 className="cursor-pointer font-semibold mb-3 min-w-[70px] mt-[0px] text-base text-center"
                 shape="round"
               >
                 1
-              </Button>
+              </Button> */}
 
 
 </div>

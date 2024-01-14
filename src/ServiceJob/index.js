@@ -19,7 +19,7 @@ const Job = () => {
         formState: { errors },
       } = useForm();
 
-    const [selectService, setSelectService] = useState(null);
+   
     const services =[
 
         {
@@ -159,6 +159,7 @@ const Job = () => {
     
       ]
       const [selectCity, setSelectCity] = useState(null);
+      const [selectService,setSelectService] = useState(null);
       const [city, setCity] = useState([]);
       const fileInputRef = useRef(null);
 
@@ -215,6 +216,43 @@ const Job = () => {
 <form
   noValidate
   onSubmit={handleSubmit(async(data)=>{
+
+    if(selectService === null){
+        setLoading(false)
+        alert("Select the service first")
+      } else if(selectCity == null){
+        setLoading(false)
+        alert("Select the city first")
+      }else{
+        setLoading(true)
+        const form = new FormData();
+              form.append("service",selectService)
+              form.append("city",selectCity)
+              form.append("email",data.email)
+              form.append("full_name",data.name)
+              form.append("experience",data.experience)
+              form.append("heading",data.heading)
+              form.append("price",data.price)
+              form.append("image",selectedFile)
+              form.append("description",data.description)
+
+              const config = {     
+    headers: { 'content-type': 'multipart/form-data' }
+       }
+
+       axios.post("https://sokhtamon-backend-production.up.railway.app/api/job/upload",form, config)
+    .then(response => {
+      setLoading(false)
+        setImage(null)
+        reset();
+        alert("Job uploaded");
+        
+    })
+    .catch(error => {
+        console.log(error);
+       // setError(error)
+    });
+      }
 
   })}
  className="flex flex-col gap-[0px] items-start justify-start mt-[70px] w-full">
@@ -277,7 +315,7 @@ const Job = () => {
                   name="subcategory"
                   options={cityData}
                   isSearchable={true}
-                  placeholder="Выберите подкатегорию"
+                  placeholder="Выберите город"
                   shape="round"
                   color="gray_100"
                   size="sm"
@@ -292,7 +330,7 @@ const Job = () => {
 
 
 <div className="flex lg:flex-row xs:flex-col mt-[25px] w-full lg:mx-20 justify-start items-start xs:mx-2">
-<div className=" flex flex-col lg:w-[35%] gap-3 xs:w-[80%] ">
+<div className=" flex flex-col lg:w-[35%] gap-3 xs:w-[80%] xs:mx-2 ">
                 <Text
                   className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                   size="txtRobotoRomanMedium14Gray90003"
@@ -315,11 +353,11 @@ const Job = () => {
               </div>         
 </div>
 
-<Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-2 " />
+<Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-4" />
 
-<div className=" flex flex-col lg:mx-20 xs:mx-2">
+<div className=" flex flex-col lg:mx-20 xs:mx-0">
               <Text
-                className="mt-10 text-gray-900 text-sm tracking-[-0.28px]"
+                className="mt-10 text-gray-900 text-sm tracking-[-0.28px] mx-2"
                 size="txtRobotoRomanMedium14Gray90003"
               >
                 Фото:
@@ -330,9 +368,7 @@ const Job = () => {
                   style={{ display: "none" }}
                   ref={fileInputRef}
                   onChange={handleFileChange}
-                  // {...register("photo", {
-                  //           required: "Photo is required"
-                  //         })}
+                 
                 />
                 <div className="bg-deep_orange-100 h-[100px] items-center justify-start p-[34px] rounded w-[100px]">
                   <img
@@ -353,7 +389,7 @@ const Job = () => {
               </div>
             </div>
 
-            <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-2 " />
+            <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-4 " />
 
 <div className="flex lg:flex-row xs:flex-col mt-[25px] w-full lg:mx-20 justify-start items-start xs:mx-2">
               <div className=" flex flex-col lg:w-[35%] gap-3 xs:w-[80%] ">

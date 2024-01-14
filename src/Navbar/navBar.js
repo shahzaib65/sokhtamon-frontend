@@ -14,10 +14,6 @@ const navigation1 = [
   { name: 'Контакты', link: '/contact' }
 ]
 
-const navigation2 = [
- 
-  { name: 'Вход', link: '/login' },
-]
 
 
 
