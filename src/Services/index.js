@@ -327,6 +327,22 @@ const ServicePage = () => {
                 >
                   {e.heading}
                 </Text>
+
+                <div className="flex flex-row gap-2.5 items-center justify-start mt-1.5 w-auto">
+                <Text
+                  className="text-base text-indigo-A200 tracking-[0.20px] w-auto"
+                  size="txtRobotoRomanSemiBold16"
+                >
+                  Сомони :
+                </Text>
+                <Text
+                  className="text-gray-800 text-lg tracking-[0.20px] w-auto"
+                  size="txtRobotoBold18"
+                >
+                  {e.price}
+                </Text>
+              </div>
+
                 
 </div>
 
