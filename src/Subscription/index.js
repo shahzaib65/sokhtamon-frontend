@@ -66,20 +66,20 @@ const Subscription = () => {
                 <div className="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
                     <div className="max-w-sm mx-auto border rounded-lg md:mx-4 bg-white-A700_1e border-gray-950">
                         <div className="p-6">
-                            <h1 className="text-xl font-medium  capitalize lg:text-2xl text-white">Free Plan</h1>
+                            <h1 className="text-xl font-medium  capitalize lg:text-2xl text-white">Standard</h1>
 
                             <p className="mt-4  text-white">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+                            The Free Plan is designed for individuals or small-scale users who are looking to explore our platform and its basic functionalities. It's an excellent starting point for those who want to get a feel for what we offer before considering more advanced features.
                             </p>
 
-                            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl dark:text-gray-300">$1.00 <span className="text-base font-medium">/Month</span></h2>
+                            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl dark:text-gray-300">Free<span className="text-base font-medium">/Month</span></h2>
 
                             {/* <p className="mt-1 text-white">
                                 Yearly payment
                             </p> */}
 
                             <button  className="w-full px-4 py-2 mt-6 tracking-wide text-white-A700 capitalize transition-colors duration-300 transform bg-yellow-800 rounded-md hover:bg-yellow-800 focus:outline-none focus:bg-yellow-800 focus:ring focus:ring-yellow-800 focus:ring-opacity-80" onClick={()=>{
-                              makePament(1)
+                              makePament(0)
                             }}>
                                 Start Now
                             </button>
@@ -96,7 +96,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">All limited links</span>
+                                    <span className="mx-4 text-white">Basic Access</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -104,23 +104,31 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Own analytics platform</span>
+                                    <span className="mx-4 text-white">Limited Usage</span>
                                 </div>
 
                                 <div className="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-yellow-800" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Chat support</span>
+                                    <span className="mx-4 text-white">Priority Support</span>
                                 </div>
 
                                 <div className="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-yellow-800" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Optimize hashtags</span>
+                                    <span className="mx-4 text-white">Early Access to Features</span>
+                                </div>
+
+                                <div className="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span className="mx-4 text-white">24/7 VIP Support</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -128,15 +136,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Mobile app</span>
-                                </div>
-
-                                <div className="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
-                                    </svg>
-
-                                    <span className="mx-4 text-white">Unlimited users</span>
+                                    <span className="mx-4 text-white">Early Access to Beta Features</span>
                                 </div>
                             </div>
                         </div>
@@ -144,17 +144,17 @@ const Subscription = () => {
 
                     <div className="max-w-sm mx-auto border rounded-lg md:mx-4 bg-white-A700 border-gray-950">
                         <div className="p-6">
-                            <h1 className="text-xl font-medium  capitalize lg:text-2xl text-white">Elite Plan</h1>
+                            <h1 className="text-xl font-medium  capitalize lg:text-2xl text-white">Golden</h1>
 
                             <p className="mt-4 text-white ">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+                            The Golden Plan is ideal for individuals, businesses, and professionals who demand the highest level of service, performance, and support. Whether you're a power user or a growing enterprise, this plan is tailored to meet your evolving needs.
                             </p>
 
-                            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl ">$50.00 <span className="text-base font-medium">/life time</span></h2>
+                            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl ">$4.99<span className="text-base font-medium">/Monthly</span></h2>
 
                           
                             <button  className="w-full px-4 py-2 mt-6 tracking-wide text-white-A700 capitalize transition-colors duration-300 transform bg-yellow-800 rounded-md hover:bg-yellow-800 focus:outline-none focus:bg-yellow-800 focus:ring focus:ring-yellow-800 focus:ring-opacity-80" onClick={()=>{
-                              makePament(50)
+                              makePament(4.99)
                             }}>
                                 Start Now
                             </button>
@@ -171,7 +171,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">All limited links</span>
+                                    <span className="mx-4 text-white">Unlimited Access</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -179,7 +179,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Own analytics platform</span>
+                                    <span className="mx-4 text-white">More Views</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -187,7 +187,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Chat support</span>
+                                    <span className="mx-4 text-white">Priority Support</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -195,7 +195,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Optimize hashtags</span>
+                                    <span className="mx-4 text-white">Early Access to Features</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -203,32 +203,41 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Mobile app</span>
+                                    <span className="mx-4 text-white">Limited Usage</span>
                                 </div>
 
                                 <div className="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-yellow-800" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Unlimited users</span>
+                                    <span className="mx-4 text-white">24/7 VIP Support</span>
                                 </div>
+
+                                <div className="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span className="mx-4 text-white">Early Access to Beta Features</span>
+                                </div>
+
                             </div>
                         </div>
                     </div>
 
                     <div className="max-w-sm mx-auto border rounded-lg md:mx-4 bg-white-A700 border-gray-950">
                         <div className="p-6">
-                            <h1 className="text-xl font-medium  capitalize lg:text-2xl text-white">Premium Plan</h1>
+                            <h1 className="text-xl font-medium  capitalize lg:text-2xl text-white">Premium</h1>
 
                             <p className="mt-4 text-white ">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+                            The Premium Plan is designed for professionals, businesses, and enterprises that demand the utmost in performance, support, and customization. Whether you're a seasoned user or a growing organization, this plan is tailored to meet the demands of the most discerning users.
                             </p>
 
-                            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl ">$100.00 <span className="text-base font-medium">/life time</span></h2>
+                            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl ">$9.99 <span className="text-base font-medium">/Monthly</span></h2>
 
                             <button className="w-full px-4 py-2 mt-6 tracking-wide text-white-A700 capitalize transition-colors duration-300 transform bg-yellow-800 rounded-md hover:bg-yellow-800 focus:outline-none focus:bg-yellow-800 focus:ring focus:ring-yellow-800 focus:ring-opacity-80" onClick={()=>{
-                              makePament(100)
+                              makePament(9.99)
                             }}>
                                 Start Now
                             </button>
@@ -245,7 +254,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">All limited links</span>
+                                    <span className="mx-4 text-white">Unlimited Access</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -253,7 +262,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Own analytics platform</span>
+                                    <span className="mx-4 text-white">Unlimited Usage</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -261,7 +270,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Chat support</span>
+                                    <span className="mx-4 text-white">Priority Support</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -269,7 +278,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Optimize hashtags</span>
+                                    <span className="mx-4 text-white">Unlimited Views</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -277,7 +286,7 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Mobile app</span>
+                                    <span className="mx-4 text-white">Early Access to Features</span>
                                 </div>
 
                                 <div className="flex items-center">
@@ -285,8 +294,17 @@ const Subscription = () => {
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span className="mx-4 text-white">Unlimited users</span>
+                                    <span className="mx-4 text-white">24/7 VIP Support</span>
                                 </div>
+
+                                <div className="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-yellow-800" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span className="mx-4 text-white">Early Access to Beta Features</span>
+                                </div>
+
                             </div>
                         </div>
                     </div>
