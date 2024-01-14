@@ -172,10 +172,11 @@ const ServicePage = () => {
     {
       "label": "Установка дверей",
       "value": "Установка дверей"
+    },
+    {
+      "label": "Транспортные услуги",
+      "value": "Транспортные услуги"
     }
-
-    
-
   ]
   const [job,setJob] = useState([state.job.data])
   //  if(state.job.data){
@@ -218,10 +219,6 @@ const ServicePage = () => {
             >
            Услуги
             </Text>
-
-
-
-    
           </div>
 
           <Text
@@ -288,8 +285,7 @@ const ServicePage = () => {
                 }
                 size="md"
                 onClick={()=>{
-                  dispatch(applyJob({city: selectCity,service: selectService}))
-                  
+                  dispatch(applyJob({selectCity,selectService}))
                 }}
               >
                 <div className="font-medium text-base text-center">Поиск</div>

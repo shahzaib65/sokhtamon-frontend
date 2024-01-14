@@ -3,7 +3,7 @@ import { Text } from "../components/Text";
 import { useForm } from "react-hook-form";
 
 import { ClipLoader } from "react-spinners";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { loginWithEmail } from "./loginSlice";
@@ -110,12 +110,14 @@ const Login = () => {
             >
               Попробуйте войти через?
             </Text>
-            <Text
+           <Link to="/mobile">
+           <Text
               className=" text-base text-gray-900 cursor-pointer"
               size="txtRobotoBold18"
             >
               Номер телефона
             </Text>
+           </Link>
           </div>
           <p className=" font-roboto font-semibold text-base text-black-900">
             {state.email.data}

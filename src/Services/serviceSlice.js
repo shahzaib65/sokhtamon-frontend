@@ -1,14 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const applyJob = createAsyncThunk("job", async (city,service) => {
-  const apiUrl = 'https://sokhtamon-backend-production.up.railway.app/api/job/fetch';
-  const queryParams = { param1: city, param2: service };
-  const queryString = Object.keys(queryParams)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(queryParams[key])}`)
-    .join('&');
-  const urlWithQuery = `${apiUrl}?${queryString}`;
+export const applyJob = createAsyncThunk("job", async(obj) => {
+
   const response = await fetch(
-       urlWithQuery,
+      `https://sokhtamon-backend-production.up.railway.app/api/job/fetch?city=${obj.selectCity}&service=${obj.selectService}`,
     {
       method: "GET",
       headers: { "content-type": "application/json" },

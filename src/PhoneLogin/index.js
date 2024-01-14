@@ -1,12 +1,36 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Text} from "../components/Text"
 import { useForm } from "react-hook-form";
+import firebase from "firebase/compat/app";
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
 import { auth } from '../firebase/setup';
+
 import { useNavigate } from 'react-router-dom';
+
+
+
 
 const Mobile = () => {
   const navigate = useNavigate()
+
+  const [verificationCode, setVerificationCode] = useState('');
+  const [verificationId, setVerificationId] = useState(null);
+
+  const handleVerifyCode = async() => {
+    const credential = await firebase.auth.PhoneAuthProvider.credential(verificationId, "123456");
+
+    firebase
+      .auth()
+      .signInWithCredential(credential)
+      .then((user) => {
+        console.log('Phone number verified:', user);
+      })
+      .catch((error) => {
+        console.error('Error verifying code:', error);
+      });
+  };
+  
+
     const {
         register,
         handleSubmit,
@@ -14,12 +38,19 @@ const Mobile = () => {
         formState: { errors },
       } = useForm();
     
-      const onSubmit = (data) => {
+      const onSubmit = async(data) => {
      try {
       const phone = "+92" + data.phoneNumber
+      //handleSendCode(phone)
         const recaptcha = new RecaptchaVerifier(auth,"recaptcha",{})
-        const confirmation = signInWithPhoneNumber(auth,phone,recaptcha)
-       
+         await signInWithPhoneNumber(auth,phone,recaptcha)
+         .then((id)=>{
+  setVerificationId(id.verificationId)
+         })
+         .catch((error) => {
+          console.error('Error sending verification code:', error);
+        });
+  
         
      //  navigate(`/firebaseotp/${confirmation}`)
      } catch (error) {
@@ -66,6 +97,11 @@ const Mobile = () => {
     
                      <div className=" w-full flex justify-center mt-[15px] mb-7">
                     <button type='submit'  className=" bg-yellow-800 w-[60%] h-[50px] flex justify-center items-center rounded-sm text-white-A700 font-roboto font-semibold tracking-[0.20px]">Continue
+                    </button>
+                    </div>
+
+                    <div className=" w-full flex justify-center mt-[15px] mb-7">
+                    <button type='submit' onClick={handleVerifyCode}  className=" bg-yellow-800 w-[60%] h-[50px] flex justify-center items-center rounded-sm text-white-A700 font-roboto font-semibold tracking-[0.20px]">Continue
                     </button>
                     </div>
                     
