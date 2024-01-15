@@ -53,7 +53,7 @@ const Send = () => {
                       return;
                     }
 
-                    const phoneNumber = "+992" + phone;
+                    const phoneNumber = "+92" + phone;
                     console.log(phoneNumber)
                     const recaptchaVerifier = new RecaptchaVerifier(
                       auth,
@@ -116,8 +116,7 @@ const Send = () => {
                     toast.error("please enter a code");
                     return;
                   }
-                  confirmationResult
-                    .confirm(otp)
+                  confirmationResult.confirm(otp)
                     .then(async (res) => {
                       console.log(res.user.phoneNumber);
                       const response = await fetch(
