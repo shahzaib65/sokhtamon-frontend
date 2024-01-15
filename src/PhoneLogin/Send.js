@@ -54,6 +54,7 @@ const Send = () => {
                     }
 
                     const phoneNumber = "+992" + phone;
+                    console.log(phoneNumber)
                     const recaptchaVerifier = new RecaptchaVerifier(
                       auth,
                       "recaptcha",
