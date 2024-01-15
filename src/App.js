@@ -12,11 +12,13 @@ import AboutUs from './AboutUs';
 import Footer from './Footer';
 import Privacy from "./Policy"
 import Tos from "./TOS"
-import Mobile from "./PhoneLogin"
+import Verify from "./PhoneLogin/Verify"
 import Otp from "./otpVerification"
 import Apply from "./ServiceJob"
 import Subscription from './Subscription';
 import Profile from "./Profile"
+import Toast from "../src/components/Toast";
+import Send from "./PhoneLogin/Send"
 
 function App() {
   return (
@@ -38,14 +40,15 @@ function App() {
       <Route exact path='/profile' element={<Profile/>}/>
       <Route exact path = "/privacy" element={<Privacy/>}/>
       <Route exact path='/tos' element={<Tos/>}/>
-      <Route exact path = "/mobile" element={<Mobile/>}/>
+      <Route exact path = "/send" element={<Send/>}/>
+      <Route exact path='/verify' element={<Verify/>}/>
       <Route exact path='/otp' element={<Otp/>}/>
       <Route exact path='/job' element={<Apply/>}/>
       <Route exact path='/subscription' element={<Subscription/>}/>
       </Routes>
       <Footer/>
     </Router>
-  
+  <Toast/>
     </div>
   );
 }

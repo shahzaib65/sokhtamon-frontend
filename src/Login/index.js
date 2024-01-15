@@ -110,7 +110,7 @@ const Login = () => {
             >
               Попробуйте войти через?
             </Text>
-           <Link to="/mobile">
+           <Link to="/send">
            <Text
               className=" text-base text-gray-900 cursor-pointer"
               size="txtRobotoBold18"
