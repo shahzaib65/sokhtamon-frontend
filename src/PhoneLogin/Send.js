@@ -53,7 +53,7 @@ const Send = () => {
                       return;
                     }
 
-                    const phoneNumber = "+92" + phone;
+                    const phoneNumber = "+992" + phone;
                     console.log(phoneNumber)
                     const recaptchaVerifier = new RecaptchaVerifier(
                       auth,
