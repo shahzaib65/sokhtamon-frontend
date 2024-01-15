@@ -2,15 +2,26 @@ import React from "react";
 import banner from "../assets/contact_bg.svg";
 import { Text } from "../components/Text";
 import { Line } from "../components/Line";
-import { Button } from "../components/Button";
 import call from "../assets/call.svg";
 import location from "../assets/location.svg";
 import email from "../assets/email.svg";
-import linkedin from "../assets/linkedin.svg";
-import insta from "../assets/insta.svg";
-import discord from "../assets/discord.svg";
-import Footer from "../Footer";
+import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { contactUs } from "./contactSlice";
+import { ClipLoader } from "react-spinners";
+import toast from "react-hot-toast"
+
 const Contact = () => {
+
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   return (
     <div className="bg-white-A700 flex flex-col font-roboto items-center justify-center mx-auto w-full">
       <div className=" flex flex-col justify-center items-center w-full mb-5">
@@ -90,7 +101,19 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-start justify-start xs:mt-0 lg:mt-12 w-[58%] xs:w-full">
+            <form 
+            noValidate
+            onSubmit={handleSubmit(async(data)=>{
+              dispatch(contactUs({name: data.name,email: data.email,subject: data.subject,telephone: data.telephone,description: data.description}))
+              reset();
+              
+              // if(state.contact.data !== null){
+              //   console.log("working")
+              //   toast.success("Ваша контактная форма отправлена")
+              // }
+            })}
+            
+            className="flex flex-col items-start justify-start xs:mt-0 lg:mt-12 w-[58%] xs:w-full">
               <div className="flex lg:flex-row xs:flex-col w-full">
                 <div className=" flex flex-col lg:w-[50%] gap-3 xs:w-[80%] ">
                   <Text
@@ -101,11 +124,17 @@ const Contact = () => {
                   </Text>
                   <input
                     name="name"
-                   
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
-                  
+                    {...register("name", {
+                    required: "Требуется полное имя",
+                  })}
                   ></input>
                   <Line className="bg-gray-900_01 h-[1px] p-0 w-full" />
+                  {errors.name && (
+                  <p className=" text-start text-red-500">
+                    {errors.name.message}
+                  </p>
+                )}
                 </div>
 
                 <div className=" flex flex-col lg:w-[50%] gap-3 lg:mx-10 xs:mx-2 xs:w-[80%]">
@@ -118,11 +147,21 @@ const Contact = () => {
 
                   <input
                     name="email"
-                  
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
-                  
+                    {...register("email", {
+                    required: "Требуется электронная почта",
+                    pattern: {
+                      value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi,
+                      message: "Email не является допустимым",
+                    },
+                  })}
                   ></input>
                   <Line className="bg-gray-900_01 h-[1px] p-0 w-full" />
+                  {errors.email && (
+                  <p className=" text-start text-red-500">
+                    {errors.email.message}
+                  </p>
+                )}
                 </div>
               </div>
 
@@ -136,11 +175,17 @@ const Contact = () => {
                   </Text>
                   <input
                     name="subject"
-                
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
-                    
+                    {...register("subject", {
+                    required: "Требуется тема",
+                  })}
                   ></input>
                   <Line className="bg-gray-900_01 h-[1px] p-0 w-full" />
+                  {errors.subject && (
+                  <p className=" text-start text-red-500">
+                    {errors.subject.message}
+                  </p>
+                )}
                 </div>
 
                 <div className=" flex flex-col lg:w-[50%] gap-3  lg:mx-10 xs:mx-2 xs:w-[80%]">
@@ -153,11 +198,18 @@ const Contact = () => {
 
                   <input
                     name="phone"
-                 
                     className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                     wrapClassName="w-full"
+                    {...register("telephone", {
+                    required: "Требуется номер телефона",
+                  })}
                   ></input>
                   <Line className="bg-gray-900_01 h-[1px] p-0 w-full" />
+                  {errors.telephone && (
+                  <p className=" text-start text-red-500">
+                    {errors.telephone.message}
+                  </p>
+                )}
                 </div>
               </div>
 
@@ -172,20 +224,36 @@ const Contact = () => {
                   name="description"
                   className="p-0 outline-none placeholder:text-gray-700 text-left text-sm w-full"
                   wrapClassName="w-full"
+                  {...register("description", {
+                    required: "Требуется описание",
+                  })}
                 ></input>
                 <Line className="bg-gray-900_01 h-[1px] p-0 w-full" />
+                {errors.description && (
+                  <p className=" text-start text-red-500">
+                    {errors.description.message}
+                  </p>
+                )}
               </div>
 
               <div className=" flex justify-end items-end w-full">
-                <Button
-                  className="cursor-pointer font-bold h-14 leading-[normal] min-w-[202px]  mr-[50px] mt-[85px] rounded-[5px] shadow-bs1 text-base text-center items-end"
+                <button
+                  className="cursor-pointer bg-yellow-800 text-white-A700 font-bold h-14 leading-[normal] min-w-[202px]  mr-[50px] mt-[85px] rounded-[5px] shadow-bs1 text-base text-center items-end"
                   shape="round"
                   size="md"
+                  type="submit"
                 >
-                  Отправить сообщение
-                </Button>
+                 {state.contact.isLoading ? (
+                <ClipLoader color="#FFFFFF" size={30} />
+              ) : (
+                "Отправить сообщение"
+              )}
+                 
+                </button>
               </div>
-            </div>
+              
+              <p className=" font-roboto text-base text-black-900">{state.contact.data}</p>
+            </form>
           </div>
         </div>
         {/* <Footer/> */}

@@ -113,7 +113,7 @@ const PostJob = () => {
           </div>
 
           <form
-            form
+            
             noValidate
             onSubmit={handleSubmit(async (data) => {
 

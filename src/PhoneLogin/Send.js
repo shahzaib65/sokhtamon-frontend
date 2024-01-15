@@ -65,7 +65,6 @@ const Send = () => {
                         },
                       }
                     );
-
                     await signInWithPhoneNumber(
                       auth,
                       phoneNumber,

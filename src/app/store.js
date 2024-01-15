@@ -4,6 +4,7 @@ import otpReducer from "../otpVerification/otpSlice"
 import checkReducer from "../MainPage/checkSlice"
 import jobReducer from "../Services/serviceSlice"
 import phoneReducer from "../PhoneLogin/phoneSlice"
+import contactReducer from "../ContactUs/contactSlice"
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     otp: otpReducer,
     check: checkReducer,
     job: jobReducer,
-    phone: phoneReducer
+    phone: phoneReducer,
+    contact: contactReducer
   },
 });
