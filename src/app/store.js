@@ -5,6 +5,7 @@ import checkReducer from "../MainPage/checkSlice"
 import jobReducer from "../Services/serviceSlice"
 import phoneReducer from "../PhoneLogin/phoneSlice"
 import contactReducer from "../ContactUs/contactSlice"
+import updateProfileReducer from "../Profile/profileSlice"
 
 export const store = configureStore({
   reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
     check: checkReducer,
     job: jobReducer,
     phone: phoneReducer,
-    contact: contactReducer
+    contact: contactReducer,
+    update: updateProfileReducer
   },
 });

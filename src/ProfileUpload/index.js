@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Registration = () => {
+const Upload = () => {
   return (
     <div className='bg-white-A700 flex flex-col font-roboto items-center justify-start w-full'>
       
@@ -8,4 +8,4 @@ const Registration = () => {
   )
 }
 
-export default Registration
+export default Upload
