@@ -103,7 +103,7 @@ const Login = () => {
             </button>
           </div>
 
-          <div className=" w-full flex space-x-1 justify-center items-center">
+          {/* <div className=" w-full flex space-x-1 justify-center items-center">
             <Text
               className=" text-base text-yellow-800 mx-0"
               size="txtRobotoRomanSemiBold20"
@@ -118,7 +118,7 @@ const Login = () => {
               Номер телефона
             </Text>
            </Link>
-          </div>
+          </div> */}
           <p className=" font-roboto font-semibold text-base text-black-900">
             {state.email.data}
           </p>

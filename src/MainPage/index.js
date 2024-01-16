@@ -39,7 +39,6 @@ const Main = () => {
         "https://sokhtamon-backend-production.up.railway.app/api/category/fetch"
       )
       .then((res) => {
-        console.log(res.data.categories);
         setcategory(res.data.categories);
       })
       .catch((err) => {

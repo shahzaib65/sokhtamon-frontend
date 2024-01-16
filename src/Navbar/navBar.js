@@ -1,37 +1,39 @@
-import { useEffect,useState } from 'react'
-import logo from "../../src/assets/logo.png"
-import { Link } from 'react-router-dom';
-import avatar from "../assets/avatar.svg"
-import { useDispatch, useSelector } from "react-redux";
-import { checkuser } from "../MainPage/checkSlice";
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useEffect, useState } from "react";
+import logo from "../../src/assets/logo.png";
+import { Link } from "react-router-dom";
+import avatar from "../assets/avatar.svg";
+import { useSelector } from "react-redux";
+
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 const navigation1 = [
-  { name: 'Главная', link: '/'},
-  { name: ' О нас', link: '/about' },
-  {name: 'Услуги', link: '/service'},
-  { name: 'Контакты', link: '/contact' }
-]
-
-
-
+  { name: "Главная", link: "/" },
+  { name: " О нас", link: "/about" },
+  { name: "Услуги", link: "/service" },
+  { name: "Контакты", link: "/contact" },
+];
 
 export default function Example() {
-
   const state = useSelector((state) => state);
-
   function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
+    return classes.filter(Boolean).join(" ");
+  }
+  let data = false
+  if(state.check.data){
+    data = state.check.data.login
+      
   }
 
-  return(
+  
+  //console.log()
+  
+
+  return (
     <Disclosure as="nav">
       {({ open }) => (
         <>
           <div className="mx-auto w-full  px-6 sm:px-6 lg:px-8">
             <div className="relative flex h-20 items-center justify-between">
-
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 ">
@@ -47,13 +49,13 @@ export default function Example() {
 
               <div className="flex flex-1 items-center justify-center xs:items-stretch xs:justify-start">
                 <div className="xs:invisible lg:visible flex flex-shrink-0 items-center">
-                <Link className=' flex justify-center items-center' to="/">
-                 <img
-                    className="h-[40px] w-auto ml-8"
-                    src={logo}
-                    alt="Your Company"
-                  />
-                 </Link>
+                  <Link className=" flex justify-center items-center" to="/">
+                    <img
+                      className="h-[40px] w-auto ml-8"
+                      src={logo}
+                      alt="Your Company"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4 ml-4 pt-3 ">
@@ -61,7 +63,7 @@ export default function Example() {
                       <Link
                         key={item.name}
                         to={item.link}
-                        className=' px-3 text-sm font-roboto font-normal text-[#64748B]'
+                        className=" px-3 text-sm font-roboto font-normal text-[#64748B]"
                       >
                         {item.name}
                       </Link>
@@ -71,38 +73,31 @@ export default function Example() {
               </div>
 
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              
-              <div className="flex space-x-4">
-
-{
-   state.check.data ? (
-   <Link to="profile">
-     <img
-         src={avatar}
-         alt='Профиль'
-         className={
-           ' px-0 pt-[0px] w-10 h-10 text-sm font-roboto font-normal text-[#64748B]'
-         }>
-         {/* Профиль */}
-       </img>
-   </Link>
-     
-   ):  ( 
-     <Link           
-         to="/login"
-         className={
-          ' px-3 pt-[4px] text-sm font-roboto font-normal text-[#64748B]'
-         }
-     >
-         Входs
-       </Link>
-    
-   )
- }
-    
-   </div>
+                <div className="flex space-x-4">
+                  {data ? (
+                    <Link to="profile">
+                      <img
+                        src={avatar}
+                        alt="Профиль"
+                        className={
+                          " px-0 pt-[0px] w-10 h-10 text-sm font-roboto font-normal text-[#64748B]"
+                        }
+                      >
+                        {/* Профиль */}
+                      </img>
+                    </Link>
+                  ) : (
+                    <Link
+                      to="/login"
+                      className={
+                        " px-3 pt-[4px] text-sm font-roboto font-normal text-[#64748B]"
+                      }
+                    >
+                      Вход
+                    </Link>
+                  )}
+                </div>
               </div>
-
             </div>
           </div>
 
@@ -114,10 +109,12 @@ export default function Example() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -127,48 +124,5 @@ export default function Example() {
         </>
       )}
     </Disclosure>
-  )
-
- 
+  );
 }
-
-
-// return (
-//   <Disclosure as="nav">
-//   {
-//     ({open})=>(
-//       <>
-//       <div className="mx-auto w-full  px-6 sm:px-6 lg:px-8">
-//            <div className="flex h-20 items-center justify-between">
-//             <div className="flex flex-shrink-0 items-center ml-0">
-
-                //  <div className="flex space-x-4 ml-4">
-                //     {navigation1.map((item) => (
-                //      <Link
-                //        key={item.name}
-                //         to={item.link}
-                //         className={
-                //           ' px-3 pt-[4px] text-sm font-roboto font-normal text-[#64748B]'
-                //         }
-                //         aria-current={item.current ? 'page' : undefined}
-                //       >
-                //         {item.name}
-                //       </Link>
-                //     ))}
-                //   </div>
-                // </div>
-
-               
-          //  </div>
-       //   </div> 
-
-//           <Disclosure.Panel className=" xs:hidden">
-
-//           </Disclosure.Panel>
-//       </>
-//     )
-//   }
-  
-    
-//   </Disclosure>
-//   )

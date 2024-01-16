@@ -1,14 +1,22 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const checkuser = createAsyncThunk("checkuser", async (token) => {
-  const response = await fetch(
-    "https://sokhtamon-backend-production.up.railway.app/api/user/check",
-    {
-      method: "GET",
-      headers: { "Authorization": token },
-    }
-  );
+export const checkuser = createAsyncThunk("checkuser", async (id) => {
+  // const response = await fetch(
+  //   "https://sokhtamon-backend-production.up.railway.app/api/user/check",
+  //   {
+  //     method: "GET",
+  //     headers: { "Authorization": token },
+  //   }
+  // );
+
+const url = "https://sokhtamon-backend-production.up.railway.app/api/user/fetch/" + id
+  const response = await fetch(url,{
+    method: "GET",
+    headers: { "content-type": "application/json" },
+  })
+  
   const data = await response.json();
+  console.log(data)
   return data;
 });
 

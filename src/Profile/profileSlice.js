@@ -11,7 +11,7 @@ export const updateProfile = createAsyncThunk("updateProfile", async (userData) 
     // form.append("image",userData.pic)
     // console.log(form)
     const response = await fetch(
-    "http://192.168.1.3:5000/api/user/update",
+    "https://sokhtamon-backend-production.up.railway.app/api/user/update",
     {
       method: "POST",
       body: JSON.stringify(userData),

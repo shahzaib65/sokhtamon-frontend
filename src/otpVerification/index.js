@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {Text} from "../components/Text"
 import { useForm } from "react-hook-form";
 import { ClipLoader } from "react-spinners";
@@ -21,7 +21,7 @@ const Otp = () => {
       if(state.otp.data){
         navigate("/")
         reset();
-        localStorage.setItem("token",state.otp.data)
+        localStorage.setItem("token",state.otp.data._id)
       }
     
       const onSubmit = (data) => {
