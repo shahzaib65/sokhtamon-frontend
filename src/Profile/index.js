@@ -34,12 +34,12 @@ const Profile = () => {
     const [selectGender, setSelectGender] = useState(null);
     const[gender,setGender] = useState([
       {
-        "label": "Male",
-        "value": "Male"
+        "label": "Мужской",
+        "value": "Мужской"
       },
       {
-        "label": "Female",
-        "value": "Female"
+        "label": "Женский",
+        "value": "Женский"
       }
     ])
 
@@ -62,11 +62,6 @@ const Profile = () => {
       if(state.check.data){
         navigate("/login")
       }
-
-     
-
-
-
 
   return (
     <div className='bg-white-A700 flex flex-col font-roboto justify-start w-full'>
@@ -158,7 +153,7 @@ const Profile = () => {
                   className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                   size="txtRobotoRomanMedium14Gray90003"
                 >
-               Mobile number
+              Номер мобильного телефона
                 </Text>
 
                 <input

@@ -5,6 +5,7 @@ import { ClipLoader } from "react-spinners";
 import { useDispatch, useSelector } from "react-redux";
 import { otpWithEmail } from './otpSlice';
 import { useNavigate } from "react-router-dom";
+import {checkuse}
 
 const Otp = () => {
   const dispatch = useDispatch();
