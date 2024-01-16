@@ -60,7 +60,7 @@ const Profile = () => {
       // }, []);
 
       if(state.check.data){
-        navigate("/login")
+        navigate("/home")
       }
 
   return (
@@ -262,6 +262,7 @@ const Profile = () => {
     <div className=' flex justify-center items-center'>
     <button onClick={()=>{
        dispatch(checkuser(localStorage.getItem("token")));
+       
       //localStorage.removeItem("token")
        
     }} className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center  text-white-A700 font-roboto font-semibold tracking-[0.20px] rounded-[4px]">
