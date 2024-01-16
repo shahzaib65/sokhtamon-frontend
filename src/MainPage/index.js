@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Line } from "../components/Line";
 import { Text } from "../components/Text";
-import { List } from "../components/List";
 import { SelectBox } from "../components/SelectBox";
 import moment from "moment";
 import banner from "../assets/home_banner.svg";
@@ -20,6 +19,7 @@ const Main = () => {
 
   useEffect(() => {
     if(localStorage.getItem("token") !==null){
+      console.log(localStorage.getItem("token"))
       dispatch(checkuser(localStorage.getItem("token")));
     }else{
       console.log("token not exist")
