@@ -101,7 +101,7 @@ const Profile = () => {
       >
       <div className="flex lg:flex-row xs:flex-col mt-[25px] lg:mx-20 w-[80%] justify-start items-start xs:mx-2">
           
-              <div className=" flex flex-col lg:w-[35%] gap-3 xs:w-[80%] ">
+              <div className=" flex flex-col lg:w-[50%] gap-3 xs:w-[80%] ">
                 <Text
                   className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                   size="txtRobotoRomanMedium14Gray90003"
@@ -125,7 +125,7 @@ const Profile = () => {
                 )}
               </div>
 
-              <div className=" flex flex-col lg:w-[35%] gap-3 lg:mx-10 xs:mx-2 xs:w-[80%]">
+              <div className=" flex flex-col lg:w-[50%] gap-3 lg:mx-10 xs:mx-2 xs:w-[80%]">
                 <Text
                   className="text-gray-900 text-sm tracking-[-0.28px] lg:mt-0 w-auto xs:mt-[25px]"
                   size="txtRobotoRomanMedium14Gray90003"
@@ -152,8 +152,8 @@ const Profile = () => {
               
             </div>
 
-   <div className="flex lg:flex-row xs:flex-col mt-[25px] lg:mx-20 w-[80%] justify-start items-start xs:mx-2">
-   <div className=" flex flex-col lg:w-[35%] gap-3 xs:w-[80%] ">
+   <div className="flex lg:flex-row xs:flex-col mt-[25px] gap-3 lg:mx-20 w-[80%] justify-start items-start xs:mx-2">
+   <div className=" flex flex-col lg:w-[47%] gap-3 xs:w-[80%] ">
                 <Text
                   className="text-gray-900 text-sm tracking-[-0.28px] w-auto"
                   size="txtRobotoRomanMedium14Gray90003"
@@ -175,7 +175,7 @@ const Profile = () => {
                   </p>
                 )}
               </div>
-              <div className=" flex flex-col lg:w-[35%] gap-3 lg:mx-0 xs:mx-2 xs:w-[80%]">
+              <div className=" flex flex-col lg:w-[47%] gap-3  lg:ml-8 xs:mx-2 xs:w-[80%]">
                 <Text
                   className="text-gray-900 text-sm tracking-[-0.28px] lg:mt-0 w-auto xs:mt-[25px]"
                   size="txtRobotoRomanMedium14Gray90003"
