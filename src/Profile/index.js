@@ -250,7 +250,7 @@ const Profile = () => {
 
             {/* <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[80%] xs:mx-4 " /> */}
 
-            <div className=" w-full flex justify-center mt-[55px] mb-7">
+            <div className=" w-full flex justify-center mt-[100px] mb-7">
               <button
                 type="submit"
                 className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center  text-white-A700 font-roboto font-semibold tracking-[0.20px] rounded-[4px]"
