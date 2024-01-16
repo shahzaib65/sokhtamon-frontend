@@ -16,10 +16,6 @@ const Profile = () => {
   const dispatch = useDispatch();
   let navigate = useNavigate();
     const state = useSelector((state) => state);
-    const checkState = useSelector(state => state.check.data);
-
-
-
     const [selectGender, setSelectGender] = useState(null);
     const[gender,setGender] = useState([
       {
@@ -40,6 +36,7 @@ const Profile = () => {
       } = useForm();
 
       if(state.check.data){
+        
        // navigate("/login")
       }
 
@@ -67,8 +64,8 @@ const Profile = () => {
         if(selectGender === null){
          alert("Select the gender first")
        }else{
-       dispatch(updateProfile({"first": data.first,"last": data.last,"id": checkState.id,"gender": selectGender,"mobile": data.mobile}))
-      
+       dispatch(updateProfile({"first": data.first,"last": data.last,"id": localStorage.getItem("token"),"gender": selectGender,"mobile": data.mobile}))
+      reset();
       }
 
 

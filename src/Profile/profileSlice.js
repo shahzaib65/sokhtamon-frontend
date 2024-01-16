@@ -2,14 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const updateProfile = createAsyncThunk("updateProfile", async (userData) => {
   try {
-    // const form = new FormData();
-    // form.append("first",userData.first)
-    // form.append("last",userData.last)
-    // form.append("id",userData.id)
-    // form.append("gender",userData.gender)
-    // form.append("mobile",userData.mobile)
-    // form.append("image",userData.pic)
-    // console.log(form)
+   console.log(userData)
     const response = await fetch(
     "https://sokhtamon-backend-production.up.railway.app/api/user/update",
     {
@@ -19,6 +12,7 @@ export const updateProfile = createAsyncThunk("updateProfile", async (userData) 
     }
   );
   const data = await response.json();
+  console.log(data)
   return data;
   } catch (error) {
     console.log(error.message)
