@@ -29,6 +29,7 @@ const Main = () => {
   }, []);
 
   useEffect(() => {
+    fetchProducts()
    // ad("test");
   }, []);
 
@@ -45,6 +46,15 @@ const Main = () => {
         console.log(err);
       });
   };
+
+  const fetchProducts = () =>{
+    axios.get("https://sokhtamon-backend-production.up.railway.app/api/post/all")
+    .then((res)=>{
+    setPosts(res.data)
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
 
   const [posts, setPosts] = useState([]);
 
