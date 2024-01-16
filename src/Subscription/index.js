@@ -1,10 +1,27 @@
-import React from 'react'
-import {loadStripe} from '@stripe/stripe-js';
-import { Text } from '../components/Text';
-
+import React, { useState,useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 const Subscription = () => {
+    
+    const {postId} = useParams();
+    console.log(postId);
 
-  const makePament = async(price)=>{
+
+   // const [name,setName] = useState('')
+    // useEffect(()=>{
+    
+    //     axios.post(`https://sokhtamon-backend-production.up.railway.app/api/post/fetch/${postId}`)
+    //     .then((res)=>{
+    //        console.log(res.data.category_name)
+    //     }).catch((err)=>{
+    //       console.log(err.message);
+    //     })
+    //   },[])
+    
+
+   
+    
+
+  const makePament = async(price,name)=>{
 
         const res = await fetch("https://sokhtamon-backend-production.up.railway.app/api/subscription/checkout",{
             method: "POST",
@@ -17,14 +34,12 @@ const Subscription = () => {
                     id: 1,
                 quantity: 1,
                 price: price,
-                name: 'shahzaib'
+                name: name
                 }
             ]
            }),
         });
         const data = await res.json()
-
-        
         console.log(data)
         window.location = data.url
   
@@ -82,7 +97,8 @@ const Subscription = () => {
                             </p> */}
 
                             <button  className="w-full px-4 py-2 mt-6 tracking-wide text-white-A700 capitalize transition-colors duration-300 transform bg-yellow-800 rounded-md hover:bg-yellow-800 focus:outline-none focus:bg-yellow-800 focus:ring focus:ring-yellow-800 focus:ring-opacity-80" onClick={()=>{
-                              makePament(0)
+                              makePament(0,"Free");
+                            
                             }}>
                                 Start Now
                             </button>
@@ -157,7 +173,8 @@ const Subscription = () => {
 
                           
                             <button  className="w-full px-4 py-2 mt-6 tracking-wide text-white-A700 capitalize transition-colors duration-300 transform bg-yellow-800 rounded-md hover:bg-yellow-800 focus:outline-none focus:bg-yellow-800 focus:ring focus:ring-yellow-800 focus:ring-opacity-80" onClick={()=>{
-                              makePament(4.99)
+                              makePament(4.99,"Golden");
+                        
                             }}>
                                 Start Now
                             </button>
@@ -240,7 +257,8 @@ const Subscription = () => {
                             <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl ">$9.99 <span className="text-base font-medium">/Monthly</span></h2>
 
                             <button className="w-full px-4 py-2 mt-6 tracking-wide text-white-A700 capitalize transition-colors duration-300 transform bg-yellow-800 rounded-md hover:bg-yellow-800 focus:outline-none focus:bg-yellow-800 focus:ring focus:ring-yellow-800 focus:ring-opacity-80" onClick={()=>{
-                              makePament(9.99)
+                              makePament(9.99,"Premium");
+                              
                             }}>
                                 Start Now
                             </button>

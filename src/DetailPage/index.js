@@ -4,11 +4,12 @@ import { Text } from "../components/Text";
 import cement from "../assets/cement.svg"
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 const DetailPage = () => {
-
+    let navigate = useNavigate();
   const { id } = useParams();
   const [ detail,setDetail] = useState('')
-
+ console.log("postId",id)
   useEffect(()=>{
     
     axios.post(`https://sokhtamon-backend-production.up.railway.app/api/post/fetch/${id}`)
@@ -91,6 +92,7 @@ const DetailPage = () => {
                     </span>
                     
                   </Text>
+
                 </div>
               </div>
 
@@ -143,9 +145,22 @@ const DetailPage = () => {
                     {detail.telephone}
                   </Text>
                   </div> 
+
+                <>
+                <button
+              onClick={()=>{
+                navigate(`/subscription/${id}`)
+              }}
+              className=" bg-yellow-800 w-[20%] h-[50px] mt-10 flex justify-center items-center rounded-sm text-white-A700 font-roboto font-semibold tracking-[0.20px]">
+              Подписка
+            </button>
+                </>
                 
               </div>
             </div>
+
+           
+
           </div>
          
       </div>

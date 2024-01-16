@@ -44,7 +44,7 @@ function App() {
       <Route exact path='/verify' element={<Verify/>}/>
       <Route exact path='/otp' element={<Otp/>}/>
       <Route exact path='/job' element={<Apply/>}/>
-      <Route exact path='/subscription' element={<Subscription/>}/>
+      <Route exact path='/subscription/:postId' element={<Subscription/>}/>
       </Routes>
       <Footer/>
     </Router>
