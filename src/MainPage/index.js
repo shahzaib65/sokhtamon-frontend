@@ -19,11 +19,11 @@ const Main = () => {
 
 
   useEffect(() => {
-    if(localStorage.getItem("token") !==null){
-      dispatch(checkuser(localStorage.getItem("token")));
-    }else{
-      console.log("token not exist")
-    }
+    // if(localStorage.getItem("token") !==null){
+    //   dispatch(checkuser(localStorage.getItem("token")));
+    // }else{
+    //   console.log("token not exist")
+    // }
       
     categories();
   }, []);

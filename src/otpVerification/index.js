@@ -5,7 +5,7 @@ import { ClipLoader } from "react-spinners";
 import { useDispatch, useSelector } from "react-redux";
 import { otpWithEmail } from './otpSlice';
 import { useNavigate } from "react-router-dom";
-import {checkuse}
+import { checkuser } from "../MainPage/checkSlice";
 
 const Otp = () => {
   const dispatch = useDispatch();
@@ -23,6 +23,7 @@ const Otp = () => {
         navigate("/")
         reset();
         localStorage.setItem("token",state.otp.data._id)
+        dispatch(checkuser(state.otp.data._id))
       }
     
       const onSubmit = (data) => {
