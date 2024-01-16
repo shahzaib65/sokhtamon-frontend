@@ -17,19 +17,8 @@ const Profile = () => {
   let navigate = useNavigate();
     const state = useSelector((state) => state);
     const checkState = useSelector(state => state.check.data);
-    const [selectedFile, setSelectedFile] = useState(null);
-    const [image, setImage] = useState(null);
-    const fileInputRef = useRef(null);
 
-    const handleImageClick = () => {
-      fileInputRef.current.click();
-    };
 
-    const handleFileChange = (e) => {
-      const file = e.target.files[0];
-      setSelectedFile(file);
-      setImage(URL.createObjectURL(e.target.files[0]));
-    };
 
     const [selectGender, setSelectGender] = useState(null);
     const[gender,setGender] = useState([
@@ -49,18 +38,9 @@ const Profile = () => {
         reset,
         formState: { errors },
       } = useForm();
-     
-      // useEffect(() => {
-      //   if(localStorage.getItem("token") !==null){
-      //     console.log("token exist")
-      //     dispatch(checkuser(localStorage.getItem("token")));
-      //   }else{
-      //     console.log("token not exist")
-      //   }
-      // }, []);
 
       if(state.check.data){
-        navigate("/login")
+       // navigate("/login")
       }
 
   return (
@@ -212,44 +192,6 @@ const Profile = () => {
    </div>
 
 
-            {/* <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[80%] xs:mx-4" /> */}
-
-            {/* <div className=" flex flex-col lg:mx-20 xs:mx-0 ">
-              <Text
-                className="mt-10 text-gray-900 text-sm tracking-[-0.28px] mx-2"
-                size="txtRobotoRomanMedium14Gray90003"
-              >
-                Фото:
-              </Text>
-              <div className=" flex flex-row space-x-5 h-[100px] justify-start items-center mt-3.5 w-full">
-                <input className=" outline-none"
-                  type="file"
-                  style={{ display: "none" }}
-                  ref={fileInputRef}
-                  onChange={handleFileChange}
-                 
-                />
-                <div className="bg-deep_orange-100 h-[100px] items-center justify-start p-[34px] rounded w-[100px]">
-                  <img
-                    onClick={handleImageClick}
-                    className="h-8 w-8"
-                    src={add}
-                    alt=""
-                  />
-                </div>
-
-                <div className=" h-[100px] items-center justify-start p-[0px] rounded w-[100px]">
-                  <img
-                    className="h-[100px] w-[100px]"
-                    src={image}
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div> */}
-
-            {/* <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[80%] xs:mx-4 " /> */}
-
             <div className=" w-full flex justify-center mt-[100px] mb-7">
               <button
                 type="submit"
@@ -262,7 +204,7 @@ const Profile = () => {
     <div className=' flex justify-center items-center'>
     <button onClick={()=>{
        dispatch(checkuser(localStorage.getItem("token")));
-       
+       navigate("/login")
       //localStorage.removeItem("token")
        
     }} className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center  text-white-A700 font-roboto font-semibold tracking-[0.20px] rounded-[4px]">
