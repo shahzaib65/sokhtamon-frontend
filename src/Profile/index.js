@@ -60,7 +60,7 @@ const Profile = () => {
       // }, []);
 
       if(state.check.data){
-        navigate("/home")
+        navigate("/login")
       }
 
   return (
