@@ -23,7 +23,7 @@ const Otp = () => {
         navigate("/")
         reset();
         localStorage.setItem("token",state.otp.data._id)
-        dispatch(checkuser(state.otp.data._id))
+     //   dispatch(checkuser(state.otp.data._id))
       }
     
       const onSubmit = (data) => {

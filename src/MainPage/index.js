@@ -10,7 +10,7 @@ import arrow from "../assets/arrow.png";
 import { Link } from "react-router-dom";
 import google from "../assets/googleplay.png"
 import apple from "../assets/appstore.png"
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { checkuser } from "../MainPage/checkSlice";
 
 const Main = () => {
@@ -19,11 +19,11 @@ const Main = () => {
 
 
   useEffect(() => {
-    // if(localStorage.getItem("token") !==null){
-    //   dispatch(checkuser(localStorage.getItem("token")));
-    // }else{
-    //   console.log("token not exist")
-    // }
+    if(localStorage.getItem("token") !==null){
+      dispatch(checkuser(localStorage.getItem("token")));
+    }else{
+      console.log("token not exist")
+    }
       
     categories();
   }, []);
