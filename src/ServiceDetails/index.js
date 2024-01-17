@@ -5,20 +5,23 @@ import { Text } from "../components/Text";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-const DetailPage = () => {
+
+const ServiceDetail = () => {
+
     let navigate = useNavigate();
-  const { id } = useParams();
-  const [ detail,setDetail] = useState('')
- console.log("postId",id)
-  useEffect(()=>{
+    const { id } = useParams();
+    const [ detail,setDetail] = useState('')
+  console.log("Job id=>",id)
+    useEffect(()=>{
     
-    axios.post(`https://sokhtamon-backend-production.up.railway.app/api/post/fetch/${id}`)
-    .then((res)=>{
-       setDetail(res.data)
-    }).catch((err)=>{
-      console.log(err.message);
-    })
-  },[])
+        axios.get(`https://sokhtamon-backend-production.up.railway.app/api/job/fetch/${id}`)
+        .then((res)=>{
+            console.log(res.data)
+           setDetail(res.data)
+        }).catch((err)=>{
+          console.log(err.message);
+        })
+      },[])
 
 
 
@@ -35,7 +38,7 @@ const DetailPage = () => {
               className="absolute h-max inset-[0] justify-center m-auto sm:text-[40px] xs:text-[20px] md:text-[46px] text-[50px] text-center text-white-A700 tracking-[-1.00px] w-max"
               size="txtRobotoRomanBold50"
             >
-            Подробная страница
+           Подробности о работе
             </Text>
           </div>
 
@@ -44,8 +47,8 @@ const DetailPage = () => {
             <div className="flex xs:flex-1 lg:flex-col gap-2.5 items-center justify-start w-[37%] xs:w-full">
               <img
                 className="h-[416px] md:h-auto object-cover rounded-[5px] w-full"
-                src={detail.post_image_url}
-                alt="Post"
+                src={detail.job_url}
+                alt="Job"
               />
             
             </div>
@@ -69,24 +72,19 @@ const DetailPage = () => {
                 </div>
 
                 <div className="flex flex-col gap-[15px] items-start justify-start w-auto md:w-full">
-                  <div className="flex flex-row gap-2 h-6 md:h-auto items-center justify-start w-auto">
-                  <Text
-                    className="lg:text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
-                    size="txtRobotoRomanSemiBold24Black900"
-                  >
-                      Подкатегория:
-                  </Text>
+                  <div className="flex flex-row lg:gap-4 xs:gap-2  items-center justify-start w-auto md:w-full">
+                  
                   <Text
                     className="xs:text-[34px] md:text-[40px] lg:text-[24px] text-yellow-800 w-auto"
                     size="txtRobotoRomanRegular18"
                   >
-                    {detail.sub_category_name}
+                    {detail.service}
                   </Text>
                   </div>
                   <div className=' flex justify-start items-start w-full'>
                   <Text
-                    className="leading-[35.00px] text-start w-full text-[19px] text-blue_gray-300_01"
-                    size="txtRobotoRomanRegular19"
+                    className="xs:text-xl md:text-[22px] lg:text-3xl text-yellow-800 w-auto"
+                    size="txtRobotoRomanSemiBold24Black900"
                   >
                     {/* <span className="text-blue_gray-300_01 font-roboto text-left font-normal">
                     
@@ -111,7 +109,7 @@ const DetailPage = () => {
                     className="xs:text-[20px] md:text-[40px] lg:text-[24px] text-yellow-800 w-auto"
                     size="txtRobotoRomanRegular18"
                   >
-                    {detail.username}
+                    {detail.full_name}
                   </Text>
                   </div>
 
@@ -122,13 +120,13 @@ const DetailPage = () => {
                     className="lg:text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
                     size="txtRobotoRomanSemiBold24Black900"
                   >
-                      Электронная почта:
+                      Город:
                   </Text>
                   <Text
                     className="xs:text-[20px] md:text-[40px] lg:text-[24px] text-yellow-800 w-auto"
                     size="txtRobotoRomanRegular18"
                   >
-                    {detail.email}
+                    {detail.city}
                   </Text>
                   </div>
 
@@ -137,25 +135,18 @@ const DetailPage = () => {
                     className="xs:text-[20px] lg:text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
                     size="txtRobotoRomanSemiBold24Black900"
                   >
-                       Tелефон:
+                       опыт:
                   </Text>
                   <Text
                     className="xs:text-[20px] md:text-[40px] lg:text-[24px] text-yellow-800 w-auto"
                     size="txtRobotoRomanRegular18"
                   >
-                    {detail.telephone}
+                    {detail.experience}
                   </Text>
                   </div> 
 
-                <>
-                <button
-              onClick={()=>{
-                navigate(`/subscription/${id}`)
-              }}
-              className=" bg-yellow-800 lg:w-[20%] xs:w-[50%] h-[50px] mt-10 flex justify-center items-center rounded-sm text-white-A700 font-roboto font-semibold tracking-[0.20px]">
-              Подписка
-            </button>
-                </>
+             
+               
                 
               </div>
             </div>
@@ -165,4 +156,4 @@ const DetailPage = () => {
   )
 }
 
-export default DetailPage
+export default ServiceDetail

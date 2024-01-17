@@ -304,7 +304,7 @@ const ServicePage = () => {
   ): (
     state.job.data.map((e)=>(
 
-<div vis key={e} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-col gap-[15px] items-center justify-center p-[15px] rounded-md w-full">
+<Link to={`/job/${e._id}`} key={e._id} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex flex-col gap-[15px] items-center justify-center p-[15px] rounded-md w-full">
 <div className=' mt-5 flex justify-center items-center'>
 <img
               className="h-[70px] w-[70px] rounded-full"
@@ -345,17 +345,7 @@ const ServicePage = () => {
 
             
 </div>
-
-
-{/* <Button
-            className="cursor-pointer font-semibold mb-3 min-w-[70px] mt-[0px] text-base text-center"
-            shape="round"
-          >
-            1
-          </Button> */}
-
-
-</div>
+</Link>
 ))
   )
 

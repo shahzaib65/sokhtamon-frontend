@@ -19,6 +19,7 @@ import Subscription from './Subscription';
 import Profile from "./Profile"
 import Toast from "../src/components/Toast";
 import Send from "./PhoneLogin/Send"
+import JobDetails from "./ServiceDetails"
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       <Route exact path='/otp' element={<Otp/>}/>
       <Route exact path='/job' element={<Apply/>}/>
       <Route exact path='/subscription/:postId' element={<Subscription/>}/>
+      <Route exact path="/job/:id" element={<JobDetails/>}/>
       </Routes>
       <Footer/>
     </Router>
