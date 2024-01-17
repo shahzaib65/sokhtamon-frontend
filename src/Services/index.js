@@ -202,17 +202,6 @@ const ServicePage = () => {
               src={banner}
               alt="banner"
             />
-
-<div className=' flex justify-end items-end h-[42px] mr-5 mt-4'>
-    <Link to="/job"
-                  className=" py-2 lg:w-[15%] xs:w-[100%] lg:items-end xs:items-center text-center text-sm text-white-A700 tracking-[0.20px] bg-yellow-800 h-auto"
-                  size="txtRobotoRomanSemiBold14"
-                >
-                  Подать заявку на работу
-                </Link>
-    </div>
-
-
             <Text
               className="absolute h-max inset-[0] justify-center m-auto sm:text-[40px] xs:text-[20px] md:text-[46px] text-[50px] text-center text-white-A700 tracking-[-1.00px] w-max"
               size="txtRobotoRomanBold50"
@@ -232,11 +221,22 @@ const ServicePage = () => {
         Наша миссия - обеспечить клиентов всеми необходимыми строительными услугами под ключ, делая процесс легким и эффективным. С нами ваш проект будет в надежных руках, а результат будет отвечать самым высоким стандартам качества.
         </Text>
 
-          <div className="flex xs:flex-col lg:flex-row gap-[50px] items-center justify-center lg:w-[70%] mt-[70px] mx-auto xs:px-5 xs:w-full">
+
+        <div className=' flex justify-end items-end h-[42px] lg:mr-20 xs:mr-10 mt-10 w-full'>
+    <Link to="/job"
+                  className=" py-2  xs:w-[50%] lg:w-[15%] lg:items-end xs:items-center text-center text-sm text-white-A700 tracking-[0.20px] bg-yellow-800 h-auto"
+                  size="txtRobotoRomanSemiBold14"
+                >
+                  Подать заявку на работу
+                </Link>
+    </div>
+
+
+          <div className="flex xs:flex-col lg:flex-row gap-[50px] items-center justify-center lg:w-[70%] mt-[70px] lg:mx-auto xs:px-5 xs:w-full">
            <div className=' w-full flex justify-center items-center'>
            <div className="border border-blue_gray-300_01 border-solid flex lg:flex-row items-center justify-between rounded lg:w-[85%]  xs:w-full">
               <SelectBox
-                className="font-medium text-base text-center text-gray-400 w-[16%] lg:px-4  sm:w-full"
+                className="lg:font-medium xs:font-normal lg:text-base xs:text-xs xs:text-center lg:text-center text-gray-400 lg:w-[50%] lg:px-4  xs:w-[45%]"
                 placeholderClassName="text-gray-400"
                 indicator={
                   <img
@@ -256,7 +256,7 @@ const ServicePage = () => {
               />
               <Line className="bg-blue_gray-300_01 h-[62px] w-px" />
               <SelectBox
-                className="font-medium text-base text-center text-gray-400 w-[11%] lg:px-4 xs:w-full"
+                className="lg:font-medium xs:font-normal lg:text-base xs:text-xs xs:text-center lg:text-center text-gray-400 lg:w-[50%] lg:px-4 xs:w-[40%] xs:px-0"
                 placeholderClassName="text-gray-400"
                 indicator={
                   <img
@@ -275,10 +275,10 @@ const ServicePage = () => {
                     }}
               />
               <Button o
-                className="cursor-pointer flex items-center justify-center min-w-[155px] rounded-br rounded-tr"
+                className="cursor-pointer flex items-center justify-center lg:min-w-[155px] xs:w-[50px] rounded-br rounded-tr"
                 leftIcon={
                   <img
-                    className="h-7 mr-3.5"
+                    className="h-7 lg:mr-3.5 xs:mr-0 xs:invisible lg:visible"
                     src={search}
                     alt="search"
                   />
@@ -288,7 +288,7 @@ const ServicePage = () => {
                   dispatch(applyJob({selectCity,selectService}))
                 }}
               >
-                <div className="font-medium text-base text-center">Поиск</div>
+                <div className="font-medium lg:text-base xs:text-xs lg:text-center xs:text-center xs:mr-2 lg:mr-0">Поиск</div>
               </Button>
             </div>
            </div>

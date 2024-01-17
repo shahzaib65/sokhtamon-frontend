@@ -497,7 +497,7 @@ const Job = () => {
               </div>
             </div>
 
-            <div className=" w-full flex justify-center mt-[55px] mb-7">
+            <div className=" xs:mx-4 w-full flex lg:justify-center lg:mx-0 xs:justify-start mt-[55px] mb-7">
               <button
                 type="submit"
                 className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center  text-white-A700 font-roboto font-semibold tracking-[0.20px] rounded-[4px]"
