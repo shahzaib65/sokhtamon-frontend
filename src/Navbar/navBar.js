@@ -104,10 +104,11 @@ export default function Example() {
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation1.map((item) => (
+                <Link
+                to={item.link}
+                >
                 <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
+                 key={item.name}
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
@@ -118,6 +119,8 @@ export default function Example() {
                 >
                   {item.name}
                 </Disclosure.Button>
+                </Link>
+                
               ))}
             </div>
           </Disclosure.Panel>
