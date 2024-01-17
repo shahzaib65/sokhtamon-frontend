@@ -155,11 +155,11 @@ const Main = () => {
    </div>
 
    <div className=" w-[95%] h-auto ">
-   <div className=" grid xs:grid-cols-1 xs:gap-6 lg:gap-4 sm:grid-cols-2 lg:grid-cols-4 justify-center ml-5 min-h-[auto] mt-[54px]  lg:w-full">
+   <div className=" grid xs:grid-cols-1 xs:gap-6 lg:gap-4 sm:grid-cols-2 lg:grid-cols-5 justify-center ml-5 min-h-[auto] mt-[54px]  lg:w-full">
           {
             posts.map((data)=>(
               <>
-          <div key={data._id} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex xs:flex-1 flex-col items-center justify-start pb-[33px] rounded-md w-[90%]">
+          <div key={data._id} className="bg-white-A700 border border-blue_gray-100_01 border-solid flex xs:flex-1 flex-col items-center justify-start pb-[20px] rounded-md w-[90%]">
           <Link to={`/detail/${data._id}`}>
           <img
                 className="lg:h-[240px] xs:h-auto object-fill  rounded-tl-md rounded-tr-md w-full"
@@ -169,7 +169,7 @@ const Main = () => {
           </Link>
               
               <Text
-                className="mt-[17px] text-blue_gray-900 text-xl"
+                className="mt-[17px] text-blue_gray-900 text-xl text-center"
                 size="txtRobotoBold20"
               >
                 {data.post_heading}
