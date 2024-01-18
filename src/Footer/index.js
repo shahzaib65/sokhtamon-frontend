@@ -143,21 +143,21 @@ const Footer = () => {
             </Text>
             </Link>
 
-           <Link to="/login">
+           <Link to="/use">
            <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-5"
               size="txtRobotoMedium16"
             >
-           Вход
+            Условия использования
             </Text>
            </Link>
 
-           <Link to="/use">
+           <Link to="/login">
            <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-0"
               size="txtRobotoMedium16"
             >
-             Условия использования
+            Вход 
             </Text>
            </Link>
 
