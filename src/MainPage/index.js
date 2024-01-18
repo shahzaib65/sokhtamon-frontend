@@ -212,7 +212,14 @@ const Main = () => {
                   moment(data.createdAt).format('HH:mm')
                 }
                 </Text>
+               
               </div>
+
+              <Text className=" bg-yellow-700 px-4 mt-3 text-black rounded-md text-lg tracking-[0.20px] w-auto"
+                  size="txtRobotoRegular18">
+                  {data.plan}
+                </Text>
+
             </div>
           </>
             ))

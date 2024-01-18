@@ -21,6 +21,7 @@ import Toast from "../src/components/Toast";
 import Send from "./PhoneLogin/Send"
 import JobDetails from "./ServiceDetails"
 
+
 function App() {
   return (
     <div className="App">
@@ -47,6 +48,7 @@ function App() {
       <Route exact path='/job' element={<Apply/>}/>
       <Route exact path='/subscription/:postId' element={<Subscription/>}/>
       <Route exact path="/job/:id" element={<JobDetails/>}/>
+     
       </Routes>
       <Footer/>
     </Router>

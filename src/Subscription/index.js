@@ -22,7 +22,8 @@ const Subscription = () => {
     
 
   const makePament = async(price,name)=>{
-
+    const userId = localStorage.getItem("token")
+       try {
         const res = await fetch("https://sokhtamon-backend-production.up.railway.app/api/subscription/checkout",{
             method: "POST",
             headers: { 
@@ -34,14 +35,22 @@ const Subscription = () => {
                     id: 1,
                 quantity: 1,
                 price: price,
-                name: name
+                name: name,
+                description: "testing the data"
                 }
-            ]
+            ],
+             userId: userId,
+             postId: postId,
+             totalAmount: price,
+             plan: name
            }),
         });
         const data = await res.json()
         console.log(data)
         window.location = data.url
+       } catch (error) {
+        console.log(error.message)
+       }
   
   }
 

@@ -14,6 +14,7 @@ const DetailPage = () => {
     
     axios.post(`https://sokhtamon-backend-production.up.railway.app/api/post/fetch/${id}`)
     .then((res)=>{
+      console.log(res.data)
        setDetail(res.data)
     }).catch((err)=>{
       console.log(err.message);
@@ -150,7 +151,8 @@ const DetailPage = () => {
                 <>
                 <button
               onClick={()=>{
-                navigate(`/subscription/${id}`)
+              //  navigate("/checkout")
+                 navigate(`/subscription/${id}`)
               }}
               className=" bg-yellow-800 lg:w-[20%] xs:w-[50%] h-[50px] mt-10 flex justify-center items-center rounded-sm text-white-A700 font-roboto font-semibold tracking-[0.20px]">
               Подписка
