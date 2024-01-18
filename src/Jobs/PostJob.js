@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import banner from "../assets/post_banner.svg";
+import banner from "../assets/add_post.jpg";
 import { Text } from "../components/Text";
 import { SelectBox } from "../components/SelectBox";
 import { CheckBox } from "../components/CheckBox";

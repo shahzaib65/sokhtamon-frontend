@@ -145,7 +145,20 @@ const ServiceDetail = () => {
                   </Text>
                   </div> 
 
-             
+                  <div className="flex flex-row gap-2 h-6 md:h-auto items-center justify-start w-auto">
+                  <Text
+                    className="xs:text-[20px] capitalize lg:text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
+                    size="txtRobotoRomanSemiBold24Black900"
+                  >
+                       телефон:
+                  </Text>
+                  <Text
+                    className="xs:text-[20px] md:text-[40px] lg:text-[24px] text-yellow-800 w-auto"
+                    size="txtRobotoRomanRegular18"
+                  >
+                    {detail.telephone}
+                  </Text>
+                  </div> 
                
                 
               </div>

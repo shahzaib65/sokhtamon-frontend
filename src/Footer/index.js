@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import logo from "../../src/assets/logo.png";
-import linkedin from "../../src/assets/linkedin.png";
-import twitter from "../../src/assets/twitter.png";
+import linkedin from "../../src/assets/youtube.png";
+import twitter from "../../src/assets/instagram.png";
 import googlePlay from "../../src/assets/googleplay.png";
 import appstore from "../../src/assets/appstore.png";
 import fb from "../../src/assets/fb.png";
@@ -23,9 +23,9 @@ const Footer = () => {
           </Text>
 
           <div className=" flex flex-row space-x-4 mt-4">
-            <img src={fb} className=" w-5 h-5" alt="fb" />
-            <img src={twitter} className=" w-5 h-5" alt="twitter" />
-            <img src={linkedin} className=" w-5 h-5" alt="linkedin" />
+            <img src={fb} className=" w-6 h-6" alt="fb" />
+            <img src={twitter} className=" w-6 h-6" alt="instagram" />
+            <img src={linkedin} className=" w-6 h-6" alt="linkedin" />
           </div>
         </div>
 
@@ -47,12 +47,12 @@ const Footer = () => {
             </Text>
             </Link>
 
-            <Link to="/about">
+            <Link to="/service">
             <Text
               className="lg:text-base capitalize xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto"
               size="txtRobotoMedium16"
             >
-              О нас
+               Услуги
             </Text>
             </Link>
 
@@ -65,12 +65,12 @@ const Footer = () => {
             </Text>
             </Link>
 
-           <Link to="/service">
+           <Link to="/about">
            <Text
               className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-0"
               size="txtRobotoMedium16"
             >
-              Услуги
+              О нас
             </Text>
            </Link>
 
@@ -152,7 +152,16 @@ const Footer = () => {
             </Text>
            </Link>
 
-           
+           <Link to="/use">
+           <Text
+              className="lg:text-base xs:text-xs md:text-xs text-gray-900 tracking-[0.51px] w-auto my-0"
+              size="txtRobotoMedium16"
+            >
+             Условия использования
+            </Text>
+           </Link>
+
+         
 
           </div>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from "../assets/about_us.svg";
+import banner from "../assets/about.jpg";
 import { Text } from "../components/Text";
  const Tos = () => {
   return (

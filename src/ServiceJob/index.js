@@ -1,5 +1,5 @@
 import React,{useState,useEffect,useRef} from 'react'
-import banner from "../assets/services.svg";
+import banner from "../assets/service.jpg";
 import { Text } from "../components/Text";
 import { SelectBox } from '../components/SelectBox';
 import arrow from "../assets/arrow.png";
@@ -235,6 +235,7 @@ const Job = () => {
               form.append("price",data.price)
               form.append("image",selectedFile)
               form.append("description",data.description)
+              form.append("telephone",data.telephone)
 
               const config = {     
     headers: { 'content-type': 'multipart/form-data' }
@@ -342,7 +343,7 @@ const Job = () => {
                   className=" p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full rounded-[4px]"
                   wrapClassName="w-full"
                   {...register("heading", {
-                    required: "Heading is required",
+                    required: "Укажите заголовок",
                   })}
                 ></input>
                 {errors.heading && (
@@ -350,7 +351,30 @@ const Job = () => {
                     {errors.heading.message}
                   </p>
                 )}
-              </div>         
+              </div>    
+
+
+              <div className=" flex flex-col lg:mx-8 lg:w-[35%] gap-3 xs:w-[80%] xs:mx-2 ">
+                <Text
+                  className="text-gray-900 text-sm tracking-[-0.28px] w-auto capitalize"
+                  size="txtRobotoRomanMedium14Gray90003"
+                >
+                 телефон
+                </Text>
+
+                <input 
+                  className=" p-[19px] bg-gray-100 outline-none placeholder:text-gray-700 text-left text-sm w-full rounded-[4px]"
+                  wrapClassName="w-full"
+                  {...register("telephone", {
+                    required: "Требуется телефон",
+                  })}
+                ></input>
+                {errors.telephone && (
+                  <p className="text-start text-red-500">
+                    {errors.telephone.message}
+                  </p>
+                )}
+              </div>      
 </div>
 
 <Line className="bg-blue_gray-300_01 h-px mt-10 lg:mx-20 w-[90%] xs:mx-4" />
@@ -497,7 +521,7 @@ const Job = () => {
               </div>
             </div>
 
-            <div className=" xs:mx-4 w-full flex lg:justify-center lg:mx-0 xs:justify-start mt-[55px] mb-7">
+            <div className=" xs:mx-2 w-full flex lg:justify-center lg:mx-20 xs:justify-start mt-[55px] mb-7">
               <button
                 type="submit"
                 className=" bg-yellow-800 w-[300px] h-[50px] flex justify-center items-center  text-white-A700 font-roboto font-semibold tracking-[0.20px] rounded-[4px]"

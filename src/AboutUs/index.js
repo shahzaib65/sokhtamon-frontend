@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import banner from "../assets/about_us.svg"
+import banner from "../assets/about.jpg"
 import  {Text} from "../components/Text"
 import circle from "../assets/circle.svg"
 import market from "../assets/market.svg"

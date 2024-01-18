@@ -4,7 +4,7 @@ import { Line } from "../components/Line";
 import { Text } from "../components/Text";
 import { SelectBox } from "../components/SelectBox";
 import moment from "moment";
-import banner from "../assets/home_banner.svg";
+import banner from "../assets/Homepage.jpg";
 import arrow from "../assets/arrow.png";
 import { Link } from "react-router-dom";
 import google from "../assets/googleplay.png"
@@ -215,7 +215,7 @@ const Main = () => {
                
               </div>
 
-              <Text className=" bg-yellow-700 px-4 mt-3 text-black rounded-md text-lg tracking-[0.20px] w-auto"
+              <Text className=" bg-yellow-800 px-8 py-0.5 mt-3 text-white-A700 rounded text-lg tracking-[0.20px] w-auto"
                   size="txtRobotoRegular18">
                   {data.plan}
                 </Text>
