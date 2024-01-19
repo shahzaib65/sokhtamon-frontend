@@ -71,7 +71,7 @@ const Contact = () => {
                     className="text-base text-white-A700"
                     size="txtRobotoRomanMedium16"
                   >
-                    +1012 3456 789
+                    +992901049911
                   </Text>
                 </div>
                 <div className="flex flex-row gap-[15px] items-start justify-start mt-[30px] w-[38%] md:w-full">
@@ -93,7 +93,7 @@ const Contact = () => {
                     className="text-base text-white-A700 w-[89%] sm:w-full mb-[24px]"
                     size="txtRobotoRomanMedium16"
                   >
-                    Адрес:
+                    Адрес: Вефа Центр | Бизнес Центр
                   </Text>
                 </div>
 
